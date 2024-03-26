@@ -2,59 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Strong Point</title>
-  <link rel="stylesheet" href="login.css">
-
-
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="assets/fontawesome-free-6.5.1-web/css/all.min.css">
 
   <style>
-.next{
- top: 100%;
-}
+    body {
+      background-color: #ADE1F8;
+      margin: 0; /* Remove default body margin */
+      padding: 0; /* Remove default body padding */
+    }
+
+    .container {
+      position: relative; /* Position container relative to allow for absolute positioning of children */
+      padding-top: 100px; /* Add padding to the top of the container to prevent content from being overlapped by fixed elements */
+    }
+
+    section {
+      position: sticky;
+      top: 0; /* Stick the section to the top of the viewport */
+      z-index: 1000; /* Ensure the section is above other content */
+    }
+
+    section>div {
+      background-color: white;
+      border-radius: 20px;
+      width: 250px;
+      height: 60px;
+      margin: 24px auto;
+      cursor: pointer;
+      position: relative; /* Ensure proper positioning for child elements */
+      z-index: 1000; /* Ensure the div is above other content */
+    }
+
+    section>div>h3 {
+      position: absolute;
+      top: 0;
+      left: 68px;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      height: fit-content;
+    }
+
+    section>div>div {
+      top: 0;
+      left: 40px;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+      height: fit-content;
+    }
+
   </style>
 </head>
 <body>
-
-<section>
-  <div class="container">
-    <h1>STRONG POINT</h1>
-    <form>
-      <div class="mb-3">
-        <label for="exampleInputUsername" class="form-label">Username</label>
-        <input type="email" class="form-control" id="exampleInputUsername" aria-describedby="emailHelp">
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-      </div>
-      <div id="forgot">
-        <label>Forgot password</label>
-      </div>
-      <button type="submit" class="btn btn-primary">Login</button>
-      <div id="account">
-        <label>Don't have an account?</label>
-      </div>
+<div class="container">
+  <section>
+    <div>
+      <h3>Dashboard</h3>
       <div>
-        <label id="signUp">Sign Up</label>
+        <i class="fa-solid fa-house"></i>
       </div>
-    </form>
-  </div>
+    </div>
+    <div>
+      <h3>Customer</h3>
+    </div>
+    <div>
+      <h3>Items</h3>
+    </div>
+    <div>
+      <h3>Orders</h3>
+    </div>
+  </section>
+</div>
 
-
-</section>
-<section class="next">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At labore nesciunt officia quam, reprehenderit ullam voluptas? Architecto esse ex ipsam iusto maxime modi nam optio, perspiciatis repellendus temporibus totam veniam!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At labore nesciunt officia quam, reprehenderit ullam voluptas? Architecto esse ex ipsam iusto maxime modi nam optio, perspiciatis repellendus temporibus totam veniam!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At labore nesciunt officia quam, reprehenderit ullam voluptas? Architecto esse ex ipsam iusto maxime modi nam optio, perspiciatis repellendus temporibus totam veniam!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At labore nesciunt officia quam, reprehenderit ullam voluptas? Architecto esse ex ipsam iusto maxime modi nam optio, perspiciatis repellendus temporibus totam veniam!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At labore nesciunt officia quam, reprehenderit ullam voluptas? Architecto esse ex ipsam iusto maxime modi nam optio, perspiciatis repellendus temporibus totam veniam!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At labore nesciunt officia quam, reprehenderit ullam voluptas? Architecto esse ex ipsam iusto maxime modi nam optio, perspiciatis repellendus temporibus totam veniam!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At labore nesciunt officia quam, reprehenderit ullam voluptas? Architecto esse ex ipsam iusto maxime modi nam optio, perspiciatis repellendus temporibus totam veniam!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At labore nesciunt officia quam, reprehenderit ullam voluptas? Architecto esse ex ipsam iusto maxime modi nam optio, perspiciatis repellendus temporibus totam veniam!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At labore nesciunt officia quam, reprehenderit ullam voluptas? Architecto esse ex ipsam iusto maxime modi nam optio, perspiciatis repellendus temporibus totam veniam!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At labore nesciunt officia quam, reprehenderit ullam voluptas? Architecto esse ex ipsam iusto maxime modi nam optio, perspiciatis repellendus temporibus totam veniam!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At labore nesciunt officia quam, reprehenderit ullam voluptas? Architecto esse ex ipsam iusto maxime modi nam optio, perspiciatis repellendus temporibus totam veniam!</p>
-  <p>Lorem ipsum dolor sit am
-</section>
 </body>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
 </html>

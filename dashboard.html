@@ -3,8 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/fontawesome-free-6.5.1-web/css/all.min.css">
+
+    <style>
+        body{
+            background-color: #ADE1F8;
+
+        }
+        header{
+            position: fixed;
+            width: 62vw;
+            height: 60px;
+            background-color: white;
+            right: 0;
+            top: 0;
+            left: calc(100vw - 62vw);
+            border-radius: 20px;
+        }
+
+        header>label{
+            font-size: 30px;
+            color: #4A579B;
+            top: 9px;
+            left: 39px;
+            position: absolute;
+        }
+        header>nav>ul>li{
+            display: inline-block;
+            margin-right: 22px;
+            font-size: 20px;
+        }
+
+        header>nav {
+            height: fit-content;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            left: 327px;
+            margin: auto;
+        }
+
+        header>nav>ul {
+            padding: 0;
+            margin: 0;
+        }
+        header>div{
+            position: absolute;
+            top: 22px;
+            bottom: 0;
+            left: 790px;
+            right: 0;
+            font-size: 10px;
+        }
+
+        section>img{
+            width: 81px;
+            aspect-ratio: 1/1;
+            border-radius: 100%;
+            top: 3px;
+            bottom: 0;
+            left: 10px;
+            position: relative;
+        }
+
+       #userName{
+           font-size: 20px;
+           top: 29px;
+           position: relative;
+           left: -80px;
+       }
+    </style>
 </head>
 <body>
+
+<header>
+    <label>STRONG POINT</label>
+    <div><i class="fa-solid fa-arrow-right-from-bracket">
+        <label>Logout</label>
+    </i></div>
+
+    <nav>
+      <ul>
+          <li>Dashboard</li>
+          <li>Customer</li>
+          <li>Items</li>
+          <li>Orders</li>
+      </ul>
+  </nav>
+</header>
+
+<section>
+<img src="assets/images/userPic.png" alt="">
+    <label id="userName">Jack Eathen</label>
+</section>
+
+<section>
+    <div></div>
+</section>
 
 </body>
 </html>
