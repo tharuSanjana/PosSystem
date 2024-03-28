@@ -16,7 +16,7 @@
             height: 60px;
             background-color: white;
             right: 0;
-            top: 0;
+            top: 10px;
             left: calc(100vw - 62vw);
             border-radius: 20px;
         }
@@ -57,7 +57,7 @@
             font-size: 10px;
         }
 
-        section>img{
+        main>section>img{
             width: 81px;
             aspect-ratio: 1/1;
             border-radius: 100%;
@@ -73,6 +73,170 @@
            position: relative;
            left: -80px;
        }
+
+       main>section>div{
+          /* width: 200px;
+           padding: 20px 15px;
+           box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+           background-color: white;*/
+
+           position: relative;
+           top: 102px;
+           bottom: 0;
+           left: 86px;
+           right: 0;
+           width: 300px;
+           padding: 100px 69px;
+           box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+           background-color: white;
+           justify-content: space-between;
+           margin: 20px 0px;
+
+
+
+       }
+        main>section>div>div{
+            position: absolute;
+
+            top: 37px;
+            left: 29px;
+            margin: auto;
+            font-size: 73px;
+        }
+
+        #lbl1{
+            font-size: 37px;
+            top: 45px;
+            left: 150px;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+        }
+
+        #lbl2{
+            font-size: 42px;
+            top: 125px;
+            left: 75px;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            color: red;
+        }
+
+
+        .lbl3{
+            font-size: 37px;
+            top: 45px;
+            left: 220px;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+        }
+
+        .lbl4{
+            font-size: 42px;
+            top: 125px;
+            left: 148px;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            color: red;
+        }
+
+        main>section>i{
+            position: relative;
+            top: 20px;
+
+            left: 1050px;
+            margin: auto;
+        }
+
+        main>section>label{
+            position: relative;
+            top: 20px;
+
+            left: 1054px;
+            margin: auto;
+        }
+
+        .rec{
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            background-color: white;
+            position: relative;
+            width: 443px;
+            height: 251px;
+            top: -558px;
+            left: 608px;
+            border-radius: 20px;
+            border: 2px solid blue;
+
+
+        }
+
+
+
+        footer>div>section>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 86%;
+            height: 100%;
+            font-size: 15px;
+
+
+        }
+
+        .rec table {
+            border-spacing: 10px;
+            max-width: 100%;
+        }
+
+
+        .rec table td,
+        .rec table th {
+            padding: 10px;
+        }
+
+        .btn-primary{
+            top: 183px;
+            left: 339px;
+            position: absolute;
+            background-color: #36F506;
+            font-size: 20px;
+            border-color: #36F506;
+        }
+
+        footer>div>div>h3{
+            font-size: 25px;
+            position: absolute;
+            top: 138px;
+            left: 760px;
+            right: 0;
+            color: #0E2BC5;
+        }
+
+        #rec2{
+            padding: 142px 4px;
+        }
+
+        #topCustomer{
+            top: 525px;
+            left: 760px;
+
+        }
+
+        .placeOrder{
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            background-color: white;
+            position: relative;
+            width: 443px;
+            height: 251px;
+            top: -558px;
+            left: 608px;
+            border-radius: 20px;
+
+
+        }
     </style>
 </head>
 <body>
@@ -92,15 +256,128 @@
       </ul>
   </nav>
 </header>
+<main>
+    <section>
+        <img src="assets/images/userPic.png" alt="">
+        <label id="userName">Jack Eathen</label>
+        <i class="fa-solid fa-users"></i>
+            <label>add customer</label>
 
-<section>
-<img src="assets/images/userPic.png" alt="">
-    <label id="userName">Jack Eathen</label>
-</section>
+        <div>
+            <div><i class="fa-solid fa-sack-dollar"></i></div>
+            <div id="lbl1">
+                <label>Rs 150 000</label>
+            </div>
 
-<section>
+            <div id="lbl2">
+                <label>Earned this month</label>
+            </div>
+
+        </div>
+        <div>
+            <div><i class="fa-solid fa-users"></i></div>
+            <div class="lbl3">
+                <label>21</label>
+            </div>
+
+            <div class="lbl4">
+                <label>Customer</label>
+            </div>
+        </div>
+        <div>
+            <div><i class="fa-solid fa-cart-shopping"></i></div>
+            <div class="lbl3">
+                <label>21</label>
+            </div>
+
+            <div class="lbl4">
+                <label>Orders</label>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <div>
+        <div>
+            <h3 >New Orders</h3>
+        </div>
+
+        <section class="rec">
+
+            <div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Order ID</th>
+                        <th scope="col">Customer</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Paid</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">O001</th>
+                        <td>Jesther</td>
+                        <td>23 000/=</td>
+                        <td>Yes</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+            <button type="button" class="btn btn-primary btn-lg">View</button>
+
+
+        </section>
+    </div>
+
+<div id="rec2">
+    <div>
+        <h3 id="topCustomer">Top Customer</h3>
+    </div>
+
+    <section class="rec" >
+
+        <div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Nic</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">01</th>
+                    <td>Cater Greason</td>
+                    <td>199223684506</td>
+
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <button type="button" class="btn btn-primary btn-lg">View</button>
+
+
+    </section>
+
+</div>
+
+</footer>
+
+<div class="placeOrder">
     <div></div>
-</section>
+</div>
 
 </body>
 </html>

@@ -6,114 +6,132 @@
   <link rel="stylesheet" href="assets/fontawesome-free-6.5.1-web/css/all.min.css">
 
   <style>
-    body {
+    body{
       background-color: #ADE1F8;
-      margin: 0; /* Remove default body margin */
-      padding: 0; /* Remove default body padding */
+      margin: 0;
     }
-
-    .container {
-      position: relative; /* Position container relative to allow for absolute positioning of children */
-      padding-top: 100px; /* Add padding to the top of the container to prevent content from being overlapped by fixed elements */
-    }
-
-    section {
-      position: sticky;
-      top: 0; /* Stick the section to the top of the viewport */
-      z-index: 1000; /* Ensure the section is above other content */
-    }
-
-    section>div {
-      background-color: white;
-      border-radius: 20px;
-      width: 250px;
+    header{
+      position: fixed;
+      width: 62vw;
       height: 60px;
-      margin: 24px auto;
-      cursor: pointer;
-      position: relative; /* Ensure proper positioning for child elements */
-      z-index: 1000; /* Ensure the div is above other content */
-    }
-
-    section>div>h3 {
-      position: absolute;
-      top: 0;
-      left: 68px;
+      background-color: white;
       right: 0;
-      bottom: 0;
-      margin: auto;
-      height: fit-content;
-    }
-
-    section>div>div {
       top: 0;
-      left: 40px;
-      bottom: 0;
-      right: 0;
-      margin: auto;
-      position: absolute;
-      height: fit-content;
+      left: calc(100vw - 62vw);
+      border-radius: 20px;
     }
 
+    header>label{
+      font-size: 30px;
+      color: #4A579B;
+      top: 9px;
+      left: 39px;
+      position: absolute;
+    }
+    header>nav>ul>li{
+      display: inline-block;
+      margin-right: 22px;
+      font-size: 20px;
+    }
+
+    header>nav {
+      height: fit-content;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      left: 327px;
+      margin: auto;
+    }
+
+    header>nav>ul {
+      padding: 0;
+      margin: 0;
+    }
+    header>div{
+      position: absolute;
+      top: 22px;
+      bottom: 0;
+      left: 790px;
+      right: 0;
+      font-size: 10px;
+    }
+
+    main>section>img{
+      width: 81px;
+      aspect-ratio: 1/1;
+      border-radius: 100%;
+      top: 3px;
+      bottom: 0;
+      left: 10px;
+      position: relative;
+    }
+
+    #userName{
+      font-size: 20px;
+      top: 29px;
+      position: relative;
+      left: -80px;
+    }
+
+    main>section>div{
+      position: relative;
+      top: 102px;
+      bottom: 0;
+      left: 86px;
+      right: 0;
+      width: 300px;
+      padding: 20px; /* Adjusted padding */
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+      background-color: white;
+      display: flex; /* Added flex display */
+      justify-content: space-between; /* Added to space items evenly */
+      gap: 20px; /* Added to create gap between divs */
+    }
+
+    main>section>div>div{
+      width: 80px; /* Adjusted width of inner divs */
+      height: 80px; /* Adjusted height of inner divs */
+      background-color: lightblue; /* Added background color for visualization */
+    }
+
+    /* Adjusted font size and added margin for labels */
+    #lbl1, #lbl2 {
+      font-size: 18px;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
-<div class="container">
+
+<header>
+  <label>STRONG POINT</label>
+  <div><i class="fa-solid fa-arrow-right-from-bracket">
+    <label>Logout</label>
+  </i></div>
+
+  <nav>
+    <ul>
+      <li>Dashboard</li>
+      <li>Customer</li>
+      <li>Items</li>
+      <li>Orders</li>
+    </ul>
+  </nav>
+</header>
+<main>
   <section>
+    <img src="assets/images/userPic.png" alt="">
+    <label id="userName">Jack Eathen</label>
     <div>
-      <h3>Dashboard</h3>
-      <div>
-        <i class="fa-solid fa-house"></i>
-      </div>
+      <div></div>
+      <label id="lbl1">Rs 150 000</label>
+      <label id="lbl2">Earned this month</label>
     </div>
-    <div>
-      <h3>Customer</h3>
-    </div>
-    <div>
-      <h3>Items</h3>
-    </div>
-    <div>
-      <h3>Orders</h3>
-    </div>
+    <div></div>
+    <div></div>
   </section>
-</div>
+</main>
 
 </body>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda dignissimos doloribus et, mollitia neque nulla obcaecati optio placeat quae ratione reiciendis, similique tempora, tenetur ut voluptas? Minima, mollitia.</p>
 </html>
