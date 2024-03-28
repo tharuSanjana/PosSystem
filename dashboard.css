@@ -1,0 +1,312 @@
+body{
+    background-color: #ADE1F8;
+
+}
+header{
+    position: fixed;
+    width: 62vw;
+    height: 60px;
+    background-color: white;
+    right: 0;
+    top: 10px;
+    left: calc(100vw - 62vw);
+    border-radius: 20px;
+    z-index: 1000;
+}
+
+header>label{
+    font-size: 30px;
+    color: #4A579B;
+    top: 9px;
+    left: 39px;
+    position: absolute;
+    animation-name: anim;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background: linear-gradient(45deg, #0B60B0, #ffffff, #201658);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+header>nav>ul>li{
+    display: inline-block;
+    margin-right: 22px;
+    font-size: 20px;
+}
+
+header>nav {
+    height: fit-content;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 327px;
+    margin: auto;
+}
+
+header>nav>ul {
+    padding: 0;
+    margin: 0;
+}
+header>div{
+    position: absolute;
+    top: 22px;
+    bottom: 0;
+    left: 790px;
+    right: 0;
+    font-size: 10px;
+}
+
+
+
+main>section>img{
+    width: 81px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    top: 3px;
+    bottom: 0;
+    left: 10px;
+    position: relative;
+}
+
+#userName{
+    font-size: 20px;
+    top: 29px;
+    position: relative;
+    left: -80px;
+}
+
+main>section>div{
+    /* width: 200px;
+     padding: 20px 15px;
+     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+     background-color: white;*/
+
+    position: relative;
+    top: 102px;
+    bottom: 0;
+    left: 86px;
+    right: 0;
+    width: 300px;
+    padding: 100px 69px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    justify-content: space-between;
+    margin: 20px 0px;
+
+
+}
+
+
+main>section>div>div{
+    position: absolute;
+
+    top: 37px;
+    left: 29px;
+    margin: auto;
+    font-size: 73px;
+}
+
+#lbl1{
+    font-size: 37px;
+    top: 45px;
+    left: 150px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+#lbl2{
+    font-size: 42px;
+    top: 125px;
+    left: 75px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    color: red;
+}
+
+
+.lbl3{
+    font-size: 37px;
+    top: 45px;
+    left: 220px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.lbl4{
+    font-size: 42px;
+    top: 125px;
+    left: 148px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    color: red;
+}
+
+main>section>i{
+    position: relative;
+    top: 20px;
+
+    left: 1050px;
+    margin: auto;
+}
+
+main>section>label{
+    position: relative;
+    top: 20px;
+
+    left: 1054px;
+    margin: auto;
+}
+
+.rec{
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    position: relative;
+    width: 443px;
+    height: 251px;
+    top: -558px;
+    left: 608px;
+    border-radius: 20px;
+    border: 2px solid blue;
+
+
+}
+
+
+
+footer>div>section>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 86%;
+    height: 100%;
+    font-size: 15px;
+
+
+}
+
+.rec table {
+    border-spacing: 10px;
+    max-width: 100%;
+}
+
+
+.rec table td,
+.rec table th {
+    padding: 10px;
+}
+
+.btn-primary{
+    top: 183px;
+    left: 339px;
+    position: absolute;
+    background-color: #36F506;
+    font-size: 20px;
+    border-color: #36F506;
+}
+
+footer>div>div>h3{
+    font-size: 25px;
+    position: absolute;
+    top: 138px;
+    left: 760px;
+    right: 0;
+    color: #0E2BC5;
+}
+
+#rec2{
+    padding: 142px 4px;
+}
+
+#topCustomer{
+    top: 525px;
+    left: 760px;
+
+}
+
+.placeOrder{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: white;
+    position: relative;
+    width: 312px;
+    height: 251px;
+    top: -1190px;
+    left: 1111px;
+    border-radius: 20px;
+
+
+}
+
+
+.fa-sharp{
+    font-size: 117px;
+    top: 39px;
+    left: 88px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+
+}
+
+.btn-order{
+    top: 183px;
+    left: 101px;
+    background-color: #E72929;
+    color: white;
+    position: absolute;
+    font-size: 35px;
+    border: 3px solid #E72929 ;
+    border-radius: 20px;
+
+}
+@keyframes anim {
+    from{
+        background-position: 0% 50%;
+
+    }
+    to{
+        background-position: 50% 100%;
+    }
+
+}
+
+/* @media all and (max-width: 650px){
+     main>section>img{
+         width: 30px;
+         aspect-ratio: 1/1;
+         border-radius: 100%;
+         top: 3px;
+         bottom: 0;
+         left: 10px;
+         position: relative;
+     }
+
+     #userName{
+         font-size: 10px;
+         top: 29px;
+         position: relative;
+         left: -80px;
+     }
+
+     main>section>div{
+
+         position: relative;
+         top: 102px;
+         bottom: 0;
+         left: 86px;
+         right: 0;
+         width: 200px;
+         padding: 50px 50px;
+         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+         background-color: white;
+         justify-content: space-between;
+         margin: 20px 0px;
+
+
+     }
+ }*/

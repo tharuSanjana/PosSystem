@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Dashboard</title>
+  <link rel="stylesheet" href="assets/normalize.css">
+
   <link rel="stylesheet" href="assets/fontawesome-free-6.5.1-web/css/all.min.css">
 
   <style>
     body{
       background-color: #ADE1F8;
-      margin: 0;
+
     }
     header{
       position: fixed;
@@ -16,9 +18,10 @@
       height: 60px;
       background-color: white;
       right: 0;
-      top: 0;
+      top: 10px;
       left: calc(100vw - 62vw);
       border-radius: 20px;
+      z-index: 1000; /* Ensure the header stays above other elements */
     }
 
     header>label{
@@ -57,6 +60,10 @@
       font-size: 10px;
     }
 
+    /*  main {
+          padding-top: 100px; !* Adjust according to your header height *!
+      }*/
+
     main>section>img{
       width: 81px;
       aspect-ratio: 1/1;
@@ -75,31 +82,258 @@
     }
 
     main>section>div{
+      /* width: 200px;
+       padding: 20px 15px;
+       box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+       background-color: white;*/
+
       position: relative;
       top: 102px;
       bottom: 0;
       left: 86px;
       right: 0;
       width: 300px;
-      padding: 20px; /* Adjusted padding */
+      padding: 100px 69px;
       box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
       background-color: white;
-      display: flex; /* Added flex display */
-      justify-content: space-between; /* Added to space items evenly */
-      gap: 20px; /* Added to create gap between divs */
-    }
+      justify-content: space-between;
+      margin: 20px 0px;
 
+
+
+    }
     main>section>div>div{
-      width: 80px; /* Adjusted width of inner divs */
-      height: 80px; /* Adjusted height of inner divs */
-      background-color: lightblue; /* Added background color for visualization */
+      position: absolute;
+
+      top: 37px;
+      left: 29px;
+      margin: auto;
+      font-size: 73px;
     }
 
-    /* Adjusted font size and added margin for labels */
-    #lbl1, #lbl2 {
-      font-size: 18px;
-      margin-top: 10px;
+    #lbl1{
+      font-size: 37px;
+      top: 45px;
+      left: 150px;
+      right: 0;
+      bottom: 0;
+      position: absolute;
     }
+
+    #lbl2{
+      font-size: 42px;
+      top: 125px;
+      left: 75px;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      color: red;
+    }
+
+
+    .lbl3{
+      font-size: 37px;
+      top: 45px;
+      left: 220px;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+    }
+
+    .lbl4{
+      font-size: 42px;
+      top: 125px;
+      left: 148px;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      color: red;
+    }
+
+    main>section>i{
+      position: relative;
+      top: 20px;
+
+      left: 1050px;
+      margin: auto;
+    }
+
+    main>section>label{
+      position: relative;
+      top: 20px;
+
+      left: 1054px;
+      margin: auto;
+    }
+
+    /*.rec{
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+      background-color: white;
+      position: relative;
+      width: 443px;
+      height: 251px;
+      top: -558px;
+      left: 608px;
+      border-radius: 20px;
+      border: 2px solid blue;
+      transition: all 0.3s ease;
+
+    }*/
+
+    .rec {
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+      background-color: white;
+      position: relative;
+      width: 443px;
+      height: 251px;
+      top: -558px;
+      left: 608px;
+      border-radius: 20px;
+      border: 2px solid blue;
+      transition: all 0.3s ease;
+    }
+
+    .rec:hover {
+      width: 400px; /* Adjust width on hover */
+      height: 300px; /* Adjust height on hover */
+      top: -600px; /* Adjust top position on hover */
+      left: 600px; /* Adjust left position on hover */
+    }
+
+
+
+    footer>div>section>div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 86%;
+      height: 100%;
+      font-size: 15px;
+    /*  z-index: 1000;*/
+
+    }
+
+    .rec table {
+      border-spacing: 10px;
+      max-width: 100%;
+    }
+
+
+    .rec table td,
+    .rec table th {
+      padding: 10px;
+    }
+
+    .btn-primary{
+      top: 183px;
+      left: 339px;
+      position: absolute;
+      background-color: #36F506;
+      font-size: 20px;
+      border-color: #36F506;
+    }
+
+    footer>div>div>h3{
+      font-size: 25px;
+      position: absolute;
+      top: 138px;
+      left: 760px;
+      right: 0;
+      color: #0E2BC5;
+    }
+
+    #rec2{
+      padding: 142px 4px;
+    }
+
+    #topCustomer{
+      top: 525px;
+      left: 760px;
+
+    }
+
+  /*  .placeOrder{
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      background-color: white;
+      position: relative;
+      width: 312px;
+      height: 251px;
+      top: -1190px;
+      left: 1111px;
+      border-radius: 20px;
+      z-index: 1000;
+
+
+    }
+*/
+
+    .placeOrder {
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      background-color: white;
+      position: relative;
+      width: 312px;
+      height: 251px;
+      top: -1190px;
+      left: 1111px;
+      border-radius: 20px;
+      transition: all 0.3s ease; /* Add smooth transition effect */
+    }
+
+    .rec:hover  {
+      width: 400px; /* Increase width */
+      height: 300px; /* Increase height */
+      top: -1300px; /* Adjust top position */
+      left: 1100px; /* Adjust left position */
+      z-index: 1001; /* Ensure it's above the .rec element */
+    }
+
+    .fa-cart-plus {
+      font-size: 117px;
+    }
+
+    .btn-order {
+      top: 183px;
+      left: 101px;
+      background-color: #E72929;
+      color: white;
+      position: absolute;
+      font-size: 35px;
+      border: 3px solid #E72929;
+      border-radius: 20px;
+    }
+    /*.placeOrder {
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      position: relative;
+      bottom: 0;
+      background-color: white;
+      padding: 10px;
+      z-index: 1000; !* Ensure it stays above other content *!
+      display: none; !* Initially hide the place order section *!
+    }*/
+
+
+    .fa-sharp{
+      font-size: 117px;
+      top: 39px;
+      left: 88px;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+
+    }
+
+    .btn-order{
+      top: 183px;
+      left: 101px;
+      background-color: #E72929;
+      color: white;
+      position: absolute;
+      font-size: 35px;
+      border: 3px solid #E72929 ;
+      border-radius: 20px;
+
+    }
+
   </style>
 </head>
 <body>
@@ -123,15 +357,134 @@
   <section>
     <img src="assets/images/userPic.png" alt="">
     <label id="userName">Jack Eathen</label>
+    <i class="fa-solid fa-users"></i>
+    <label>add customer</label>
+
     <div>
-      <div></div>
-      <label id="lbl1">Rs 150 000</label>
-      <label id="lbl2">Earned this month</label>
+      <div><i class="fa-solid fa-sack-dollar"></i></div>
+      <div id="lbl1">
+        <label>Rs 150 000</label>
+      </div>
+
+      <div id="lbl2">
+        <label>Earned this month</label>
+      </div>
+
     </div>
-    <div></div>
-    <div></div>
+    <div>
+      <div><i class="fa-solid fa-users"></i></div>
+      <div class="lbl3">
+        <label>21</label>
+      </div>
+
+      <div class="lbl4">
+        <label>Customer</label>
+      </div>
+    </div>
+    <div>
+      <div><i class="fa-solid fa-cart-shopping"></i></div>
+      <div class="lbl3">
+        <label>21</label>
+      </div>
+
+      <div class="lbl4">
+        <label>Orders</label>
+      </div>
+    </div>
+
   </section>
+
+
+
+
 </main>
+
+<footer>
+  <div>
+    <div>
+      <h3 >New Orders</h3>
+    </div>
+
+    <section class="rec">
+
+      <div>
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">Order ID</th>
+            <th scope="col">Customer</th>
+            <th scope="col">Total</th>
+            <th scope="col">Paid</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">O001</th>
+            <td>Jesther</td>
+            <td>23 000/=</td>
+            <td>Yes</td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+
+      <button type="button" class="btn btn-primary btn-lg">View</button>
+
+
+    </section>
+  </div>
+
+  <div id="rec2">
+    <div>
+      <h3 id="topCustomer">Top Customer</h3>
+    </div>
+
+    <section class="rec" >
+
+      <div>
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Nic</th>
+
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">01</th>
+            <td>Cater Greason</td>
+            <td>199223684506</td>
+
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+
+      <button type="button" class="btn btn-primary btn-lg">View</button>
+
+
+    </section>
+
+  </div>
+<section>
+  <div class="placeOrder" id="place">
+    <div>
+      <div><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
+      <button type="button" class="btn btn-order"><b>+ Order</b></button>
+    </div>
+  </div>
+</section>
+
+
+</footer>
+
+
 
 </body>
 </html>

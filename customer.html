@@ -56,6 +56,44 @@
           right: 0;
           font-size: 10px;
       }
+      .fa-sharp{
+          position: relative;
+          top: 0;
+          right: 1320px;
+          font-size: 20px;
+      }
+
+      header>div>label{
+          position: relative;
+          top: -20px;
+          right: 1289px;
+          font-size: 20px;
+      }
+
+      main>section>div{
+          position: relative;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+         background-color: white;
+          top: 132px;
+          left: 67px;
+          width: 331px;
+          height: 169px;
+      }
+
+      #totalCustomer{
+          color: #ff253a;
+          top: 20px;
+          left: 30px;
+          font-size: 41px;
+          position: absolute;
+      }
+      #customerCount{
+
+          top: 69px;
+          left: 126px;
+          font-size: 67px;
+          position: absolute;
+      }
   </style>
 </head>
 <body>
@@ -73,6 +111,20 @@
             <li>Orders</li>
         </ul>
     </nav>
+
+    <div>
+        <div><i class="fa-sharp fa-solid fa-users"></i></div>
+        <label>Customer</label>
+    </div>
 </header>
+
+<main>
+    <section>
+        <div>
+            <div id="totalCustomer">Total Customers</div>
+            <div id="customerCount">21</div>
+        </div>
+    </section>
+</main>
 </body>
 </html>
