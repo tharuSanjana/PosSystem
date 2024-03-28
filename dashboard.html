@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/normalize.css">
+
     <link rel="stylesheet" href="assets/fontawesome-free-6.5.1-web/css/all.min.css">
 
     <style>
@@ -19,6 +21,7 @@
             top: 10px;
             left: calc(100vw - 62vw);
             border-radius: 20px;
+            z-index: 1000; /* Ensure the header stays above other elements */
         }
 
         header>label{
@@ -56,6 +59,10 @@
             right: 0;
             font-size: 10px;
         }
+
+      /*  main {
+            padding-top: 100px; !* Adjust according to your header height *!
+        }*/
 
         main>section>img{
             width: 81px;
@@ -229,12 +236,34 @@
             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
             background-color: white;
             position: relative;
-            width: 443px;
+            width: 312px;
             height: 251px;
-            top: -558px;
-            left: 608px;
+            top: -1190px;
+            left: 1111px;
             border-radius: 20px;
+            z-index: 1000; /* Ensure the place order button stays above other elements */
 
+        }
+
+        .fa-sharp{
+            font-size: 117px;
+            top: 39px;
+            left: 88px;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+
+        }
+
+        .btn-order{
+            top: 183px;
+            left: 101px;
+            background-color: #E72929;
+            color: white;
+            position: absolute;
+            font-size: 35px;
+            border: 3px solid #E72929 ;
+            border-radius: 20px;
 
         }
     </style>
@@ -296,6 +325,9 @@
         </div>
 
     </section>
+
+
+
 
 </main>
 
@@ -376,7 +408,11 @@
 </footer>
 
 <div class="placeOrder">
-    <div></div>
+    <div>
+        <div><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
+        <button type="button" class="btn btn-order"><b>+ Order</b></button>
+
+    </div>
 </div>
 
 </body>
