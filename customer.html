@@ -19,6 +19,7 @@
           top: 10px;
           left: calc(100vw - 62vw);
           border-radius: 20px;
+          z-index: 1000;
       }
 
       header>label{
@@ -56,6 +57,8 @@
           right: 0;
           font-size: 10px;
       }
+
+
       .fa-sharp{
           position: relative;
           top: 0;
@@ -78,6 +81,8 @@
           left: 67px;
           width: 331px;
           height: 169px;
+          z-index: 1000;
+
       }
 
       #totalCustomer{
@@ -93,6 +98,78 @@
           left: 126px;
           font-size: 67px;
           position: absolute;
+      }
+
+      .btn-primary{
+          top: -52px;
+          left: 1146px;
+          width: 158px;
+          height: 47px;
+          background-color: #14DA10;
+          position: relative;
+          font-size: 18px;
+          border-color: #14DA10;
+          margin-right: 10px;
+      }
+
+      .btn-secondary{
+          top: -52px;
+          left: 1146px;
+          width: 158px;
+          height: 47px;
+          background-color: #FCC314;
+          position: relative;
+          font-size: 18px;
+          border-color: #FCC314;
+          margin-right: 10px;
+      }
+
+      .table{
+          position: relative;
+          width: 100px;
+          height: 200px;
+          top: 400px;
+          left: 500px;
+          font-size: 20px;
+          z-index: 1000;
+
+      }
+
+      .table th,
+      .table td {
+          padding: 21px;
+      }
+
+      .table th:first-child,th:nth-child(2),th:nth-child(3),th:nth-child(4),th:nth-child(5),th:nth-child(6){
+          background-color: #0B60B0;
+      }
+
+      .table td:nth-child(2),td:nth-child(3),td:nth-child(4),td:nth-child(5),td:nth-child(6){
+          background-color: white;
+      }
+
+      .update{
+          top: -30px;
+          left: 1146px;
+          width: 158px;
+          height: 47px;
+          background-color: #5180F9;
+          position: relative;
+          font-size: 18px;
+          border-color: #5180F9;
+
+      }
+
+      .delete{
+          top: -30px;
+          left: 1158px;
+          width: 158px;
+          height: 47px;
+          background-color: #F61515;
+          position: relative;
+          font-size: 18px;
+          border-color: #F61515;
+
       }
   </style>
 </head>
@@ -124,6 +201,49 @@
             <div id="totalCustomer">Total Customers</div>
             <div id="customerCount">21</div>
         </div>
+
+        <button type="button" class="btn btn-primary"><b>+ Customer</b></button>
+        <button type="button" class="btn btn-secondary"><b>View Customers</b></button>
+
+    <table class="table">
+        <thead>
+        <tr>
+
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">NIC</th>
+            <th scope="col">Address</th>
+            <th scope="col">Tel</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">C001</th>
+            <td>Sanjana</td>
+            <td>200283804705</td>
+            <td>Mathugama</td>
+            <td>076-6123489</td>
+        </tr>
+        <tr>
+            <th scope="row">C002</th>
+            <td>Kushani</td>
+            <td>200585100184</td>
+            <td>Polegoda</td>
+            <td>075-8054761</td>
+        </tr>
+        <tr>
+            <th scope="row">C003</th>
+            <td>Jacob</td>
+            <td>199045372309</td>
+            <td>Kaluthara</td>
+            <td>076-6158213</td>
+        </tr>
+        </tbody>
+    </table>
+
+        <button type="button" class="update"><b>Update</b></button>
+        <button type="button" class="delete"><b>Delete</b></button>
+
     </section>
 </main>
 </body>
