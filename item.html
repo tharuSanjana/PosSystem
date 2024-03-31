@@ -31,6 +31,7 @@
     top: 9px;
     left: 39px;
     position: absolute;
+        animation-name: anim;
         animation-duration: 3s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
@@ -103,6 +104,7 @@
     left: 57px;
     font-size: 41px;
     position: absolute;
+
     }
     #cost{
 
@@ -110,6 +112,8 @@
     left: 64px;
     font-size: 50px;
     position: absolute;
+        animation-name: enlargeText;
+        animation-duration: 4s;
     }
 
     .btn-primary{
@@ -201,6 +205,15 @@
 
     }
 
+    @keyframes enlargeText {
+        0% {
+            font-size: 55px;
+        }
+        100% {
+            font-size: 41px;
+        }
+    }
+
     </style>
 </head>
 <body>
@@ -219,7 +232,7 @@
         </ul>
     </nav>
 
-    <div id="customer">
+    <div>
         <div><i class="fa-sharp fa-solid fa-users"></i></div>
         <label>Items</label>
     </div>
@@ -250,32 +263,32 @@
 
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
-                <th scope="col">NIC</th>
-                <th scope="col">Address</th>
-                <th scope="col">Tel</th>
+                <th scope="col">QTY</th>
+                <th scope="col">Price(Rs)</th>
+
             </tr>
             </thead>
             <tbody>
             <tr>
-                <th scope="row">C001</th>
-                <td>Sanjana</td>
-                <td>200283804705</td>
-                <td>Mathugama</td>
-                <td>076-6123489</td>
+                <th scope="row">I001</th>
+                <td>Baasmathi</td>
+                <td>400kg</td>
+                <td>120</td>
+
             </tr>
             <tr>
-                <th scope="row">C002</th>
-                <td>Kushani</td>
-                <td>200585100184</td>
-                <td>Polegoda</td>
-                <td>075-8054761</td>
+                <th scope="row">I002</th>
+                <td>Tipi tip</td>
+                <td>100</td>
+                <td>100</td>
+
             </tr>
             <tr>
-                <th scope="row">C003</th>
-                <td>Jacob</td>
-                <td>199045372309</td>
-                <td>Kaluthara</td>
-                <td>076-6158213</td>
+                <th scope="row">I003</th>
+                <td>Red bull</td>
+                <td>500</td>
+                <td>200</td>
+
             </tr>
             </tbody>
         </table>
