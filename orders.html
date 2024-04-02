@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Orders</title>
 
- <!-- <link rel="stylesheet" href="assets/normalize.css">-->
+ <link rel="stylesheet" href="assets/normalize.css">
 
   <link rel="stylesheet" href="assets/fontawesome-free-6.5.1-web/css/all.min.css">
 
@@ -97,7 +97,7 @@
       position: relative;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
       background-color: white;
-      top: 132px;
+      top: 395px;
       left: 67px;
       width: 331px;
       height: 169px;
@@ -163,11 +163,12 @@
       position: relative;
       top: 0;
       left: 617px;
-      height: 1074px;
+      height: 969px;
       width: 688px;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-      background-color:  #0B60B0;
-
+      background-color:  white;
+      border-radius: 30px;
+      border: 5px solid #36F506;
     }
 
     /*.select::after {*/
@@ -183,7 +184,7 @@
 
     #selectCustomer{
       font-size: 30px;
-      color: white;
+      color: darkblue;
       position: absolute;
       top: 25px;
       left: 0;
@@ -204,9 +205,10 @@
     }
 
     main>section>div>div>form>fieldset{
-      border: 3px solid white;
+      border: 3px solid #ADE1F8;
       position: absolute;
       left: 150px;
+      border-radius: 30px;
 
     }
 
@@ -216,7 +218,7 @@
 
     #selectItems{
       font-size: 30px;
-      color: white;
+      color: darkblue;
       position: absolute;
       top: 398px;
       left: -11px;
@@ -235,7 +237,259 @@
       right: 20px;
     }
 
+    #placeOrder{
+      font-size: 30px;
+      color: darkblue;
+      position: absolute;
+      top: 724px;
+      left: -55px;
+      bottom: 0;
+      right: 0;
+      text-align: center;
+    }
 
+    #order{
+      font-size: 20px;
+      position: absolute;
+      top: 798px;
+      left: 20px;
+      bottom: 0;
+      right: 20px;
+    }
+
+    .btn-primary{
+      background-color: red;
+      color: white;
+      position: relative;
+      top: 41px;
+      left: 1175px;
+      font-size: 30px;
+      border: 2px solid red;
+    }
+
+    .table{
+      position: relative;
+      width: 100px;
+      height: 200px;
+      top: 229px;
+      left: 330px;
+      font-size: 20px;
+      z-index: 1000;
+
+    }
+
+    .table th,
+    .table td {
+      padding: 21px;
+    }
+
+    .table th:first-child,th:nth-child(2),th:nth-child(3),th:nth-child(4),th:nth-child(5),th:nth-child(6),th:nth-child(7){
+      background-color: #0B60B0;
+    }
+
+    .table td:nth-child(2),td:nth-child(3),td:nth-child(4),td:nth-child(5),td:nth-child(6),td:nth-child(7){
+      background-color: white;
+    }
+
+    .btn-view{
+      background-color: #FCC314;
+      color: white;
+      position: relative;
+      top: 201px;
+      left: 551px;
+      font-size: 30px;
+      border: 2px solid #FCC314;
+    }
+
+    .btn-update{
+      background-color: #5180F9;
+      color: white;
+      position: relative;
+      top: 162px;
+      left: 784px;
+      font-size: 30px;
+      border: 2px solid #5180F9;
+    }
+
+    .btn-delete{
+      background-color: #F61515;
+      color: white;
+      position: relative;
+      top: 123px;
+      left: 953px;
+      font-size: 30px;
+      border: 2px solid #F61515;
+    }
+
+   /* footer>div{
+      background-color: white;
+      position: relative;
+      width: 100%;
+      height: 45%;
+    }*/
+
+    footer > div {
+      background-color: white;
+      position: absolute;
+      bottom: -1572px;
+      width: 100%;
+      height: 45%;
+      z-index: 1000;
+    }
+
+    #trending{
+      text-align: center;
+      font-size: 30px;
+      position: absolute;
+      top: 41px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .list1{
+      position: absolute;
+      top: 104px;
+      left: 189px;
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .list1>label{
+      margin-bottom: 10px;
+
+    }
+
+    .list2{
+      position: absolute;
+      top: 104px;
+      left: 432px;
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .list2>label{
+      margin-bottom: 10px;
+
+    }
+
+    .list3{
+      position: absolute;
+      top: 104px;
+      left: 692px;
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .list3>label{
+      margin-bottom: 10px;
+
+    }
+
+    .list4{
+      position: absolute;
+      top: 104px;
+      left: 927px;
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .list4>label{
+      margin-bottom: 10px;
+
+    }
+
+    #blue{
+      background-color: #5180F9;
+      position: absolute;
+      bottom: -1572px;
+      width: 100%;
+      height: 45%;
+      z-index: 1000;
+      top: 2308px;
+
+    }
+
+    #blue>h3{
+      color: white;
+      font-size: 40px;
+      position: absolute;
+      top: 88px;
+      left: 0;
+    }
+
+    #customerCare{
+      color: black;
+      font-size: 20px;
+      position: relative;
+      top: 42px;
+      left: 428px;
+      display: flex;
+
+    }
+
+    #contactUs{
+      color: black;
+      font-size: 19px;
+      position: relative;
+      top: 22px;
+      left: 654px;
+
+    }
+
+    #stayUpdates{
+      color: black;
+      font-size: 19px;
+      position: relative;
+      top: 22px;
+      left: 782px;
+    }
+
+   /* #customerCareList>label{
+      position: absolute;
+      top: 200px;
+      left: 927px;
+
+    }*/
+
+    #customerCareList {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: 67px;
+      left: 446px;
+    }
+
+    #customerCareList>label {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    #contactUsList{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: -48px;
+      left: 652px;
+    }
+
+    #contactUsList>label {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    #stayUpdatesImages>img{
+      position: relative;
+      border-radius: 100%;
+      width: 50px;
+      aspect-ratio: 1/1;
+      top: -158px;
+      left: 40px;
+    }
   </style>
 </head>
 <body>
@@ -270,7 +524,7 @@
 
     <div class="select">
       <div>
-        <label id="selectCustomer">Select Customer</label>
+        <label id="selectCustomer"><b>Select Customer</b></label>
         <form>
           <fieldset disabled>
 
@@ -303,7 +557,7 @@
       </div>
 
       <div>
-        <label id="selectItems">Select Items</label>
+        <label id="selectItems"><b>Select Items</b></label>
         <form id="items">
           <fieldset disabled>
 
@@ -332,10 +586,155 @@
 
       </div>
 
+      <div>
+        <label id="placeOrder"><b>Order</b></label>
+        <form id="order">
+          <fieldset disabled>
+
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">Order ID</label>
+              <input type="text" id="inputOrderId" class="form-control" >
+            </div>
+            <div class="mb-3">
+              <label for="inputName" class="form-label">Total</label>
+              <input type="text" id="inputTotal" class="form-control" >
+            </div>
+
+          </fieldset>
+        </form>
+
+      </div>
+
     </div>
   </section>
+
+  <div>
+    <button  class="btn btn-primary"><b>Place Order</b></button>
+  </div>
+
+  <div>
+    <button  class="btn btn-view"><b>View Orders</b></button>
+  </div>
+
+  <div>
+    <button  class="btn btn-update"><b>Update</b></button>
+  </div>
+
+  <div>
+    <button class="btn btn-delete"><b>Delete</b></button>
+  </div>
+
+  <table class="table">
+    <thead>
+    <tr>
+
+      <th scope="col">Order ID</th>
+      <th scope="col">Customer ID</th>
+      <th scope="col">Customer Name</th>
+      <th scope="col">Item ID</th>
+      <th scope="col">Item Name</th>
+      <th scope="col">Qty</th>
+      <th scope="col">Total(Rs)</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row">O001</th>
+      <td>C001</td>
+      <td>Amal</td>
+      <td>I001</td>
+      <td>Baasmathi</td>
+      <td>20kg</td>
+      <td>30 000/=</td>
+
+    </tr>
+    <tr>
+      <th scope="row">O002</th>
+      <td>C001</td>
+      <td>Amal</td>
+      <td>I001</td>
+      <td>Baasmathi</td>
+      <td>20kg</td>
+      <td>30 000/=</td>
+
+    </tr>
+    <tr>
+      <th scope="row">O003</th>
+      <td>C001</td>
+      <td>Amal</td>
+      <td>I001</td>
+      <td>Baasmathi</td>
+      <td>20kg</td>
+      <td>30 000/=</td>
+
+    </tr>
+    </tbody>
+  </table>
+
 </main>
 
+
+<footer>
+  <div>
+    <label id="trending"><b>What's Trending</b></label>
+
+    <div class="list1">
+      <label>Almonds</label>
+      <label>Coconut Oil</label>
+      <label>Goat Milk</label>
+      <label>Oats</label>
+      <label>Tipi Tip</label>
+    </div>
+
+    <div class="list2">
+      <label>Basmati Rice</label>
+      <label>Olive Oil</label>
+      <label>Cream Cheese</label>
+      <label>Ramen</label>
+      <label>Peanut Butter</label>
+    </div>
+
+    <div class="list3">
+      <label>Cheetos</label>
+      <label>Doritos</label>
+      <label>Red Bull</label>
+      <label>Yoghurt</label>
+      <label>Sun Crush</label>
+    </div>
+
+    <div class="list4">
+      <label>Nescafe</label>
+      <label>Pop Tarts</label>
+      <label>Revello Chocolate</label>
+      <label>Popcorn</label>
+      <label>Sunquick</label>
+    </div>
+  </div>
+
+  <div id="blue">
+    <h3>STRONG POINT</h3>
+    <label id="customerCare"><b>Customer Care</b></label>
+    <label id="contactUs"><b>Contact Us</b></label>
+    <label id="stayUpdates"><b>Stay Updates</b></label>
+
+    <div id="customerCareList">
+      <label>My Account</label>
+      <label>About Us</label>
+      <label>Privancy Policy</label>
+    </div>
+
+    <div id="contactUsList">
+      <label>+94 74 034 4429</label>
+      <label>Galle Road, Colombo 04</label>
+      <label>Privancy Policy</label>
+    </div>
+
+    <div id="stayUpdatesImages">
+      <img src="assets/images/watsapp.png" alt="watsp">
+    </div>
+  </div>
+</footer>
 
 
 
