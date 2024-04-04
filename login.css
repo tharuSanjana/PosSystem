@@ -45,31 +45,8 @@ form{
     margin-bottom: 50px;
 }
 
-@keyframes anim {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
 
-    }
-    to {
-        opacity: 3;
-        transform: translateY(0);
 
-    }
-}
-
-@keyframes animation {
-    from {
-        width: 163px;
-        height: 30px;
-
-    }
-    to {
-        width: 170px;
-        height: 40px;
-
-    }
-}
 .btn-primary:hover{
     animation-name: animation;
     animation-duration: 1s;
@@ -141,45 +118,95 @@ label.form-label {
 
 }
 
-/*
-@media screen and (max-width: 768px) {
-    section > div > #welcome {
-        font-size: 40px; !* Adjust font size for smaller screens *!
+@keyframes animation {
+    from {
+        width: 163px;
+        height: 30px;
+
     }
-    section > div > h1 {
-        margin-bottom: 410px; !* Adjust margin for smaller screens *!
-    }
-    .container {
-        width: 80%;
-        height: 80%;
-        border-radius: 14%;
-        background-color: white;
-        position: absolute;
-        top: 10%;
-        left: 10%;
+    to {
+        width: 170px;
+        height: 40px;
+
     }
 }
 
-@media screen and (max-width: 576px) {
-    section > div {
+@keyframes anim {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+
+    }
+    to {
+        opacity: 3;
+        transform: translateY(0);
+
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    section>div>h1{
+        color: #0B60B0;
+        font-size: 48px;
+        position: absolute;
+        margin-bottom: 510px;
+        animation-name:anim ;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+
+    }
+
+    form{
+
+
+        width: 100%;
+        max-width: 400px;
+        height: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
-    section > div > #welcome {
-        font-size: 30px; !* Adjust font size for smaller screens *!
-        margin-top: 20px; !* Adjust margin to position below the container *!
-    }
-    section > div > h1 {
-        margin-bottom: 310px; !* Adjust margin for smaller screens *!
-    }
-    .container {
-        width: 60%;
-        height: auto; !* Set height to auto to adjust based on content *!
+
+    .container{
+        width: 380px;
+        height: 668px;
         border-radius: 14%;
         background-color: white;
         position: absolute;
-        top: 10%;
-        left: 5%;
+        top: 34px;
+        left: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-}*/
+
+    .mb-3 {
+        margin-bottom: 50px;
+    }
+
+}
+
+#welcome{
+    font-size: 65px;
+    position: absolute;
+    top: 50%;
+    left: 71%;
+    color: white;
+    animation-name: welcome;
+    animation-duration: 4s;
+    background: linear-gradient(45deg, #0B60B0, #ffffff, #0B60B0);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+
+}
+
+
