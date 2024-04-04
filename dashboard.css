@@ -48,7 +48,12 @@ header>nav {
 header>nav>ul {
     padding: 0;
     margin: 0;
+
+
 }
+
+
+
 header>div{
     position: absolute;
     top: 22px;
