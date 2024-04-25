@@ -361,6 +361,159 @@ footer>div>div>h3{
         position: relative;
         left: -45px;
     }
+    main>section>div{
+
+        position: relative;
+        top: 102px;
+        bottom: 0;
+        left: 38px;
+        right: 0;
+        width: 213px;
+        padding: 100px 69px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        background-color: white;
+        justify-content: space-between;
+        margin: 20px 0px;
+
+
+    }
+
+    #lbl1{
+        font-size: 40px;
+        top: 72px;
+        left: 134px;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+    }
+
+    #lbl2{
+        font-size: 38px;
+        top: 140px;
+        left: 31px;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        color: red;
+    }
+
+    .lbl3{
+        font-size: 40px;
+        top: 45px;
+        left: 187px;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+    }
+
+    .lbl4{
+        font-size: 38px;
+        top: 136px;
+        left: 58px;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        color: red;
+    }
+
+    footer>div>section>div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 94%;
+        height: 100%;
+        font-size: 12px;
+
+
+    }
+
+    .rec{
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        background-color: white;
+        position: relative;
+        width: 290px;
+        height: 232px;
+        top: 197px;
+        left: 71px;
+        border-radius: 20px;
+        border: 2px solid blue;
+
+
+    }
+
+    .btn-primary{
+        top: 183px;
+        left: 176px;
+        position: absolute;
+        background-color: #36F506;
+        font-size: 20px;
+        border-color: #36F506;
+    }
+
+    footer>div>section>div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 94%;
+        height: 100%;
+        font-size: 12px;
+
+
+    }
+
+    footer>div>div>h3{
+        font-size: 25px;
+        position: absolute;
+        top: 848px;
+        left: 160px;
+        right: 0;
+        color: #0E2BC5;
+    }
+
+    #topCustomer{
+        top: 1228px;
+        left: 142px;
+
+    }
+
+    .placeOrder{
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        background-color: white;
+        position: relative;
+        width: 268px;
+        height: 204px;
+        top: 94px;
+        left: 86px;
+        border-radius: 20px;
+
+
+    }
+
+    .fa-sharp{
+        font-size: 89px;
+        top: 39px;
+        left: 76px;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+
+    }
+
+    .btn-order{
+        top: 147px;
+        left: 88px;
+        background-color: #E72929;
+        color: white;
+        position: absolute;
+        font-size: 26px;
+        border: 3px solid #E72929 ;
+        border-radius: 20px;
+
+    }
+
+
+
+
 }
 @media all and (min-width: 461px ) and (max-width: 768px){
     header {
