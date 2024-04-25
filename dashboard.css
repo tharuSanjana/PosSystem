@@ -301,7 +301,66 @@ footer>div>div>h3{
 
 }
 @media all and (min-width: 377px ) and (max-width: 425px){
+    header > #menu {
 
+        position: absolute;
+        top: 34px;
+        left: 76%;
+        transform: translateX(-50%);
+    }
+
+    .menu-btn {
+        display: block;
+        width: 40px;
+        height: 33px;
+        position: absolute;
+        top: 50%;
+        left: 26px;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .menu-btn span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        margin-bottom: 6px;
+    }
+
+    header>label{
+
+        font-size: 19px;
+        color: blue;
+        top: 17px;
+        left: 22px;
+        position: absolute;
+        animation-name: anim;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        background: linear-gradient(45deg, blue, #ffffff, #201658);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    main>section>img{
+        width: 44px;
+        aspect-ratio: 1/1;
+        border-radius: 100%;
+        top: 10px;
+        bottom: 0;
+        left: 4px;
+        position: relative;
+    }
+
+    #userName{
+        font-size: 13px;
+        top: 29px;
+        position: relative;
+        left: -45px;
+    }
 }
 @media all and (min-width: 461px ) and (max-width: 768px){
     header {
