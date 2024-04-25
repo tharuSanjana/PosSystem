@@ -231,6 +231,478 @@ main>section>div{
     }
 }
 
+@media all and (min-width: 377px ) and (max-width: 425px) {
+    header > #menu {
+
+        position: absolute;
+        top: 34px;
+        left: 76%;
+        transform: translateX(-50%);
+    }
+
+    .menu-btn {
+        display: block;
+        width: 40px;
+        height: 33px;
+        position: absolute;
+        top: 50%;
+        left: 26px;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .menu-btn span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        margin-bottom: 6px;
+    }
+
+    header > label {
+
+        font-size: 19px;
+        color: blue;
+        top: 17px;
+        left: 22px;
+        position: absolute;
+        animation-name: anim;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        background: linear-gradient(45deg, blue, #ffffff, #201658);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    main > section > div {
+        position: relative;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-color: white;
+        top: 132px;
+        left: 28px;
+        width: 137px;
+        height: 124px;
+        z-index: 999;
+        padding: 20px;
+
+    }
+}
+@media all and (min-width: 461px ) and (max-width: 768px){
+    header {
+
+        padding: 10px 20px;
+
+        position: fixed;
+        width: 83vw;
+        height: 42px;
+        background-color: white;
+        right: 0;
+        top: 1px;
+        left: calc(100vw - 88vw);
+        border-radius: 20px;
+        z-index: 1000;
+    }
+
+    header>label{
+
+        font-size: 21px;
+        color: blue;
+        top: 15px;
+        left: 39px;
+        position: absolute;
+        animation-name: anim;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        background: linear-gradient(45deg, blue, #ffffff, #201658);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    header nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        transform: translateX(90%);
+        top: 14px;
+    }
+
+    header nav ul a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 22px;
+        font-size: 17px;
+    }
+
+    .btn-primary{
+        top: -52px;
+        left: 502px;
+        width: 120px;
+        height: 43px;
+        background-color: #14DA10;
+        position: relative;
+        font-size: 18px;
+        border-color: #14DA10;
+        margin-right: 10px;
+    }
+
+    .btn-secondary{
+        top: -52px;
+        left: 499px;
+        width: 120px;
+        height: 43px;
+        background-color: #FCC314;
+        position: relative;
+        font-size: 18px;
+        border-color: #FCC314;
+        margin-right: 10px;
+    }
+
+    .update{
+        top: -30px;
+        left: 502px;
+        width: 120px;
+        height: 43px;
+        background-color: #5180F9;
+        position: relative;
+        font-size: 18px;
+        border-color: #5180F9;
+
+    }
+
+    .delete{
+        top: -30px;
+        left: 510px;
+        width: 120px;
+        height: 43px;
+        background-color: #F61515;
+        position: relative;
+        font-size: 18px;
+        border-color: #F61515;
+
+    }
+
+    .table{
+        position: relative;
+        width: 100px;
+        height: 200px;
+        top: 400px;
+
+        left: 172px;
+        font-size: 20px;
+        z-index: 1000;
+
+    }
+}
+@media all and (min-width: 835px ) and (max-width: 1024px){
+    header {
+
+        padding: 10px 20px;
+
+        position: fixed;
+        width: 84vw;
+        height: 42px;
+        background-color: white;
+        right: 0;
+        top: 1px;
+        left: calc(100vw - 88vw);
+        border-radius: 20px;
+        z-index: 1000;
+    }
+
+    header>label{
+
+        font-size: 27px;
+        color: blue;
+        top: 9px;
+        left: 39px;
+        position: absolute;
+        animation-name: anim;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        background: linear-gradient(45deg, blue, #ffffff, #201658);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    header nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        transform: translateX(149%);
+        top: 14px;
+    }
+
+    header nav ul a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 9px;
+        font-size: 20px;
+    }
+
+    .btn-primary{
+        top: -52px;
+        left: 759px;
+        width: 120px;
+        height: 43px;
+        background-color: #14DA10;
+        position: relative;
+        font-size: 18px;
+        border-color: #14DA10;
+        margin-right: 10px;
+    }
+
+    .btn-secondary{
+        top: -53px;
+        left: 759px;
+        width: 120px;
+        height: 43px;
+        background-color: #FCC314;
+        position: relative;
+        font-size: 18px;
+        border-color: #FCC314;
+        margin-right: 10px;
+    }
+
+    .update{
+        top: -30px;
+        left: 759px;
+        width: 120px;
+        height: 43px;
+        background-color: #5180F9;
+        position: relative;
+        font-size: 18px;
+        border-color: #5180F9;
+
+    }
+
+    .delete{
+        top: -30px;
+        left: 767px;
+        width: 120px;
+        height: 43px;
+        background-color: #F61515;
+        position: relative;
+        font-size: 18px;
+        border-color: #F61515;
+
+    }
+
+    .table{
+        position: relative;
+        width: 100px;
+        height: 200px;
+        top: 400px;
+
+        left: 281px;
+        font-size: 20px;
+        z-index: 1000;
+
+    }
+}
+@media all and (min-width: 1025px ) and (max-width: 1440px) {
+
+    header {
+
+        padding: 10px 20px;
+
+        position: fixed;
+        width: 84vw;
+        height: 42px;
+        background-color: white;
+        right: 0;
+        top: 1px;
+        left: calc(100vw - 88vw);
+        border-radius: 20px;
+        z-index: 1000;
+    }
+
+    header>label{
+
+        font-size: 27px;
+        color: blue;
+        top: 9px;
+        left: 39px;
+        position: absolute;
+        animation-name: anim;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        background: linear-gradient(45deg, blue, #ffffff, #201658);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    header nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        transform: translateX(149%);
+        top: 14px;
+    }
+
+    header nav ul a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 9px;
+        font-size: 20px;
+    }
+    .btn-primary{
+        top: -52px;
+        left: 759px;
+        width: 120px;
+        height: 43px;
+        background-color: #14DA10;
+        position: relative;
+        font-size: 18px;
+        border-color: #14DA10;
+        margin-right: 10px;
+    }
+
+    .btn-secondary{
+        top: -53px;
+        left: 767px;
+        width: 120px;
+        height: 43px;
+        background-color: #FCC314;
+        position: relative;
+        font-size: 18px;
+        border-color: #FCC314;
+        margin-right: 10px;
+    }
+
+    .update{
+        top: -30px;
+        left: 759px;
+        width: 120px;
+        height: 43px;
+        background-color: #5180F9;
+        position: relative;
+        font-size: 18px;
+        border-color: #5180F9;
+
+    }
+
+    .delete{
+        top: -30px;
+        left: 767px;
+        width: 120px;
+        height: 43px;
+        background-color: #F61515;
+        position: relative;
+        font-size: 18px;
+        border-color: #F61515;
+
+    }
+
+    .table{
+        position: relative;
+        width: 100px;
+        height: 200px;
+        top: 400px;
+
+        left: 281px;
+        font-size: 20px;
+        z-index: 1000;
+
+    }
+
+}
+@media all and  (min-width:1440px) {
+    header>label{
+
+        font-size: 30px;
+        color: blue;
+        top: 9px;
+        left: 39px;
+        position: absolute;
+        animation-name: anim;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        background: linear-gradient(45deg, blue, #ffffff, #201658);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+
+    header {
+
+        padding: 10px 20px;
+
+        position: fixed;
+        width: 85vw;
+        height: 42px;
+        background-color: white;
+        right: 0;
+        top: 1px;
+        left: calc(100vw - 88vw);
+        border-radius: 20px;
+        z-index: 1000;
+    }
+
+    .btn-primary{
+        top: -52px;
+        left: 1084px;
+        width: 158px;
+        height: 47px;
+        background-color: #14DA10;
+        position: relative;
+        font-size: 18px;
+        border-color: #14DA10;
+        margin-right: 10px;
+    }
+
+    .btn-secondary{
+        top: -52px;
+        left: 1091px;
+        width: 158px;
+        height: 47px;
+        background-color: #FCC314;
+        position: relative;
+        font-size: 18px;
+        border-color: #FCC314;
+        margin-right: 10px;
+    }
+
+    .update{
+        top: -30px;
+        left: 1084px;
+        width: 158px;
+        height: 47px;
+        background-color: #5180F9;
+        position: relative;
+        font-size: 18px;
+        border-color: #5180F9;
+
+    }
+
+    .delete{
+        top: -30px;
+        left: 1100px;
+        width: 158px;
+        height: 47px;
+        background-color: #F61515;
+        position: relative;
+        font-size: 18px;
+        border-color: #F61515;
+
+    }
+}
+/*
 @media all and (max-width: 768px){
 
     header{
@@ -419,4 +891,4 @@ main>section>div{
         border-color: #F61515;
 
     }
-}
+}*/
