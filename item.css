@@ -1,13 +1,14 @@
 body{
     background-color: #ADE1F8;
-
+    overflow-x: hidden;
 }
+
 
 
 header>label{
     font-size: 30px;
     color: #4A579B;
-    top: 9px;
+    top: -6px;
     left: 39px;
     position: absolute;
     animation-name: anim;
@@ -18,14 +19,14 @@ header>label{
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
+
 header {
 
     padding: 10px 20px;
 
     position: fixed;
-    width: 84vw;
+    width: 87vw;
     height: 42px;
     background-color: white;
     right: 0;
@@ -61,7 +62,7 @@ header nav ul {
     margin: 0;
     position: absolute;
     transform: translateX(167%);
-    top: 14px;
+    top: 3px;
 }
 
 header nav ul a {
@@ -101,7 +102,7 @@ header>div>label{
     font-size: 20px;
 }
 
-main>section>div{
+main>section>#totalRec{
     position: relative;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     background-color: white;
@@ -132,36 +133,15 @@ main>section>div{
     animation-duration: 4s;
 }
 
-.btn-primary{
-    top: -52px;
-    left: 1146px;
-    width: 158px;
-    height: 47px;
-    background-color: #14DA10;
-    position: relative;
-    font-size: 18px;
-    border-color: #14DA10;
-    margin-right: 10px;
-}
 
-.btn-secondary{
-    top: -52px;
-    left: 1146px;
-    width: 158px;
-    height: 47px;
-    background-color: #FCC314;
-    position: relative;
-    font-size: 18px;
-    border-color: #FCC314;
-    margin-right: 10px;
-}
+
+
 
 .table{
     position: relative;
     width: 100px;
     height: 200px;
-    top: 400px;
-
+    top: 173px;
     left: 500px;
     font-size: 20px;
     z-index: 1000;
@@ -181,29 +161,7 @@ main>section>div{
     background-color: white;
 }
 
-.update{
-    top: -30px;
-    left: 1146px;
-    width: 158px;
-    height: 47px;
-    background-color: #5180F9;
-    position: relative;
-    font-size: 18px;
-    border-color: #5180F9;
 
-}
-
-.delete{
-    top: -30px;
-    left: 1158px;
-    width: 158px;
-    height: 47px;
-    background-color: #F61515;
-    position: relative;
-    font-size: 18px;
-    border-color: #F61515;
-
-}
 
 #search{
     position: relative;
@@ -211,6 +169,22 @@ main>section>div{
     left: 40px;
 }
 
+#itemForm {
+    position: relative;
+    left: 864px;
+    font-size: 20px;
+    margin-top: -98px;
+}
+
+.form-control {
+    width: 400px;
+}
+
+form>button{
+    position: relative;
+    left: 8px;
+    top: 30px;
+}
 @keyframes anim {
     from{
         background-position: 0% 50%;
@@ -290,437 +264,22 @@ main>section>div{
     }
 }
 @media all and (min-width: 461px ) and (max-width: 768px){
-    header {
-
-        padding: 10px 20px;
-
-        position: fixed;
-        width: 83vw;
-        height: 42px;
-        background-color: white;
-        right: 0;
-        top: 1px;
-        left: calc(100vw - 88vw);
-        border-radius: 20px;
-        z-index: 1000;
-    }
-
-    header>label{
-
-        font-size: 21px;
-        color: blue;
-        top: 15px;
-        left: 39px;
-        position: absolute;
-        animation-name: anim;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        background: linear-gradient(45deg, blue, #ffffff, #201658);
-        background-size: 200% 200%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    header nav ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        position: absolute;
-        transform: translateX(90%);
-        top: 14px;
-    }
-
-    header nav ul a {
-        color: black;
-        text-decoration: none;
-        font-weight: bold;
-        margin-right: 22px;
-        font-size: 17px;
-    }
-
-    .btn-primary{
-        top: -52px;
-        left: 502px;
-        width: 120px;
-        height: 43px;
-        background-color: #14DA10;
-        position: relative;
-        font-size: 18px;
-        border-color: #14DA10;
-        margin-right: 10px;
-    }
-
-    .btn-secondary{
-        top: -52px;
-        left: 499px;
-        width: 120px;
-        height: 43px;
-        background-color: #FCC314;
-        position: relative;
-        font-size: 18px;
-        border-color: #FCC314;
-        margin-right: 10px;
-    }
-
-    .update{
-        top: -30px;
-        left: 502px;
-        width: 120px;
-        height: 43px;
-        background-color: #5180F9;
-        position: relative;
-        font-size: 18px;
-        border-color: #5180F9;
-
-    }
-
-    .delete{
-        top: -30px;
-        left: 510px;
-        width: 120px;
-        height: 43px;
-        background-color: #F61515;
-        position: relative;
-        font-size: 18px;
-        border-color: #F61515;
-
-    }
-
-    .table{
-        position: relative;
-        width: 100px;
-        height: 200px;
-        top: 400px;
-
-        left: 172px;
-        font-size: 20px;
-        z-index: 1000;
-
-    }
-}
-@media all and (min-width: 835px ) and (max-width: 1024px){
-    header {
-
-        padding: 10px 20px;
-
-        position: fixed;
-        width: 84vw;
-        height: 42px;
-        background-color: white;
-        right: 0;
-        top: 1px;
-        left: calc(100vw - 88vw);
-        border-radius: 20px;
-        z-index: 1000;
-    }
-
-    header>label{
-
-        font-size: 27px;
-        color: blue;
-        top: 9px;
-        left: 39px;
-        position: absolute;
-        animation-name: anim;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        background: linear-gradient(45deg, blue, #ffffff, #201658);
-        background-size: 200% 200%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    header nav ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        position: absolute;
-        transform: translateX(149%);
-        top: 14px;
-    }
-
-    header nav ul a {
-        color: black;
-        text-decoration: none;
-        font-weight: bold;
-        margin-right: 9px;
-        font-size: 20px;
-    }
-
-    .btn-primary{
-        top: -52px;
-        left: 759px;
-        width: 120px;
-        height: 43px;
-        background-color: #14DA10;
-        position: relative;
-        font-size: 18px;
-        border-color: #14DA10;
-        margin-right: 10px;
-    }
-
-    .btn-secondary{
-        top: -53px;
-        left: 759px;
-        width: 120px;
-        height: 43px;
-        background-color: #FCC314;
-        position: relative;
-        font-size: 18px;
-        border-color: #FCC314;
-        margin-right: 10px;
-    }
-
-    .update{
-        top: -30px;
-        left: 759px;
-        width: 120px;
-        height: 43px;
-        background-color: #5180F9;
-        position: relative;
-        font-size: 18px;
-        border-color: #5180F9;
-
-    }
-
-    .delete{
-        top: -30px;
-        left: 767px;
-        width: 120px;
-        height: 43px;
-        background-color: #F61515;
-        position: relative;
-        font-size: 18px;
-        border-color: #F61515;
-
-    }
-
-    .table{
-        position: relative;
-        width: 100px;
-        height: 200px;
-        top: 400px;
-
-        left: 281px;
-        font-size: 20px;
-        z-index: 1000;
-
-    }
-}
-@media all and (min-width: 1025px ) and (max-width: 1440px) {
-
-    header {
-
-        padding: 10px 20px;
-
-        position: fixed;
-        width: 84vw;
-        height: 42px;
-        background-color: white;
-        right: 0;
-        top: 1px;
-        left: calc(100vw - 88vw);
-        border-radius: 20px;
-        z-index: 1000;
-    }
-
-    header>label{
-
-        font-size: 27px;
-        color: blue;
-        top: 9px;
-        left: 39px;
-        position: absolute;
-        animation-name: anim;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        background: linear-gradient(45deg, blue, #ffffff, #201658);
-        background-size: 200% 200%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    header nav ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        position: absolute;
-        transform: translateX(149%);
-        top: 14px;
-    }
-
-    header nav ul a {
-        color: black;
-        text-decoration: none;
-        font-weight: bold;
-        margin-right: 9px;
-        font-size: 20px;
-    }
-    .btn-primary{
-        top: -52px;
-        left: 759px;
-        width: 120px;
-        height: 43px;
-        background-color: #14DA10;
-        position: relative;
-        font-size: 18px;
-        border-color: #14DA10;
-        margin-right: 10px;
-    }
-
-    .btn-secondary{
-        top: -53px;
-        left: 767px;
-        width: 120px;
-        height: 43px;
-        background-color: #FCC314;
-        position: relative;
-        font-size: 18px;
-        border-color: #FCC314;
-        margin-right: 10px;
-    }
-
-    .update{
-        top: -30px;
-        left: 759px;
-        width: 120px;
-        height: 43px;
-        background-color: #5180F9;
-        position: relative;
-        font-size: 18px;
-        border-color: #5180F9;
-
-    }
-
-    .delete{
-        top: -30px;
-        left: 767px;
-        width: 120px;
-        height: 43px;
-        background-color: #F61515;
-        position: relative;
-        font-size: 18px;
-        border-color: #F61515;
-
-    }
-
-    .table{
-        position: relative;
-        width: 100px;
-        height: 200px;
-        top: 400px;
-
-        left: 281px;
-        font-size: 20px;
-        z-index: 1000;
-
-    }
-
-}
-@media all and  (min-width:1440px) {
-    header>label{
-
-        font-size: 30px;
-        color: blue;
-        top: 9px;
-        left: 39px;
-        position: absolute;
-        animation-name: anim;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        background: linear-gradient(45deg, blue, #ffffff, #201658);
-        background-size: 200% 200%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-
-    header {
-
-        padding: 10px 20px;
-
-        position: fixed;
-        width: 85vw;
-        height: 42px;
-        background-color: white;
-        right: 0;
-        top: 1px;
-        left: calc(100vw - 88vw);
-        border-radius: 20px;
-        z-index: 1000;
-    }
-
-    .btn-primary{
-        top: -52px;
-        left: 1084px;
-        width: 158px;
-        height: 47px;
-        background-color: #14DA10;
-        position: relative;
-        font-size: 18px;
-        border-color: #14DA10;
-        margin-right: 10px;
-    }
-
-    .btn-secondary{
-        top: -52px;
-        left: 1091px;
-        width: 158px;
-        height: 47px;
-        background-color: #FCC314;
-        position: relative;
-        font-size: 18px;
-        border-color: #FCC314;
-        margin-right: 10px;
-    }
-
-    .update{
-        top: -30px;
-        left: 1084px;
-        width: 158px;
-        height: 47px;
-        background-color: #5180F9;
-        position: relative;
-        font-size: 18px;
-        border-color: #5180F9;
-
-    }
-
-    .delete{
-        top: -30px;
-        left: 1100px;
-        width: 158px;
-        height: 47px;
-        background-color: #F61515;
-        position: relative;
-        font-size: 18px;
-        border-color: #F61515;
-
-    }
-}
-/*
-@media all and (max-width: 768px){
-
     header{
         position: fixed;
-        width: 99vw;
-        height: 40px;
+        width: 88vw;
+        height: 53px;
         background-color: white;
         right: 0;
-        top: 10px;
-        left: calc(100vw - 85vw);
-        border-radius: 30px;
+        top: 0;
+        left: calc(100vw - 88vw);
+        border-radius: 20px;
         z-index: 1000;
     }
 
     header>label{
-        font-size: 20px;
+        font-size: 30px;
         color: #4A579B;
-        top: 9px;
+        top: -4px;
         left: 39px;
         position: absolute;
         animation-name: anim;
@@ -733,44 +292,59 @@ main>section>div{
         -webkit-text-fill-color: transparent;
     }
 
-    header>nav>ul>li{
 
-        display: inline-block;
-        margin-right: 16px;
-        font-size: 16px;
 
-    }
-
-    header>nav {
-        height: fit-content;
+    #logOut{
+        color: black;
+        font-size: 11px;
         position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        left: 240px;
-        margin: auto;
+        left: 395px;
+        margin-right: 10px;
     }
 
-    header>nav>ul {
+
+    header i.fa-arrow-right-from-bracket {
+        color: black;
+        font-size: 20px;
+        margin-right: 10px;
+        cursor: pointer;
+        position: absolute;
+        left: 10px;
+    }
+
+
+    header nav ul {
+        list-style-type: none;
         padding: 0;
         margin: 0;
+        position: absolute;
+        transform: translateX(67%);
+        top: 10px;
+    }
+
+    header nav ul a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 28px;
+        font-size: 17px;
+    }
+
+
+
+    header nav ul a:hover {
+        text-decoration: underline;
     }
 
     header>div{
         position: absolute;
-        top: 15px;
+        top: 22px;
         bottom: 0;
-        left: 530px;
+        left: 790px;
         right: 0;
-        font-size: 8px;
+        font-size: 10px;
     }
 
-    header>div>label{
-        position: relative;
-        top: -31px;
-        right: 1289px;
-        font-size: 20px;
-    }
 
     .fa-sharp{
         position: relative;
@@ -782,37 +356,36 @@ main>section>div{
     header>div>label{
         position: relative;
         top: -20px;
-        right: 1100px;
+        right: 1289px;
         font-size: 20px;
     }
 
-    main>section>div{
+    main>section>#totalRec{
         position: relative;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
         background-color: white;
         top: 132px;
-        left: 37px;
-        width: 296px;
-        height: 137px;
+        left: 36px;
+        width: 331px;
+        height: 169px;
         z-index: 999;
         padding: 20px;
 
     }
 
-
     #totalCost{
         color: #ff253a;
         top: 20px;
-        left: 84px;
-        font-size: 36px;
+        left: 57px;
+        font-size: 41px;
         position: absolute;
 
     }
     #cost{
 
         top: 87px;
-        left: 64px;
-        font-size: 42px;
+        left: 28px;
+        font-size: 50px;
         position: absolute;
         animation-name: enlargeText;
         animation-duration: 4s;
@@ -820,37 +393,15 @@ main>section>div{
 
 
 
-    .btn-primary{
-        top: -52px;
-        left: 404px;
-        width: 140px;
-        height: 37px;
-        background-color: #14DA10;
-        position: relative;
-        font-size: 17px;
-        border-color: #14DA10;
-        margin-right: 10px;
-    }
 
-    .btn-secondary{
-        top: -52px;
-        left: 412px;
-        width: 140px;
-        height: 37px;
-        background-color: #FCC314;
-        position: relative;
-        font-size: 17px;
-        border-color: #FCC314;
-        margin-right: 10px;
-    }
 
     .table{
         position: relative;
         width: 100px;
         height: 200px;
-        top: 267px;
-        left: 169px;
-        font-size: 14px;
+        top: 173px;
+        left: 187px;
+        font-size: 20px;
         z-index: 1000;
 
     }
@@ -868,27 +419,581 @@ main>section>div{
         background-color: white;
     }
 
-    .update{
-        top: -92px;
-        left: 564px;
-        width: 140px;
-        height: 37px;
-        background-color: #5180F9;
+
+
+    #search{
         position: relative;
-        font-size: 18px;
-        border-color: #5180F9;
+        top: 20px;
+        left: 40px;
+    }
+
+    #itemForm {
+        position: relative;
+        left: 435px;
+        font-size: 14px;
+        margin-top: -53px;
+    }
+
+    .form-control {
+        width: 300px;
+    }
+
+    form>button{
+        position: relative;
+        left: -24px;
+        top: 30px;
+    }
+}
+@media all and (min-width: 835px ) and (max-width: 1024px){
+    header>label{
+
+        font-size: 30px;
+        color: blue;
+        top: -4px;
+        left: 39px;
+        position: absolute;
+        animation-name: anim;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        background: linear-gradient(45deg, blue, #ffffff, #201658);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+
+    header {
+
+        padding: 10px 20px;
+
+        position: fixed;
+        width: 88vw;
+        height: 42px;
+        background-color: white;
+        right: 0;
+        top: 1px;
+        left: calc(100vw - 88vw);
+        border-radius: 20px;
+        z-index: 1000;
+    }
+
+
+    #logOut{
+        color: black;
+        font-size: 11px;
+        position: absolute;
+        left: 395px;
+        margin-right: 10px;
+    }
+
+
+    header i.fa-arrow-right-from-bracket {
+        color: black;
+        font-size: 20px;
+        margin-right: 10px;
+        cursor: pointer;
+        position: absolute;
+        left: 10px;
+    }
+
+
+    header nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        transform: translateX(81%);
+        top: 3px;
+    }
+
+    header nav ul a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 38px;
+        font-size: 20px;
+    }
+
+
+
+    header nav ul a:hover {
+        text-decoration: underline;
+    }
+
+    header>div{
+        position: absolute;
+        top: 22px;
+        bottom: 0;
+        left: 790px;
+        right: 0;
+        font-size: 10px;
+    }
+
+
+    .fa-sharp{
+        position: relative;
+        top: 0;
+        right: 1320px;
+        font-size: 20px;
+    }
+
+    header>div>label{
+        position: relative;
+        top: -20px;
+        right: 1289px;
+        font-size: 20px;
+    }
+
+    main>section>#totalRec{
+        position: relative;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-color: white;
+        top: 132px;
+        left: 67px;
+        width: 331px;
+        height: 169px;
+        z-index: 999;
+        padding: 20px;
 
     }
 
-    .delete{
-        top: -92px;
-        left: 253px;
-        width: 140px;
-        height: 37px;
-        background-color: #F61515;
-        position: relative;
-        font-size: 18px;
-        border-color: #F61515;
+    #totalCost{
+        color: #ff253a;
+        top: 20px;
+        left: 57px;
+        font-size: 41px;
+        position: absolute;
 
     }
-}*/
+    #cost{
+
+        top: 87px;
+        left: 28px;
+        font-size: 50px;
+        position: absolute;
+        animation-name: enlargeText;
+        animation-duration: 4s;
+    }
+
+
+
+
+
+    .table{
+        position: relative;
+        width: 100px;
+        height: 200px;
+        top: 173px;
+        left: 306px;
+        font-size: 20px;
+        z-index: 1000;
+
+    }
+
+    .table th,
+    .table td {
+        padding: 21px;
+    }
+
+    .table th:first-child,th:nth-child(2),th:nth-child(3),th:nth-child(4),th:nth-child(5),th:nth-child(6){
+        background-color: #0B60B0;
+    }
+
+    .table td:nth-child(2),td:nth-child(3),td:nth-child(4),td:nth-child(5),td:nth-child(6){
+        background-color: white;
+    }
+
+
+
+    #search{
+        position: relative;
+        top: 20px;
+        left: 40px;
+    }
+
+    #itemForm {
+        position: relative;
+        left: 584px;
+        font-size: 20px;
+        margin-top: -98px;
+    }
+
+    .form-control {
+        width: 300px;
+    }
+
+    form>button{
+        position: relative;
+        left: 8px;
+        top: 30px;
+    }
+}
+@media all and (min-width: 1025px ) and (max-width: 1440px) {
+
+    header>label{
+        font-size: 30px;
+        color: #4A579B;
+        top: -6px;
+        left: 39px;
+        position: absolute;
+        animation-name: anim;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        background: linear-gradient(45deg, #0B60B0, #ffffff, #201658);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    header {
+
+        padding: 10px 20px;
+
+        position: fixed;
+        width: 88vw;
+        height: 42px;
+        background-color: white;
+        right: 0;
+        top: 1px;
+        left: calc(100vw - 88vw);
+        border-radius: 20px;
+        z-index: 1000;
+    }
+
+
+    #logOut{
+        color: black;
+        font-size: 11px;
+        position: absolute;
+        left: 395px;
+        margin-right: 10px;
+    }
+
+
+    header i.fa-arrow-right-from-bracket {
+        color: black;
+        font-size: 20px;
+        margin-right: 10px;
+        cursor: pointer;
+        position: absolute;
+        left: 10px;
+    }
+
+
+    header nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        transform: translateX(150%);
+        top: 3px;
+    }
+
+    header nav ul a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 38px;
+        font-size: 20px;
+    }
+
+
+    header nav ul a:hover {
+        text-decoration: underline;
+    }
+
+    header>div{
+        position: absolute;
+        top: 22px;
+        bottom: 0;
+        left: 790px;
+        right: 0;
+        font-size: 10px;
+    }
+
+
+    .fa-sharp{
+        position: relative;
+        top: 0;
+        right: 1320px;
+        font-size: 20px;
+    }
+
+    header>div>label{
+        position: relative;
+        top: -20px;
+        right: 1289px;
+        font-size: 20px;
+    }
+
+    main>section>#totalRec{
+        position: relative;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-color: white;
+        top: 132px;
+        left: 67px;
+        width: 331px;
+        height: 169px;
+        z-index: 999;
+        padding: 20px;
+
+    }
+
+    #totalCost{
+        color: #ff253a;
+        top: 20px;
+        left: 57px;
+        font-size: 41px;
+        position: absolute;
+
+    }
+    #cost{
+
+        top: 87px;
+        left: 64px;
+        font-size: 50px;
+        position: absolute;
+        animation-name: enlargeText;
+        animation-duration: 4s;
+    }
+
+
+
+
+
+    .table{
+        position: relative;
+        width: 100px;
+        height: 200px;
+        top: 173px;
+        left: 500px;
+        font-size: 20px;
+        z-index: 1000;
+
+    }
+
+    .table th,
+    .table td {
+        padding: 21px;
+    }
+
+    .table th:first-child,th:nth-child(2),th:nth-child(3),th:nth-child(4),th:nth-child(5),th:nth-child(6){
+        background-color: #0B60B0;
+    }
+
+    .table td:nth-child(2),td:nth-child(3),td:nth-child(4),td:nth-child(5),td:nth-child(6){
+        background-color: white;
+    }
+
+
+
+    #search{
+        position: relative;
+        top: 20px;
+        left: 40px;
+    }
+
+    #itemForm {
+        position: relative;
+        left: 864px;
+        font-size: 20px;
+        margin-top: -98px;
+    }
+
+    .form-control {
+        width: 400px;
+    }
+
+    form>button{
+        position: relative;
+        left: 8px;
+        top: 30px;
+    }
+
+}
+
+
+@media all and  (min-width:1440px) {
+    header>label{
+        font-size: 30px;
+        color: #4A579B;
+        top: -6px;
+        left: 39px;
+        position: absolute;
+        animation-name: anim;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        background: linear-gradient(45deg, #0B60B0, #ffffff, #201658);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    header {
+
+        padding: 10px 20px;
+
+        position: fixed;
+        width: 88vw;
+        height: 42px;
+        background-color: white;
+        right: 0;
+        top: 1px;
+        left: calc(100vw - 88vw);
+        border-radius: 20px;
+        z-index: 1000;
+    }
+
+
+    #logOut{
+        color: black;
+        font-size: 11px;
+        position: absolute;
+        left: 395px;
+        margin-right: 10px;
+    }
+
+
+    header i.fa-arrow-right-from-bracket {
+        color: black;
+        font-size: 20px;
+        margin-right: 10px;
+        cursor: pointer;
+        position: absolute;
+        left: 10px;
+    }
+
+
+    header nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        transform: translateX(150%);
+        top: 3px;
+    }
+
+    header nav ul a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 38px;
+        font-size: 20px;
+    }
+
+
+    header nav ul a:hover {
+        text-decoration: underline;
+    }
+
+    header>div{
+        position: absolute;
+        top: 22px;
+        bottom: 0;
+        left: 790px;
+        right: 0;
+        font-size: 10px;
+    }
+
+
+    .fa-sharp{
+        position: relative;
+        top: 0;
+        right: 1320px;
+        font-size: 20px;
+    }
+
+    header>div>label{
+        position: relative;
+        top: -20px;
+        right: 1289px;
+        font-size: 20px;
+    }
+
+    main>section>#totalRec{
+        position: relative;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-color: white;
+        top: 132px;
+        left: 67px;
+        width: 331px;
+        height: 169px;
+        z-index: 999;
+        padding: 20px;
+
+    }
+
+    #totalCost{
+        color: #ff253a;
+        top: 20px;
+        left: 57px;
+        font-size: 41px;
+        position: absolute;
+
+    }
+    #cost{
+
+        top: 87px;
+        left: 64px;
+        font-size: 50px;
+        position: absolute;
+        animation-name: enlargeText;
+        animation-duration: 4s;
+    }
+
+
+
+
+
+    .table{
+        position: relative;
+        width: 100px;
+        height: 200px;
+        top: 173px;
+        left: 500px;
+        font-size: 20px;
+        z-index: 1000;
+
+    }
+
+    .table th,
+    .table td {
+        padding: 21px;
+    }
+
+    .table th:first-child,th:nth-child(2),th:nth-child(3),th:nth-child(4),th:nth-child(5),th:nth-child(6){
+        background-color: #0B60B0;
+    }
+
+    .table td:nth-child(2),td:nth-child(3),td:nth-child(4),td:nth-child(5),td:nth-child(6){
+        background-color: white;
+    }
+
+
+
+    #search{
+        position: relative;
+        top: 20px;
+        left: 40px;
+    }
+
+    #itemForm {
+        position: relative;
+        left: 864px;
+        font-size: 20px;
+        margin-top: -98px;
+    }
+
+    .form-control {
+        width: 400px;
+    }
+
+    form>button{
+        position: relative;
+        left: 8px;
+        top: 30px;
+    }
+}

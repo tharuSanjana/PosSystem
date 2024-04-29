@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Strong Point</title>
+  <link rel="stylesheet" href="assets/normalize.css">
+  <link rel="stylesheet" href="assets/fontawesome-free-6.5.1-web/css/all.min.css">
+  <link rel="stylesheet" href="customer.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="item.css">
+  <link rel="stylesheet" href="orders.css">
+</head>
+<body>
+
+<header>
+  <label>STRONG POINT</label>
+
+
+  <nav>
+    <ul>
+      <a href="dashboard.html" id="nav-dash"><b>Dashboard</b></a>
+      <a href="customer.html" id="nav-customer"><b>Customer</b></a>
+      <a href="item.html" id="nav-item"><b>Items</b></a>
+      <a href="orders.html" id="nav-orders"><b>Orders</b></a>
+
+    </ul>
+  </nav>
+
+  <nav id="menu">
+    <div class="menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+<!--<section id="dashboardPage">
+  <main>
+    <section>
+      <img src="assets/images/userPic.png" alt="user picture">
+      <label id="userName">Jack Eathen</label>
+      <i class="fa-solid fa-users"></i>
+      <button>add customer</button>
+
+      <div>
+        <div><i class="fa-solid fa-sack-dollar"></i></div>
+        <div id="lbl1">
+          <label>Rs 150 000</label>
+        </div>
+
+        <div id="lbl2">
+          <label>Earned this month</label>
+        </div>
+
+      </div>
+      <div>
+        <div><i class="fa-solid fa-users"></i></div>
+        <div class="lbl3">
+          <label>21</label>
+        </div>
+
+        <div class="lbl4">
+          <label>Customer</label>
+        </div>
+      </div>
+      <div>
+        <div><i class="fa-solid fa-cart-shopping"></i></div>
+        <div class="lbl3">
+          <label>21</label>
+        </div>
+
+        <div class="lbl4">
+          <label>Orders</label>
+        </div>
+      </div>
+
+    </section>
+
+
+
+
+  </main>
+
+  <footer>
+    <div>
+      <div>
+        <h3 >New Orders</h3>
+      </div>
+
+      <section class="rec">
+
+        <div>
+          <table class="table">
+            <thead>
+            <tr>
+              <th scope="col">Order ID</th>
+              <th scope="col">Customer</th>
+              <th scope="col">Total</th>
+              <th scope="col">Paid</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">O001</th>
+              <td>Jesther</td>
+              <td>23 000/=</td>
+              <td>Yes</td>
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+
+        <button type="button" class="btn btn-primary btn-lg">View</button>
+
+
+      </section>
+    </div>
+
+    <div id="rec2">
+      <div>
+        <h3 id="topCustomer">Top Customer</h3>
+      </div>
+
+      <section class="rec" >
+
+        <div>
+          <table class="table">
+            <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Name</th>
+              <th scope="col">Nic</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">01</th>
+              <td>Cater Greason</td>
+              <td>199223684506</td>
+
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+
+        <button type="button" class="btn btn-primary btn-lg">View</button>
+
+
+      </section>
+
+    </div>
+
+    <section>
+      <div class="placeOrder" id="place">
+        <div>
+          <div><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
+          <button type="button" class="btn btn-order"><b>+ Order</b></button>
+        </div>
+      </div>
+    </section>
+
+  </footer>
+
+
+
+</section>-->
+<section id="dashboardPage">
+  <main>
+    <section>
+      <img src="assets/images/userPic.png" alt="user picture">
+      <label id="userName">Jack Eathen</label>
+      <i class="fa-solid fa-users"></i>
+      <button>add customer</button>
+
+      <div>
+        <div><i class="fa-solid fa-sack-dollar"></i></div>
+        <div id="lbl1">
+          <label>Rs 150 000</label>
+        </div>
+
+        <div id="lbl2">
+          <label>Earned this month</label>
+        </div>
+
+      </div>
+      <div>
+        <div><i class="fa-solid fa-users"></i></div>
+        <div class="lbl3">
+          <label>21</label>
+        </div>
+
+        <div class="lbl4">
+          <label>Customer</label>
+        </div>
+      </div>
+      <div>
+        <div><i class="fa-solid fa-cart-shopping"></i></div>
+        <div class="lbl3">
+          <label>21</label>
+        </div>
+
+        <div class="lbl4">
+          <label>Orders</label>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+ <!-- <footer>
+    <div>
+      <div>
+        <h3>New Orders</h3>
+      </div>
+
+      <section class="rec">
+        <div>
+          <table class="table">
+            <thead>
+            <tr>
+              <th scope="col">Order ID</th>
+              <th scope="col">Customer</th>
+              <th scope="col">Total</th>
+              <th scope="col">Paid</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">O001</th>
+              <td>Jesther</td>
+              <td>23 000/=</td>
+              <td>Yes</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg">View</button>
+      </section>
+    </div>
+
+    <div id="rec2">
+      <div>
+        <h3 id="topCustomer">Top Customer</h3>
+      </div>
+
+      <section class="rec" >
+        <div>
+          <table class="table">
+            <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Name</th>
+              <th scope="col">Nic</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">01</th>
+              <td>Cater Greason</td>
+              <td>199223684506</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg">View</button>
+      </section>
+    </div>
+
+    <section>
+      <div class="placeOrder" id="place">
+        <div>
+          <div><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
+          <button type="button" class="btn btn-order"><b>+ Order</b></button>
+        </div>
+      </div>
+    </section>
+  </footer>-->
+</section>
+
+<section id="customerPage">
+  <main>
+    <!--<div id="search">-->
+    <!--    <input type="text" placeholder="Search Customer" value="Customer">-->
+
+    <!--</div>-->
+
+
+    <section>
+      <div>
+        <div id="totalCustomer">Total Customers</div>
+        <div id="customerCount">21</div>
+      </div>
+
+      <button type="button" class="btn btn-primary"><b>+ Customer</b></button>
+      <button type="button" class="btn btn-secondary"><b>View Customers</b></button>
+
+      <table class="table">
+        <thead>
+        <tr>
+
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">NIC</th>
+          <th scope="col">Address</th>
+          <th scope="col">Tel</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">C001</th>
+          <td>Sanjana</td>
+          <td>200283804705</td>
+          <td>Mathugama</td>
+          <td>076-6123489</td>
+        </tr>
+        <tr>
+          <th scope="row">C002</th>
+          <td>Kushani</td>
+          <td>200585100184</td>
+          <td>Polegoda</td>
+          <td>075-8054761</td>
+        </tr>
+        <tr>
+          <th scope="row">C003</th>
+          <td>Jacob</td>
+          <td>199045372309</td>
+          <td>Kaluthara</td>
+          <td>076-6158213</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <button type="button" class="update"><b>Update</b></button>
+      <button type="button" class="delete"><b>Delete</b></button>
+
+    </section>
+  </main>
+</section>
+
+<section id="itemPage">
+  <main>
+    <!--<div id="search">-->
+    <!--    <input type="text" placeholder="Search Customer" value="Customer">-->
+
+    <!--</div>-->
+
+
+    <section>
+      <div>
+        <div id="totalCost">Total Cost</div>
+        <div id="cost"> Rs 100 000/=</div>
+      </div>
+
+      <button type="button" class="btn btn-primary"><b>+ Items</b></button>
+      <button type="button" class="btn btn-secondary"><b>View Items</b></button>
+
+      <table class="table">
+        <thead>
+        <tr>
+
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">QTY</th>
+          <th scope="col">Price(Rs)</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">I001</th>
+          <td>Baasmathi</td>
+          <td>400kg</td>
+          <td>120</td>
+
+        </tr>
+        <tr>
+          <th scope="row">I002</th>
+          <td>Tipi tip</td>
+          <td>100</td>
+          <td>100</td>
+
+        </tr>
+        <tr>
+          <th scope="row">I003</th>
+          <td>Red bull</td>
+          <td>500</td>
+          <td>200</td>
+
+        </tr>
+        </tbody>
+      </table>
+
+      <button type="button" class="update"><b>Update</b></button>
+      <button type="button" class="delete"><b>Delete</b></button>
+
+    </section>
+  </main>
+</section>
+
+<section id="ordersPage">
+  <main>
+    <section id="section1">
+      <div class="viewOrderCount">
+        <div id="ordersCount">Orders</div>
+        <div id="count"> 50</div>
+      </div>
+
+      <div class="select">
+        <div>
+          <label id="selectCustomer"><b>Fill Details</b></label>
+          <form>
+
+
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label"> Customer ID</label>
+              <input type="text" id="disabledTextInput" class="form-control" >
+            </div>
+            <div class="mb-3">
+              <label for="inputName" class="form-label">Customer Name</label>
+              <input type="text" id="inputName" class="form-control" >
+            </div>
+            <div class="mb-3">
+              <label for="inputEmail" class="form-label">Customer Email</label>
+              <input type="text" id="inputEmail" class="form-control" >
+            </div>
+            <div class="mb-3">
+              <label for="inputNic" class="form-label"> Customer NIC</label>
+              <input type="text" id="inputNic" class="form-control" >
+            </div>
+            <div class="mb-3">
+              <label for="inputAddress" class="form-label">Customer Address</label>
+              <input type="text" id="inputAddress" class="form-control" >
+            </div>
+
+
+            <!--<button type="submit" class="btn btn-primary">Submit</button>-->
+
+          </form>
+
+        </div>
+
+        <div>
+          <!--<label id="selectItems"><b>Select Items</b></label>-->
+          <form id="items">
+
+
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">Item ID</label>
+              <input type="text" id="inputItemId" class="form-control" >
+            </div>
+            <div class="mb-3">
+              <label for="inputName" class="form-label">Item Name</label>
+              <input type="text" id="inputItemName" class="form-control" >
+            </div>
+            <div class="mb-3">
+              <label for="inputEmail" class="form-label">Item Qty</label>
+              <input type="text" id="inputQty" class="form-control" >
+            </div>
+            <div class="mb-3">
+              <label for="inputNic" class="form-label">Item Price</label>
+              <input type="text" id="inputPrice" class="form-control" >
+            </div>
+
+
+
+            <!--<button type="submit" class="btn btn-primary">Submit</button>-->
+
+          </form>
+
+        </div>
+
+        <div>
+
+          <form id="order">
+
+
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">Order ID</label>
+              <input type="text" id="inputOrderId" class="form-control" >
+            </div>
+            <div class="mb-3">
+              <label for="inputName" class="form-label">Total</label>
+              <input type="text" id="inputTotal" class="form-control" >
+            </div>
+
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div>
+      <button  class="btn btn-primary"><b>Place Order</b></button>
+    </div>
+
+    <div>
+      <button  class="btn btn-view"><b>View Orders</b></button>
+    </div>
+
+    <div>
+      <button  class="btn btn-update"><b>Update</b></button>
+    </div>
+
+    <div>
+      <button class="btn btn-delete"><b>Delete</b></button>
+    </div>
+
+    <table class="table">
+      <thead>
+      <tr>
+
+        <th scope="col">Order ID</th>
+        <th scope="col">Customer ID</th>
+        <th scope="col">Customer Name</th>
+        <th scope="col">Item ID</th>
+        <th scope="col">Item Name</th>
+        <th scope="col">Qty</th>
+        <th scope="col">Total(Rs)</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">O001</th>
+        <td>C001</td>
+        <td>Amal</td>
+        <td>I001</td>
+        <td>Baasmathi</td>
+        <td>20kg</td>
+        <td>30 000/=</td>
+
+      </tr>
+      <tr>
+        <th scope="row">O002</th>
+        <td>C001</td>
+        <td>Amal</td>
+        <td>I001</td>
+        <td>Baasmathi</td>
+        <td>20kg</td>
+        <td>30 000/=</td>
+
+      </tr>
+      <tr>
+        <th scope="row">O003</th>
+        <td>C001</td>
+        <td>Amal</td>
+        <td>I001</td>
+        <td>Baasmathi</td>
+        <td>20kg</td>
+        <td>30 000/=</td>
+
+      </tr>
+      </tbody>
+    </table>
+
+  </main>
+
+
+  <footer>
+    <div>
+      <label id="trending"><b>What's Trending</b></label>
+
+      <div class="list1">
+        <label>Almonds</label>
+        <label>Coconut Oil</label>
+        <label>Goat Milk</label>
+        <label>Oats</label>
+        <label>Tipi Tip</label>
+      </div>
+
+      <div class="list2">
+        <label>Basmati Rice</label>
+        <label>Olive Oil</label>
+        <label>Cream Cheese</label>
+        <label>Ramen</label>
+        <label>Peanut Butter</label>
+      </div>
+
+      <div class="list3">
+        <label>Cheetos</label>
+        <label>Doritos</label>
+        <label>Red Bull</label>
+        <label>Yoghurt</label>
+        <label>Sun Crush</label>
+      </div>
+
+      <div class="list4">
+        <label>Nescafe</label>
+        <label>Pop Tarts</label>
+        <label>Revello Chocolate</label>
+        <label>Popcorn</label>
+        <label>Sunquick</label>
+      </div>
+    </div>
+
+    <div id="blue">
+      <h3>STRONG POINT</h3>
+      <label id="customerCare"><b>Customer Care</b></label>
+      <label id="contactUs"><b>Contact Us</b></label>
+      <label id="stayUpdates"><b>Stay Updates</b></label>
+
+      <div id="customerCareList">
+        <label>My Account</label>
+        <label>About Us</label>
+        <label>Privancy Policy</label>
+      </div>
+
+      <div id="contactUsList">
+        <label>+94 74 034 4429</label>
+        <label>Galle Road, Colombo 04</label>
+        <label>Privancy Policy</label>
+      </div>
+
+      <div id="stayUpdatesImages">
+        <img src="assets/images/watsapp.png" alt="watsp">
+        <img src="assets/images/facebook.png" alt="facebook">
+        <img src="assets/images/tiktok.png" alt="tiktok">
+      </div>
+    </div>
+  </footer>
+
+</section>
+
+<script src="assets/lib/jquery-3.7.1.min.js"></script>
+<script src="assets/file/Js.js"></script>
+</body>
+</html>

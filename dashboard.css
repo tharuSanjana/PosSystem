@@ -357,7 +357,7 @@ footer>div>div>h3{
 
     #userName{
         font-size: 13px;
-        top: 29px;
+        top: 57px;
         position: relative;
         left: -45px;
     }
@@ -1136,29 +1136,27 @@ footer>div>div>h3{
     }
 
     header>label{
-
         font-size: 30px;
-        color: blue;
-        top: 9px;
+        color: #4A579B;
+        top: -6px;
         left: 39px;
         position: absolute;
         animation-name: anim;
         animation-duration: 3s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-        background: linear-gradient(45deg, blue, #ffffff, #201658);
+        background: linear-gradient(45deg, #0B60B0, #ffffff, #201658);
         background-size: 200% 200%;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
 
     header {
 
         padding: 10px 20px;
 
         position: fixed;
-        width: 85vw;
+        width: 87vw;
         height: 42px;
         background-color: white;
         right: 0;
@@ -1167,6 +1165,7 @@ footer>div>div>h3{
         border-radius: 20px;
         z-index: 1000;
     }
+
 
 
     #logOut{
@@ -1194,7 +1193,7 @@ footer>div>div>h3{
         margin: 0;
         position: absolute;
         transform: translateX(167%);
-        top: 14px;
+        top: 3px;
     }
 
     header nav ul a {
@@ -1233,7 +1232,7 @@ footer>div>div>h3{
 
     #userName{
         font-size: 20px;
-        top: 29px;
+        top: 57px;
         position: relative;
         left: -80px;
     }
@@ -1245,7 +1244,7 @@ footer>div>div>h3{
         bottom: 0;
         left: 86px;
         right: 0;
-        width: 300px;
+        width: 411px;
         padding: 100px 69px;
         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
         background-color: white;
@@ -1275,7 +1274,7 @@ footer>div>div>h3{
     }
 
     #lbl2{
-        font-size: 42px;
+        font-size: 37px;
         top: 125px;
         left: 75px;
         right: 0;

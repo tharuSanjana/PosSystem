@@ -1,10 +1,10 @@
 body{
     background-color: #ADE1F8;
-
+overflow-x: hidden;
 }
 header{
     position: fixed;
-    width: 62vw;
+    width: 87vw;
     height: 60px;
     background-color: white;
     right: 0;
@@ -17,7 +17,7 @@ header{
 header>label{
     font-size: 30px;
     color: #4A579B;
-    top: 9px;
+    top: -4px;
     left: 39px;
     position: absolute;
     animation-name: anim;
@@ -72,7 +72,7 @@ header nav ul {
     margin: 0;
     position: absolute;
     transform: translateX(167%);
-    top: 14px;
+    top: 3px;
 }
 
 header nav ul a {
@@ -113,7 +113,7 @@ header>div>label{
     font-size: 20px;
 }
 
-main>section>div{
+main>section>#totalRec{
     position: relative;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     background-color: white;
@@ -143,35 +143,13 @@ main>section>div{
     animation-duration: 4s;
 }
 
-.btn-primary{
-    top: -52px;
-    left: 1146px;
-    width: 158px;
-    height: 47px;
-    background-color: #14DA10;
-    position: relative;
-    font-size: 18px;
-    border-color: #14DA10;
-    margin-right: 10px;
-}
 
-.btn-secondary{
-    top: -52px;
-    left: 1146px;
-    width: 158px;
-    height: 47px;
-    background-color: #FCC314;
-    position: relative;
-    font-size: 18px;
-    border-color: #FCC314;
-    margin-right: 10px;
-}
 
 .table{
     position: relative;
     width: 100px;
     height: 200px;
-    top: 400px;
+    top: 173px;
     left: 500px;
     font-size: 20px;
     z-index: 1000;
@@ -191,7 +169,7 @@ main>section>div{
     background-color: white;
 }
 
-.update{
+/*.update{
     top: -30px;
     left: 1146px;
     width: 158px;
@@ -213,14 +191,29 @@ main>section>div{
     font-size: 18px;
     border-color: #F61515;
 
-}
+}*/
 
 #search{
     position: relative;
     top: 20px;
     left: 40px;
 }
+#customerForm {
+    position: relative;
+    left: 864px;
+    font-size: 20px;
+    margin-top: -98px;
+}
 
+.form-control {
+    width: 400px;
+}
+
+form>button{
+    position: relative;
+    left: 8px;
+    top: 30px;
+}
 @keyframes anim {
     from{
         background-position: 0% 50%;
@@ -240,6 +233,7 @@ main>section>div{
         font-size: 60px;
     }
 }
+
 
 @media all and (min-width: 377px ) and (max-width: 425px){
     header > #menu {
@@ -377,149 +371,192 @@ main>section>div{
 
 }
 @media all and (min-width: 461px ) and (max-width: 768px){
-    header {
-
-        padding: 10px 20px;
-
+    header{
         position: fixed;
-        width: 83vw;
-        height: 42px;
+        width: 88vw;
+        height: 53px;
         background-color: white;
         right: 0;
-        top: 1px;
+        top: 0;
         left: calc(100vw - 88vw);
         border-radius: 20px;
         z-index: 1000;
     }
 
     header>label{
-
-        font-size: 21px;
-        color: blue;
-        top: 15px;
+        font-size: 30px;
+        color: #4A579B;
+        top: -4px;
         left: 39px;
         position: absolute;
         animation-name: anim;
         animation-duration: 3s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-        background: linear-gradient(45deg, blue, #ffffff, #201658);
+        background: linear-gradient(45deg, #0B60B0, #ffffff, #201658);
         background-size: 200% 200%;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+
+
+
+
+    #logOut{
+        color: black;
+        font-size: 11px;
+        position: absolute;
+        left: 395px;
+        margin-right: 10px;
+    }
+
+
+    header i.fa-arrow-right-from-bracket {
+        color: black;
+        font-size: 20px;
+        margin-right: 10px;
+        cursor: pointer;
+        position: absolute;
+        left: 10px;
+    }
+
 
     header nav ul {
         list-style-type: none;
         padding: 0;
         margin: 0;
         position: absolute;
-        transform: translateX(90%);
-        top: 14px;
+        transform: translateX(67%);
+        top: 10px;
     }
 
     header nav ul a {
         color: black;
         text-decoration: none;
         font-weight: bold;
-        margin-right: 22px;
+        margin-right: 28px;
         font-size: 17px;
     }
 
-    main>section>div{
+
+    header nav ul a:hover {
+        text-decoration: underline;
+    }
+
+    header>div{
+        position: absolute;
+        top: 22px;
+        bottom: 0;
+        left: 790px;
+        right: 0;
+        font-size: 10px;
+    }
+
+
+
+    .fa-sharp{
+        position: relative;
+        top: 0;
+        right: 1320px;
+        font-size: 20px;
+    }
+
+    header>div>label{
+        position: relative;
+        top: -20px;
+        right: 1289px;
+        font-size: 20px;
+    }
+
+    main>section>#totalRec{
         position: relative;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
         background-color: white;
         top: 132px;
-        left: 42px;
-        width: 273px;
-        height: 124px;
+        left: 41px;
+        width: 331px;
+        height: 169px;
         z-index: 999;
         padding: 20px;
 
     }
 
-    .btn-primary{
-        top: -52px;
-        left: 502px;
-        width: 120px;
-        height: 43px;
-        background-color: #14DA10;
-        position: relative;
-        font-size: 18px;
-        border-color: #14DA10;
-        margin-right: 10px;
+    #totalCustomer{
+        color: #ff253a;
+        top: 20px;
+        left: 30px;
+        font-size: 41px;
+        position: absolute;
     }
+    #customerCount{
 
-    .btn-secondary{
-        top: -41px;
-        left: 499px;
-        width: 120px;
-        height: 43px;
-        background-color: #FCC314;
-        position: relative;
-        font-size: 18px;
-        border-color: #FCC314;
-        margin-right: 10px;
-    }
-
-    .update{
-        top: -30px;
-        left: 502px;
-        width: 120px;
-        height: 43px;
-        background-color: #5180F9;
-        position: relative;
-        font-size: 18px;
-        border-color: #5180F9;
-
-    }
-
-    .delete{
-        top: -30px;
-        left: 510px;
-        width: 120px;
-        height: 43px;
-        background-color: #F61515;
-        position: relative;
-        font-size: 18px;
-        border-color: #F61515;
-
+        top: 69px;
+        left: 126px;
+        font-size: 67px;
+        position: absolute;
+        animation-name: enlargeText;
+        animation-duration: 4s;
     }
 
     .table{
         position: relative;
         width: 100px;
         height: 200px;
-        top: 400px;
-        left: 104px;
-        font-size: 15px;
+        top: 173px;
+        left: 171px;
+        font-size: 11px;
         z-index: 1000;
 
     }
 
+    .table th,
+    .table td {
+        padding: 21px;
+    }
+
+    .table th:first-child,th:nth-child(2),th:nth-child(3),th:nth-child(4),th:nth-child(5),th:nth-child(6){
+        background-color: #0B60B0;
+    }
+
+    .table td:nth-child(2),td:nth-child(3),td:nth-child(4),td:nth-child(5),td:nth-child(6){
+        background-color: white;
+    }
+
+
+    #search{
+        position: relative;
+        top: 20px;
+        left: 40px;
+    }
+    #customerForm {
+        position: relative;
+        left: 477px;
+        font-size: 14px;
+        margin-top: -53px;
+    }
+
+    .form-control {
+        width: 200px;
+    }
+
+    form>button{
+        position: relative;
+        left: -105px;
+        top: 30px;
+    }
 }
 @media all and (min-width: 835px ) and (max-width: 1024px){
-    header {
+    body{
+        background-color: #ADE1F8;
 
-        padding: 10px 20px;
-
-        position: fixed;
-        width: 84vw;
-        height: 42px;
-        background-color: white;
-        right: 0;
-        top: 1px;
-        left: calc(100vw - 88vw);
-        border-radius: 20px;
-        z-index: 1000;
     }
 
     header>label{
 
-        font-size: 27px;
+        font-size: 30px;
         color: blue;
-        top: 9px;
+        top: -4px;
         left: 39px;
         position: absolute;
         animation-name: anim;
@@ -532,103 +569,113 @@ main>section>div{
         -webkit-text-fill-color: transparent;
     }
 
-    header nav ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        position: absolute;
-        transform: translateX(149%);
-        top: 14px;
-    }
 
-    header nav ul a {
-        color: black;
-        text-decoration: none;
-        font-weight: bold;
-        margin-right: 9px;
-        font-size: 20px;
+    header {
+
+        padding: 10px 20px;
+
+        position: fixed;
+        width: 88vw;
+        height: 42px;
+        background-color: white;
+        right: 0;
+        top: 1px;
+        left: calc(100vw - 88vw);
+        border-radius: 20px;
+        z-index: 1000;
     }
 
     .table{
         position: relative;
         width: 100px;
         height: 200px;
-        top: 400px;
-        left: 206px;
+        top: 173px;
+        left: 212px;
         font-size: 20px;
         z-index: 1000;
 
     }
 
-    .btn-primary{
-        top: -52px;
-        left: 759px;
-        width: 120px;
-        height: 43px;
-        background-color: #14DA10;
-        position: relative;
-        font-size: 18px;
-        border-color: #14DA10;
-        margin-right: 10px;
+    .table th,
+    .table td {
+        padding: 21px;
     }
 
-    .btn-secondary{
-        top: -41px;
-        left: 759px;
-        width: 120px;
-        height: 43px;
-        background-color: #FCC314;
-        position: relative;
-        font-size: 18px;
-        border-color: #FCC314;
-        margin-right: 10px;
+    .table th:first-child,th:nth-child(2),th:nth-child(3),th:nth-child(4),th:nth-child(5),th:nth-child(6){
+        background-color: #0B60B0;
     }
 
-    .update{
-        top: -30px;
-        left: 759px;
-        width: 120px;
-        height: 43px;
-        background-color: #5180F9;
-        position: relative;
-        font-size: 18px;
-        border-color: #5180F9;
-
+    .table td:nth-child(2),td:nth-child(3),td:nth-child(4),td:nth-child(5),td:nth-child(6){
+        background-color: white;
     }
 
-    .delete{
-        top: -30px;
-        left: 767px;
-        width: 120px;
-        height: 43px;
-        background-color: #F61515;
-        position: relative;
-        font-size: 18px;
-        border-color: #F61515;
+    header nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        transform: translateX(146%);
+        top: 3px;
+    }
 
+    header nav ul a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 38px;
+        font-size: 20px;
+    }
+
+
+    header nav ul a:hover {
+        text-decoration: underline;
+    }
+
+    #customerForm {
+        position: relative;
+        left: 595px;
+        font-size: 20px;
+        margin-top: -98px;
+    }
+
+    .form-control {
+        width: 400px;
+    }
+
+    form>button{
+        position: relative;
+        left: 8px;
+        top: 30px;
+    }
+
+    header nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        transform: translateX(82%);
+        top: 3px;
+    }
+
+    header nav ul a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 38px;
+        font-size: 20px;
     }
 }
 @media all and (min-width: 1025px ) and (max-width: 1440px) {
-    header {
+    body{
+        background-color: #ADE1F8;
 
-        padding: 10px 20px;
-
-        position: fixed;
-        width: 84vw;
-        height: 42px;
-        background-color: white;
-        right: 0;
-        top: 1px;
-        left: calc(100vw - 88vw);
-        border-radius: 20px;
-        z-index: 1000;
     }
 
     header>label{
 
-        font-size: 27px;
+        font-size: 30px;
         color: blue;
-        top: 9px;
+        top: -4px;
         left: 39px;
         position: absolute;
         animation-name: anim;
@@ -641,82 +688,68 @@ main>section>div{
         -webkit-text-fill-color: transparent;
     }
 
+
+    header {
+
+        padding: 10px 20px;
+
+        position: fixed;
+        width: 88vw;
+        height: 42px;
+        background-color: white;
+        right: 0;
+        top: 1px;
+        left: calc(100vw - 88vw);
+        border-radius: 20px;
+        z-index: 1000;
+    }
+
+    .table{
+        position: relative;
+        width: 100px;
+        height: 200px;
+        top: 173px;
+        left: 371px;
+        font-size: 20px;
+        z-index: 1000;
+
+    }
+
+    .table th,
+    .table td {
+        padding: 21px;
+    }
+
+    .table th:first-child,th:nth-child(2),th:nth-child(3),th:nth-child(4),th:nth-child(5),th:nth-child(6){
+        background-color: #0B60B0;
+    }
+
+    .table td:nth-child(2),td:nth-child(3),td:nth-child(4),td:nth-child(5),td:nth-child(6){
+        background-color: white;
+    }
+
     header nav ul {
         list-style-type: none;
         padding: 0;
         margin: 0;
         position: absolute;
-        transform: translateX(149%);
-        top: 14px;
+        transform: translateX(146%);
+        top: 3px;
     }
 
     header nav ul a {
         color: black;
         text-decoration: none;
         font-weight: bold;
-        margin-right: 9px;
+        margin-right: 38px;
         font-size: 20px;
     }
 
 
-    .table{
-        position: relative;
-        width: 100px;
-        height: 200px;
-        top: 400px;
-        left: 206px;
-        font-size: 20px;
-        z-index: 1000;
-
+    header nav ul a:hover {
+        text-decoration: underline;
     }
 
-    .btn-primary{
-        top: -52px;
-        left: 759px;
-        width: 120px;
-        height: 43px;
-        background-color: #14DA10;
-        position: relative;
-        font-size: 18px;
-        border-color: #14DA10;
-        margin-right: 10px;
-    }
-
-    .btn-secondary{
-        top: -41px;
-        left: 767px;
-        width: 120px;
-        height: 43px;
-        background-color: #FCC314;
-        position: relative;
-        font-size: 18px;
-        border-color: #FCC314;
-        margin-right: 10px;
-    }
-
-    .update{
-        top: -30px;
-        left: 759px;
-        width: 120px;
-        height: 43px;
-        background-color: #5180F9;
-        position: relative;
-        font-size: 18px;
-        border-color: #5180F9;
-
-    }
-
-    .delete{
-        top: -30px;
-        left: 767px;
-        width: 120px;
-        height: 43px;
-        background-color: #F61515;
-        position: relative;
-        font-size: 18px;
-        border-color: #F61515;
-
-    }
 }
 @media all and  (min-width:1440px) {
     body{
@@ -728,7 +761,7 @@ main>section>div{
 
         font-size: 30px;
         color: blue;
-        top: 9px;
+        top: -4px;
         left: 39px;
         position: absolute;
         animation-name: anim;
@@ -747,7 +780,7 @@ main>section>div{
         padding: 10px 20px;
 
         position: fixed;
-        width: 85vw;
+        width: 88vw;
         height: 42px;
         background-color: white;
         right: 0;
@@ -757,53 +790,30 @@ main>section>div{
         z-index: 1000;
     }
 
-    .btn-primary{
-        top: -52px;
-        left: 1084px;
-        width: 158px;
-        height: 47px;
-        background-color: #14DA10;
+    .table{
         position: relative;
-        font-size: 18px;
-        border-color: #14DA10;
-        margin-right: 10px;
-    }
-
-    .btn-secondary{
-        top: -52px;
-        left: 1091px;
-        width: 158px;
-        height: 47px;
-        background-color: #FCC314;
-        position: relative;
-        font-size: 18px;
-        border-color: #FCC314;
-        margin-right: 10px;
-    }
-
-    .update{
-        top: -30px;
-        left: 1084px;
-        width: 158px;
-        height: 47px;
-        background-color: #5180F9;
-        position: relative;
-        font-size: 18px;
-        border-color: #5180F9;
+        width: 100px;
+        height: 200px;
+        top: 173px;
+        left: 371px;
+        font-size: 20px;
+        z-index: 1000;
 
     }
 
-    .delete{
-        top: -30px;
-        left: 1100px;
-        width: 158px;
-        height: 47px;
-        background-color: #F61515;
-        position: relative;
-        font-size: 18px;
-        border-color: #F61515;
-
+    .table th,
+    .table td {
+        padding: 21px;
     }
+
+    .table th:first-child,th:nth-child(2),th:nth-child(3),th:nth-child(4),th:nth-child(5),th:nth-child(6){
+        background-color: #0B60B0;
+    }
+
+    .table td:nth-child(2),td:nth-child(3),td:nth-child(4),td:nth-child(5),td:nth-child(6){
+        background-color: white;
+    }
+
 
 
 }
