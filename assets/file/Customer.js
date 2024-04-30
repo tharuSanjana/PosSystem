@@ -1,1 +1,3 @@
-$('#customer-save').on
+$('#customer-save').on('click',()=>{
+
+})
