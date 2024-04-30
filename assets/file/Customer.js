@@ -1,13 +1,14 @@
 
 function addCustomerToTable(customer) {
+    $('#tbody').empty();
     c.map((item,index)=>{
 
         var record = `<tr>
-        <td>${item.id}</td>
-        <td>${item.name}</td>
-        <td>${item.nic}</td>
-        <td>${item.address}</td>
-        <td>${item.tel}</td>
+        <td id="colId">${item.id}</td>
+        <td id="colName">${item.name}</td>
+        <td id="colNic">${item.nic}</td>
+        <td id="colAddress">${item.address}</td>
+        <td id="colTel">${item.tel}</td>
     </tr>`;
         $('#customerTable').append(record);
     });
@@ -43,3 +44,25 @@ $('#customer-save').on('click', () => {
     addCustomerToTable(customer);
 });
 
+$('#tbody').on('click','tr',function () {
+let index = $(this).index();
+ let id = $(this).find('#colId').text();
+ let name = $(this).find('#colName').text();
+ let nic = $(this).find('#colNic').text();
+ let address = $(this).find('#colAddress').text();
+ let tel = $(this).find('#colTel').text();
+
+ console.log("clicked index: ",index);
+ console.log("clicked id: ",id);
+ console.log("clicked name: ",name);
+ console.log("clicked nic: ",nic);
+ console.log("clicked address: ",address);
+ console.log("clicked tel: ",tel);
+
+ $('#id').val(id);
+ $('#name').val(name);
+ $('#nic').val(nic);
+ $('#address').val(address);
+ $('#tel').val(tel);
+
+})
