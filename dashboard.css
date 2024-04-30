@@ -226,14 +226,14 @@ footer>div>section>div {
     padding: 10px;
 }
 
-.btn-primary{
+/*.btn-primary{
     top: 183px;
     left: 339px;
     position: absolute;
     background-color: #36F506;
     font-size: 20px;
     border-color: #36F506;
-}
+}*/
 
 footer>div>div>h3{
     font-size: 25px;
@@ -1358,14 +1358,14 @@ footer>div>div>h3{
         padding: 10px;
     }
 
-    .btn-primary{
+    /*.btn-primary{
         top: 183px;
         left: 339px;
         position: absolute;
         background-color: #36F506;
         font-size: 20px;
         border-color: #36F506;
-    }
+    }*/
 
     footer>div>div>h3{
         font-size: 25px;

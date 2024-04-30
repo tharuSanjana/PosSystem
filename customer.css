@@ -152,7 +152,7 @@ header>div>label{
     top: 173px;
     left: 500px;
     font-size: 20px;
-    z-index: 1000;
+
 
 }
 
@@ -310,7 +310,7 @@ form>button{
         animation-duration: 4s;
     }
 
-    .btn-primary{
+   /* .btn-primary{
         top: -52px;
         left: 284px;
         width: 120px;
@@ -321,8 +321,8 @@ form>button{
         border-color: #14DA10;
         margin-right: 10px;
     }
-
-    .btn-secondary{
+*/
+  /*  .btn-secondary{
         top: 21px;
         left: 151px;
         width: 120px;
@@ -357,7 +357,7 @@ form>button{
         border-color: #F61515;
 
     }
-
+*/
     .table{
         position: relative;
         width: 100px;
@@ -365,7 +365,7 @@ form>button{
         top: 400px;
         left: 21px;
         font-size: 8px;
-        z-index: 1000;
+
 
     }
 
@@ -506,7 +506,7 @@ form>button{
         top: 173px;
         left: 171px;
         font-size: 11px;
-        z-index: 1000;
+
 
     }
 
@@ -592,7 +592,7 @@ form>button{
         top: 173px;
         left: 212px;
         font-size: 20px;
-        z-index: 1000;
+
 
     }
 
@@ -711,7 +711,7 @@ form>button{
         top: 173px;
         left: 371px;
         font-size: 20px;
-        z-index: 1000;
+
 
     }
 
@@ -797,7 +797,7 @@ form>button{
         top: 173px;
         left: 371px;
         font-size: 20px;
-        z-index: 1000;
+
 
     }
 
@@ -827,4 +827,9 @@ form>button{
 
     }
 
+    form>button{
+        position: relative;
+        left: 8px;
+        top: 30px;
+    }
 }

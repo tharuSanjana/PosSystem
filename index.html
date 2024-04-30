@@ -118,31 +118,31 @@
         <form>
           <div class="mb-3">
             <label  class="form-label">ID</label>
-            <input type="text" class="form-control" id="" aria-describedby="emailHelp">
+            <input type="text" class="form-control" id="id" aria-describedby="emailHelp">
 
           </div>
           <div class="mb-3">
             <label  class="form-label">Name</label>
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control"id="name" >
           </div>
           <div class="mb-3">
             <label  class="form-label">NIC</label>
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control"id="nic" >
           </div>
           <div class="mb-3">
             <label  class="form-label">Address</label>
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control" id="address" >
           </div>
           <div class="mb-3">
             <label  class="form-label">Tel</label>
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control" id="tel">
           </div>
           <!--<button type="submit" class="btn btn-primary">Submit</button>-->
 
-          <button type="button" class="btn btn-primary">Save</button>
-          <button type="button" class="btn btn-success">Update</button>
-          <button type="button" class="btn btn-danger">Delete</button>
-          <button type="button" class="btn btn-warning">View Customers</button>
+          <button type="button" class="btn btn-primary" id="customer-save">Save</button>
+          <button type="button" class="btn btn-success" id="customer-update">Update</button>
+          <button type="button" class="btn btn-danger" id="customer-delete">Delete</button>
+          <button type="button" class="btn btn-warning" id="customer-view">View Customers</button>
 
 
         </form>
@@ -150,7 +150,7 @@
       <!-- <button type="button" class="btn btn-primary"><b>+ Customer</b></button>
        <button type="button" class="btn btn-secondary"><b>View Customers</b></button>-->
 
-      <table class="table">
+      <table class="table" id="customerTable">
         <thead>
         <tr>
 
@@ -161,8 +161,8 @@
           <th scope="col">Tel</th>
         </tr>
         </thead>
-        <tbody>
-        <tr>
+        <tbody id="tbody">
+       <!-- <tr>
           <th scope="row">C001</th>
           <td>Sanjana</td>
           <td>200283804705</td>
@@ -182,7 +182,7 @@
           <td>199045372309</td>
           <td>Kaluthara</td>
           <td>076-6158213</td>
-        </tr>
+        </tr>-->
         </tbody>
       </table>
       <!--
@@ -205,7 +205,7 @@
       <div id="itemForm">
         <form>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">ID</label>
+            <label  class="form-label">ID</label>
             <input type="text" class="form-control"  aria-describedby="emailHelp">
 
           </div>
@@ -226,6 +226,8 @@
           <button type="button" class="btn btn-success">Update</button>
           <button type="button" class="btn btn-danger">Delete</button>
           <button type="button" class="btn btn-warning">View Items</button>
+
+
 
 
         </form>

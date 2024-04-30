@@ -221,7 +221,7 @@ main>section>div>div>form{
     right: 20px;
 }
 
-.btn-primary{
+/*.btn-primary{
     background-color: #0E2BC5;
     color: white;
     position: relative;
@@ -229,7 +229,7 @@ main>section>div>div>form{
     left: 1175px;
     font-size: 30px;
     border: 2px solid #0E2BC5;
-}
+}*/
 
 .table{
     position: relative;
