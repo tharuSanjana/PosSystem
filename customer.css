@@ -113,7 +113,7 @@ header>div>label{
     font-size: 20px;
 }
 
-main>section>#totalRec{
+.totalRec{
     position: relative;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     background-color: white;
@@ -814,6 +814,17 @@ form>button{
         background-color: white;
     }
 
+   .totalRec{
+        position: relative;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-color: white;
+        top: 132px;
+        left: 67px;
+        width: 331px;
+        height: 169px;
+        z-index: 999;
+        padding: 20px;
 
+    }
 
 }
