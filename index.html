@@ -162,32 +162,10 @@
         </tr>
         </thead>
         <tbody id="tbody">
-       <!-- <tr>
-          <th scope="row">C001</th>
-          <td>Sanjana</td>
-          <td>200283804705</td>
-          <td>Mathugama</td>
-          <td>076-6123489</td>
-        </tr>
-        <tr>
-          <th scope="row">C002</th>
-          <td>Kushani</td>
-          <td>200585100184</td>
-          <td>Polegoda</td>
-          <td>075-8054761</td>
-        </tr>
-        <tr>
-          <th scope="row">C003</th>
-          <td>Jacob</td>
-          <td>199045372309</td>
-          <td>Kaluthara</td>
-          <td>076-6158213</td>
-        </tr>-->
+
         </tbody>
       </table>
-      <!--
-              <button type="button" class="update"><b>Update</b></button>
-              <button type="button" class="delete"><b>Delete</b></button>-->
+
 
     </section>
   </main>
@@ -205,27 +183,27 @@
       <div id="itemForm">
         <form>
           <div class="mb-3">
-            <label  class="form-label">ID</label>
-            <input type="text" class="form-control"  aria-describedby="emailHelp">
+            <label  class="form-label" >ID</label>
+            <input type="text" class="form-control"  aria-describedby="emailHelp" id="item-id">
 
           </div>
           <div class="mb-3">
             <label  class="form-label">Name</label>
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control"id="item-name" >
           </div>
           <div class="mb-3">
-            <label  class="form-label">Qty</label>
-            <input type="text" class="form-control" >
+            <label  class="form-label" >Qty</label>
+            <input type="text" class="form-control" id="item-qty">
           </div>
           <div class="mb-3">
-            <label  class="form-label">Price(Rs)</label>
-            <input type="text" class="form-control" >
+            <label  class="form-label" >Price(Rs)</label>
+            <input type="text" class="form-control" id="item-price">
           </div>
 
-          <button type="button" class="btn btn-primary">Save</button>
-          <button type="button" class="btn btn-success">Update</button>
-          <button type="button" class="btn btn-danger">Delete</button>
-          <button type="button" class="btn btn-warning">View Items</button>
+          <button type="button" class="btn btn-primary" id="item-save">Save</button>
+          <button type="button" class="btn btn-success" id="item-update">Update</button>
+          <button type="button" class="btn btn-danger" id="item-delete">Delete</button>
+          <button type="button" class="btn btn-warning" id="item-view">View Items</button>
 
 
 
@@ -233,7 +211,7 @@
         </form>
       </div>
 
-      <table class="table">
+      <table class="table" id="item-table">
         <thead>
         <tr>
 
@@ -244,8 +222,8 @@
 
         </tr>
         </thead>
-        <tbody>
-        <tr>
+        <tbody id="item-body">
+       <!-- <tr>
           <th scope="row">I001</th>
           <td>Baasmathi</td>
           <td>400kg</td>
@@ -265,7 +243,7 @@
           <td>500</td>
           <td>200</td>
 
-        </tr>
+        </tr>-->
         </tbody>
       </table>
 
@@ -481,6 +459,7 @@
 
 <script src="assets/file/Dashboard.js"></script>
 <script src="assets/file/Customer.js"></script>
+<script src="assets/file/Item.js"></script>
 
 </body>
 </html>

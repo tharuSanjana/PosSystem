@@ -157,7 +157,7 @@ main>section>#totalRec{
     background-color: #0B60B0;
 }
 
-.table td:nth-child(2),td:nth-child(3),td:nth-child(4),td:nth-child(5),td:nth-child(6){
+.table td:first-child,td:nth-child(2),td:nth-child(3),td:nth-child(4),td:nth-child(5),td:nth-child(6){
     background-color: white;
 }
 
