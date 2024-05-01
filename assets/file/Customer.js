@@ -16,6 +16,7 @@ function addCustomerToTable(customer) {
 
 }
 let c=[];
+let getIndex;
 $('#customer-save').on('click', () => {
     let id = $('#id').val();
     let na = $('#name').val();
@@ -42,10 +43,18 @@ $('#customer-save').on('click', () => {
     };
     c.push(customer);
     addCustomerToTable(customer);
+
+
+    $('#id').val('');
+    $('#name').val('');
+    $('#nic').val('');
+    $('#address').val('');
+    $('#tel').val('');
 });
 
 $('#tbody').on('click','tr',function () {
 let index = $(this).index();
+getIndex=index;
  let id = $(this).find('#colId').text();
  let name = $(this).find('#colName').text();
  let nic = $(this).find('#colNic').text();
@@ -65,4 +74,37 @@ let index = $(this).index();
  $('#address').val(address);
  $('#tel').val(tel);
 
-})
+});
+
+$('#customer-update').on('click',()=>{
+    let id = $('#id').val();
+    let na = $('#name').val();
+    let nic = $('#nic').val();
+    let address = $('#address').val();
+    let tel = $('#tel').val();
+
+c[getIndex].id=id;
+c[getIndex].name=na;
+c[getIndex].nic=nic;
+c[getIndex].address=address;
+c[getIndex].tel=tel;
+
+    addCustomerToTable(c[getIndex]);
+    $('#id').val('');
+    $('#name').val('');
+    $('#nic').val('');
+    $('#address').val('');
+    $('#tel').val('');
+
+});
+
+$('#customer-delete').on('click',()=>{
+c.splice(getIndex,1);
+    addCustomerToTable(c[getIndex]);
+    $('#id').val('');
+    $('#name').val('');
+    $('#nic').val('');
+    $('#address').val('');
+    $('#tel').val('');
+});
+
