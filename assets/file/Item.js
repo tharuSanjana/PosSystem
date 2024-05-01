@@ -1,17 +1,23 @@
 
-function addItemToTable(item) {
-    var record = `<tr>
-        <td id="colId">${item.id}</td>
-        <td id="colName">${item.name}</td>
-        <td id="colQty">${item.q}</td>
-        <td id="colPrice">${item.p}</td>
-    </tr>`;
+function addItemToTable(items) {
+    $('#item-body').empty();
+    i.map((item,index)=>{
+    var record =
+         `<tr>
+            <td id="colId">${item.id}</td>
+            <td id="colName">${item.name}</td>
+            <td id="colQty">${item.q}</td>
+            <td id="colPrice">${item.p}</td>
+        </tr>`;
 
-    $('#item-table').append(record);
+
+        $('#item-table').append(record);
+    });
+
+
 }
 
 let i = [];
-let getIndexNum;
 $('#item-save').on('click', () => {
     let id = $('#item-id').val();
     let na = $('#item-name').val();
@@ -29,6 +35,8 @@ $('#item-save').on('click', () => {
     };
 
     i.push(items);
+
+
     addItemToTable(items);
 
     $('#item-id').val('');
@@ -36,6 +44,7 @@ $('#item-save').on('click', () => {
     $('#item-qty').val('');
     $('#item-price').val('');
 });
+
 
 $('#item-body').on('click','tr',function () {
     let index = $(this).index();
@@ -59,4 +68,48 @@ $('#item-body').on('click','tr',function () {
     $('#item-price').val(price);
 
 
+});
+
+/*
+$('#item-update').on('click',()=>{
+    let id = $('#item-id').val();
+    let na = $('#item-name').val();
+    let qty = $('#item-qty').val();
+    let price = $('#item-price').val();
+
+    i[getIndexNum].id=id;
+    i[getIndexNum].name=na;
+    i[getIndexNum].q=qty;
+    i[getIndexNum].p=price;
+
+
+    console.log("clicked id: ",id);
+    console.log("clicked name: ",na);
+    console.log("clicked qty: ",qty);
+    console.log("clicked price: ",price);
+
+
+    addItemToTable(i[getIndexNum]);
+    $('#item-id').val('');
+    $('#item-name').val('');
+    $('#item-qty').val('');
+    $('#item-price').val('');
+
+});*/
+$('#item-update').on('click', () => {
+    let id = $('#item-id').val();
+    let na = $('#item-name').val();
+    let qty = $('#item-qty').val();
+    let price = $('#item-price').val();
+
+    i[getIndexNum].id = id;
+    i[getIndexNum].name = na;
+    i[getIndexNum].q = qty;
+    i[getIndexNum].p = price;
+
+    addItemToTable(i[getIndexNum]); // Pass the entire array i
+    $('#item-id').val('');
+    $('#item-name').val('');
+    $('#item-qty').val('');
+    $('#item-price').val('');
 });
