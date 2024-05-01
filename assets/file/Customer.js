@@ -43,7 +43,7 @@ $('#customer-save').on('click', () => {
     };
     c.push(customer);
     addCustomerToTable(customer);
-
+getCustomerCount(c);
 
     $('#id').val('');
     $('#name').val('');
@@ -101,6 +101,7 @@ c[getIndex].tel=tel;
 $('#customer-delete').on('click',()=>{
 c.splice(getIndex,1);
     addCustomerToTable(c[getIndex]);
+    getCustomerCount(c);
     $('#id').val('');
     $('#name').val('');
     $('#nic').val('');
@@ -108,3 +109,9 @@ c.splice(getIndex,1);
     $('#tel').val('');
 });
 
+
+function getCustomerCount(c) {
+    let count = c.length;
+    $('#customerCount').text(count);
+    console.log("customer count: ", count);
+}

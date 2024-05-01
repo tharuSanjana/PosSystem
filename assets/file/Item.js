@@ -70,32 +70,7 @@ $('#item-body').on('click','tr',function () {
 
 });
 
-/*
-$('#item-update').on('click',()=>{
-    let id = $('#item-id').val();
-    let na = $('#item-name').val();
-    let qty = $('#item-qty').val();
-    let price = $('#item-price').val();
 
-    i[getIndexNum].id=id;
-    i[getIndexNum].name=na;
-    i[getIndexNum].q=qty;
-    i[getIndexNum].p=price;
-
-
-    console.log("clicked id: ",id);
-    console.log("clicked name: ",na);
-    console.log("clicked qty: ",qty);
-    console.log("clicked price: ",price);
-
-
-    addItemToTable(i[getIndexNum]);
-    $('#item-id').val('');
-    $('#item-name').val('');
-    $('#item-qty').val('');
-    $('#item-price').val('');
-
-});*/
 $('#item-update').on('click', () => {
     let id = $('#item-id').val();
     let na = $('#item-name').val();
@@ -107,9 +82,21 @@ $('#item-update').on('click', () => {
     i[getIndexNum].q = qty;
     i[getIndexNum].p = price;
 
-    addItemToTable(i[getIndexNum]); // Pass the entire array i
+    addItemToTable(i[getIndexNum]);
     $('#item-id').val('');
     $('#item-name').val('');
     $('#item-qty').val('');
     $('#item-price').val('');
 });
+
+$('#item-delete').on('click',()=>{
+    i.splice(getIndexNum,1);
+   addItemToTable(i[getIndexNum]);
+    $('#item-id').val('');
+    $('#item-name').val('');
+    $('#item-qty').val('');
+    $('#item-price').val('');
+
+});
+
+
