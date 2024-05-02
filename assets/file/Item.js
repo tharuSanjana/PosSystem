@@ -38,6 +38,7 @@ $('#item-save').on('click', () => {
 
 
     addItemToTable(items);
+getItemCost(i);
 
     $('#item-id').val('');
     $('#item-name').val('');
@@ -92,6 +93,7 @@ $('#item-update').on('click', () => {
 $('#item-delete').on('click',()=>{
     i.splice(getIndexNum,1);
    addItemToTable(i[getIndexNum]);
+
     $('#item-id').val('');
     $('#item-name').val('');
     $('#item-qty').val('');
@@ -100,3 +102,14 @@ $('#item-delete').on('click',()=>{
 });
 
 
+
+function getItemCost(i) {
+
+let totalCost=0;
+    for (let j=0;j<i.length;j++){
+        let cost = i[j].q*i[j].p;
+        totalCost += cost ;
+    }
+    $('#cost').text(totalCost);
+    console.log("Total cost : ", totalCost);
+}
