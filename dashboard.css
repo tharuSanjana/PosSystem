@@ -123,7 +123,7 @@ main>section>.dash-rec{
 }
 
 
-main>section>div>div{
+main>section>div>.fontAwesome{
     position: absolute;
 
     top: 37px;
@@ -1255,7 +1255,7 @@ footer>div>div>h3{
     }
 
 
-    main>section>div>div{
+    main>section>div>.fontAwesome{
         position: absolute;
 
         top: 37px;

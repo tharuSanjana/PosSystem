@@ -84,6 +84,7 @@ $('#item-update').on('click', () => {
     i[getIndexNum].p = price;
 
     addItemToTable(i[getIndexNum]);
+    getItemCost(i);
     $('#item-id').val('');
     $('#item-name').val('');
     $('#item-qty').val('');
@@ -93,7 +94,7 @@ $('#item-update').on('click', () => {
 $('#item-delete').on('click',()=>{
     i.splice(getIndexNum,1);
    addItemToTable(i[getIndexNum]);
-
+getItemCost(i);
     $('#item-id').val('');
     $('#item-name').val('');
     $('#item-qty').val('');
@@ -103,13 +104,30 @@ $('#item-delete').on('click',()=>{
 
 
 
-function getItemCost(i) {
+/*function getItemCost(i) {
 
 let totalCost=0;
     for (let j=0;j<i.length;j++){
         let cost = i[j].q*i[j].p;
         totalCost += cost ;
     }
-    $('#cost').text(totalCost);
+    $('#cost').text("Rs "+ totalCost);
     console.log("Total cost : ", totalCost);
+}*/
+
+
+
+function getItemCost(i) {
+    let totalCost = 0;
+    for (let j = 0; j < i.length; j++) {
+        let qty = parseFloat(i[j].q);
+        let price = parseFloat(i[j].p);
+        if (!isNaN(qty) && !isNaN(price)) {
+            totalCost += qty * price;
+        } else {
+            console.error("Quantity or price is not a valid number for item at index " + j);
+        }
+    }
+    $('#cost').text("Rs " + totalCost.toFixed(2)); // Ensure two decimal places for currency
+    console.log("Total cost: ", totalCost);
 }

@@ -85,6 +85,10 @@
             <input type="text"  class="form-control" >
           </div>
           <div class="mb-3">
+            <label  class="form-label">Qty</label>
+            <input type="text"  class="form-control" >
+          </div>
+          <div class="mb-3">
             <label  class="form-label">Order ID</label>
             <input type="text"  class="form-control" >
           </div>
@@ -109,7 +113,7 @@
     </div>
   </section>
 
-  <div>
+ <!-- <div>
     <button  class="btn btn-primary"><b>Place Order</b></button>
   </div>
 
@@ -123,7 +127,14 @@
 
   <div>
     <button class="btn btn-delete"><b>Delete</b></button>
-  </div>
+  </div>-->
+<div id="buttons">
+  <button type="button" class="btn btn-primary">Place Order</button>
+  <button type="button" class="btn btn-success">Update</button>
+  <button type="button" class="btn btn-danger">Delete</button>
+  <button type="button" class="btn btn-warning">View Orders</button>
+</div>
+
 
   <table class="table">
     <thead>
@@ -132,6 +143,9 @@
       <th scope="col">Order ID</th>
       <th scope="col">Customer ID</th>
       <th scope="col">Customer Name</th>
+      <th scope="col">Customer Email</th>
+      <th scope="col">Customer NIC</th>
+      <th scope="col">Customer Address</th>
       <th scope="col">Item ID</th>
       <th scope="col">Item Name</th>
       <th scope="col">Qty</th>
@@ -144,32 +158,16 @@
       <th scope="row">O001</th>
       <td>C001</td>
       <td>Amal</td>
+      <td>Amal@gmail.com</td>
+      <td>20028386705</td>
+      <td>Panadura</td>
       <td>I001</td>
       <td>Baasmathi</td>
       <td>20kg</td>
       <td>30 000/=</td>
 
     </tr>
-    <tr>
-      <th scope="row">O002</th>
-      <td>C001</td>
-      <td>Amal</td>
-      <td>I001</td>
-      <td>Baasmathi</td>
-      <td>20kg</td>
-      <td>30 000/=</td>
 
-    </tr>
-    <tr>
-      <th scope="row">O003</th>
-      <td>C001</td>
-      <td>Amal</td>
-      <td>I001</td>
-      <td>Baasmathi</td>
-      <td>20kg</td>
-      <td>30 000/=</td>
-
-    </tr>
     </tbody>
   </table>
 
