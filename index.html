@@ -273,44 +273,44 @@
 
 
             <div class="mb-3">
-              <label for="disabledTextInput" class="form-label"> Customer ID</label>
-              <input type="text" id="disabledTextInput" class="form-control" >
+              <label class="form-label"> Customer ID</label>
+              <input type="text"  class="form-control" id="cId">
             </div>
             <div class="mb-3">
-              <label for="inputName" class="form-label">Customer Name</label>
-              <input type="text" id="inputName" class="form-control" >
+              <label  class="form-label">Customer Name</label>
+              <input type="text"  class="form-control" id="cName" >
             </div>
             <div class="mb-3">
-              <label for="inputEmail" class="form-label">Customer Email</label>
-              <input type="text" id="inputEmail" class="form-control" >
+              <label  class="form-label">Customer Email</label>
+              <input type="text"  class="form-control" id="cEmail">
             </div>
             <div class="mb-3">
-              <label for="inputNic" class="form-label"> Customer NIC</label>
-              <input type="text" id="inputNic" class="form-control" >
+              <label  class="form-label"> Customer NIC</label>
+              <input type="text" class="form-control" id="cNic">
             </div>
             <div class="mb-3">
               <label  class="form-label">Customer Address</label>
-              <input type="text"  class="form-control" >
+              <input type="text"  class="form-control" id="cAddress">
             </div>
             <div class="mb-3">
               <label  class="form-label">Item ID</label>
-              <input type="text"  class="form-control" >
+              <input type="text"  class="form-control" id="iId" >
             </div>
             <div class="mb-3">
               <label  class="form-label">Qty</label>
-              <input type="text"  class="form-control" >
+              <input type="text"  class="form-control" id="qty">
             </div>
             <div class="mb-3">
               <label  class="form-label">Item Name</label>
-              <input type="text"  class="form-control" >
+              <input type="text"  class="form-control" id="itemName">
             </div>
             <div class="mb-3">
               <label  class="form-label">Order ID</label>
-              <input type="text"  class="form-control" >
+              <input type="text"  class="form-control" id="oId">
             </div>
             <div class="mb-3">
               <label  class="form-label">Total</label>
-              <input type="text"  class="form-control" >
+              <input type="text"  class="form-control" id="total">
             </div>
 
 
@@ -327,13 +327,13 @@
 
 
     <div id="buttons">
-      <button type="button" class="btn btn-primary">Place Order</button>
-      <button type="button" class="btn btn-success">Update</button>
-      <button type="button" class="btn btn-danger">Delete</button>
-      <button type="button" class="btn btn-warning">View Orders</button>
+      <button type="button" class="btn btn-primary" id="placeOrder">Place Order</button>
+      <button type="button" class="btn btn-success" id="update">Update</button>
+      <button type="button" class="btn btn-danger" id="delete">Delete</button>
+      <button type="button" class="btn btn-warning" id="viewOrders">View Orders</button>
     </div>
 
-    <table class="table">
+    <table class="table" id="orderTable">
       <thead>
       <tr>
 
@@ -350,7 +350,7 @@
 
       </tr>
       </thead>
-      <tbody>
+      <tbody id="order-tbody">
      <!-- <tr>
         <th scope="row">O001</th>
         <td>C001</td>
@@ -460,6 +460,7 @@
 <script src="assets/file/Dashboard.js"></script>
 <script src="assets/file/Customer.js"></script>
 <script src="assets/file/Item.js"></script>
+<script src="assets/file/Orders.js"></script>
 
 </body>
 </html>
