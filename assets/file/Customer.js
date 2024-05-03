@@ -125,5 +125,6 @@ c.splice(getIndex,1);
 function getCustomerCount(c) {
     let count = c.length;
     $('#customerCount').text(count);
+    $('#customer-count').text(count);
     console.log("customer count: ", count);
 }

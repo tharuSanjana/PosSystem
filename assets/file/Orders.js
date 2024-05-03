@@ -166,5 +166,6 @@ $('#delete').on('click',()=>{
 function getOrdersCount(o) {
    let count = o.length;
    $('#count').text(count);
+   $('#orderOrder').text(count);
    console.log("Orders count: ", count);
 }
