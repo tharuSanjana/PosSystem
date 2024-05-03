@@ -65,7 +65,7 @@ $('#placeOrder').on('click',()=>{
    };
    o.push(orders);
    addOrdersToTable(orders);
-
+   getOrdersCount(o);
 
    $('#cId').val('');
    $('#cName').val('');
@@ -144,3 +144,27 @@ $('#update').on('click',()=>{
    $('#total').val('');
 
 });
+
+$('#delete').on('click',()=>{
+   o.splice(getOrderIndex,1);
+
+   addOrdersToTable(o[getIndex]);
+   getOrdersCount(o);
+   $('#cId').val('');
+   $('#cName').val('');
+   $('#cEmail').val('');
+   $('#cNic').val('');
+   $('#cAddress').val('');
+   $('#iId').val('');
+   $('#itemName').val('');
+   $('#qty').val('');
+   $('#oId').val('');
+   $('#total').val('');
+
+})
+
+function getOrdersCount(o) {
+   let count = o.length;
+   $('#count').text(count);
+   console.log("Orders count: ", count);
+}
