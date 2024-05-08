@@ -46,7 +46,7 @@ $('#customer-save').on('click', () => {
         }
     };
 
-validateNIC();
+
     if (!id) {
         alert('Please enter ID');
         return;
@@ -109,9 +109,10 @@ validateNIC();
         alert('Please enter a valid phone number');
         return;
     }
+
     c.push(customer);
     addCustomerToTable(customer);
-getCustomerCount(c);
+    getCustomerCount(c);
 
     $('#id').val('');
     $('#name').val('');
@@ -156,7 +157,72 @@ $('#customer-update').on('click',()=>{
     let address = $('#address').val();
     let tel = $('#tel').val();
 
-c[getIndex].id=id;
+
+    if (!id) {
+        alert('Please enter ID');
+        return;
+    }
+
+    if (!id.startsWith('C00')) {
+        alert('ID should start with C00');
+        return;
+    }
+
+    if (!na) {
+        alert('Please enter Name');
+        return;
+    }
+
+
+    if (!/^[a-zA-Z\s]+$/.test(na)) {
+        alert('Name can only contain letters and spaces');
+        return;
+    }
+
+
+    if (!nic) {
+        alert('Please enter NIC');
+        return;
+    }
+
+    if (!/^[0-9A-Za-z]{12}$/.test(nic)) {
+        alert('NIC should contain exactly 12 characters ');
+        return;
+    }
+
+    if (!email) {
+        alert('Please enter email');
+        return;
+    }
+
+    if (!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
+        alert('Please enter a valid email address');
+        return;
+    }
+
+    if (!address) {
+        alert('Please enter address');
+        return;
+    }
+
+
+    if (!/^[\w\s\-,.'#&()]+$/u.test(address)) {
+        alert('Please enter a valid address');
+        return;
+    }
+
+    if (!tel) {
+        alert('Please enter Phone number');
+        return;
+    }
+
+    if (!/^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/.test(tel)) {
+        alert('Please enter a valid phone number');
+        return;
+    }
+
+
+    c[getIndex].id=id;
 c[getIndex].name=na;
 c[getIndex].nic=nic;
 c[getIndex].email=email;
@@ -177,6 +243,9 @@ $('#customer-delete').on('click',()=>{
 c.splice(getIndex,1);
     addCustomerToTable(c[getIndex]);
     getCustomerCount(c);
+
+
+
     $('#id').val('');
     $('#name').val('');
     $('#nic').val('');
