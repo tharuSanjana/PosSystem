@@ -264,128 +264,280 @@
     <section id="section1">
       <div class="viewOrderCount">
         <div id="ordersCount">Orders</div>
-        <div id="count">0</div>
-      </div>
-
-      <div class="select">
-        <div>
-          <label id="selectCustomer"><b>Fill Details</b></label>
-          <form>
-
-
-            <div class="mb-3">
-              <label class="form-label"> Customer ID</label>
-              <input type="text"  class="form-control" id="cId">
-            </div>
-            <div class="mb-3">
-              <label  class="form-label">Customer Name</label>
-              <input type="text"  class="form-control" id="cName" >
-            </div>
-            <div class="mb-3">
-              <label  class="form-label">Customer Email</label>
-              <input type="text"  class="form-control" id="cEmail">
-            </div>
-            <div class="mb-3">
-              <label  class="form-label"> Customer NIC</label>
-              <input type="text" class="form-control" id="cNic">
-            </div>
-            <div class="mb-3">
-              <label  class="form-label">Customer Address</label>
-              <input type="text"  class="form-control" id="cAddress">
-            </div>
-            <div class="mb-3">
-              <label  class="form-label">Item ID</label>
-              <input type="text"  class="form-control" id="iId" >
-            </div>
-            <div class="mb-3">
-              <label  class="form-label">Qty</label>
-              <input type="text"  class="form-control" id="qty">
-            </div>
-            <div class="mb-3">
-              <label  class="form-label">Item Name</label>
-              <input type="text"  class="form-control" id="itemName">
-            </div>
-            <div class="mb-3">
-              <label  class="form-label">Order ID</label>
-              <input type="text"  class="form-control" id="oId">
-            </div>
-            <div class="mb-3">
-              <label  class="form-label">Total</label>
-              <input type="text"  class="form-control" id="total">
-            </div>
-
-
-            <!--<button type="submit" class="btn btn-primary">Submit</button>-->
-
-          </form>
-
-        </div>
-
-      </div>
-
+        <div id="count"> 50</div>
       </div>
     </section>
+  </main>
+
+  <section id="section2">
 
 
-    <div id="buttons">
-      <button type="button" class="btn btn-primary" id="placeOrder">Place Order</button>
-      <button type="button" class="btn btn-success" id="update">Update</button>
-      <button type="button" class="btn btn-danger" id="delete">Delete</button>
-      <button type="button" class="btn btn-warning" id="viewOrders">View Orders</button>
+    <div>
+      <h3 id="invoice-rec"><b>INVOICE</b></h3>
+
+      <div id="dateDate">
+        <label id="date">Date</label>
+        <input type="date">
+      </div>
+
+      <div>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="inputOrderId" class="col-form-label" id="orderId-label">Order ID</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" id="inputOrderId" class="form-control" aria-describedby="passwordHelpInline">
+          </div>
+          <div class="col-auto">
+    <span id="passwordHelpInline" class="form-text">
+
+    </span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="inputCustomerId" class="col-form-label" id="customerId-label">Customer ID</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" id="inputCustomerId" class="form-control" aria-describedby="passwordHelpInline">
+          </div>
+          <div class="col-auto">
+
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="inputCustomerName" class="col-form-label" id="customerName-label">Name</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" id="inputCustomerName" class="form-control" aria-describedby="passwordHelpInline">
+          </div>
+          <div class="col-auto">
+
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="inputCustomerNic" class="col-form-label" id="customerNic-label">NIC</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" id="inputCustomerNic" class="form-control" aria-describedby="passwordHelpInline">
+          </div>
+          <div class="col-auto">
+
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="inputCustomerEmail" class="col-form-label" id="customerEmail-label">Email</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" id="inputCustomerEmail" class="form-control" aria-describedby="passwordHelpInline">
+          </div>
+          <div class="col-auto">
+
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="inputCustomerAddress" class="col-form-label" id="customerAddress-label">Address</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" id="inputCustomerAddress" class="form-control" aria-describedby="passwordHelpInline">
+          </div>
+          <div class="col-auto">
+
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="inputCustomerTel" class="col-form-label" id="customerTel-label">Tel</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" id="inputCustomerTel" class="form-control" aria-describedby="passwordHelpInline">
+          </div>
+          <div class="col-auto">
+
+          </div>
+        </div>
+      </div>
+
+
     </div>
 
-    <table class="table" id="orderTable">
-      <thead>
-      <tr>
+    <div>
+      <h3 id="item-rec"><b>ITEM</b></h3>
 
-        <th scope="col">Order ID</th>
-        <th scope="col">Customer ID</th>
-        <th scope="col">Customer Name</th>
-        <th scope="col">Customer Email</th>
-        <th scope="col">Customer NIC</th>
-        <th scope="col">Customer Address</th>
-        <th scope="col">Item ID</th>
-        <th scope="col">Item Name</th>
-        <th scope="col">Qty</th>
-        <th scope="col">Total(Rs)</th>
+      <div>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="inputItemId" class="col-form-label" id="itemId-label">ID</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" id="inputItemId" class="form-control" aria-describedby="passwordHelpInline">
+          </div>
+          <div class="col-auto">
 
-      </tr>
-      </thead>
-      <tbody id="order-tbody">
-     <!-- <tr>
-        <th scope="row">O001</th>
-        <td>C001</td>
-        <td>Amal</td>
-        <td>I001</td>
-        <td>Baasmathi</td>
-        <td>20kg</td>
-        <td>30 000/=</td>
+          </div>
+        </div>
+      </div>
 
-      </tr>
-      <tr>
-        <th scope="row">O002</th>
-        <td>C001</td>
-        <td>Amal</td>
-        <td>I001</td>
-        <td>Baasmathi</td>
-        <td>20kg</td>
-        <td>30 000/=</td>
+      <div>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="inputItemId" class="col-form-label" id="itemName-label">Name</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" id="inputItemName" class="form-control" aria-describedby="passwordHelpInline">
+          </div>
+          <div class="col-auto">
 
-      </tr>
-      <tr>
-        <th scope="row">O003</th>
-        <td>C001</td>
-        <td>Amal</td>
-        <td>I001</td>
-        <td>Baasmathi</td>
-        <td>20kg</td>
-        <td>30 000/=</td>
+          </div>
+        </div>
+      </div>
 
-      </tr>-->
-      </tbody>
-    </table>
+      <div>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="inputItemId" class="col-form-label" id="itemPrice-label">Price</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" id="inputItemPrice" class="form-control" aria-describedby="passwordHelpInline">
+          </div>
+          <div class="col-auto">
 
-  </main>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="inputItemId" class="col-form-label" id="itemQty-label">Qty</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" id="inputItemQty" class="form-control" aria-describedby="passwordHelpInline">
+          </div>
+          <div class="col-auto">
+
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="inputItemId" class="col-form-label" id="itemSelectedQty-label">SelectedQty</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" id="inputItemSelectedQty" class="form-control" aria-describedby="passwordHelpInline">
+          </div>
+          <div class="col-auto">
+
+          </div>
+        </div>
+      </div>
+
+      <button class="addItem" type="submit"><b>Add Item</b></button>
+
+    </div>
+    <div>
+      <h3 id="order-rec"><b>ORDER</b></h3>
+      <label id="countTotal">Cart</label>
+
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <label for="inputCash" class="col-form-label" id="cash-label">Cash</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" id="inputCash" class="form-control" aria-describedby="passwordHelpInline">
+        </div>
+        <div class="col-auto">
+
+        </div>
+      </div>
+
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <label for="inputDiscount" class="col-form-label" id="discount-label">Discount</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" id="inputDiscount" class="form-control" aria-describedby="passwordHelpInline">
+        </div>
+        <div class="col-auto">
+
+        </div>
+      </div>
+
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <label for="inputBalance" class="col-form-label" id="balance-label">Balance</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" id="inputBalance" class="form-control" aria-describedby="passwordHelpInline">
+        </div>
+        <div class="col-auto">
+
+        </div>
+      </div>
+
+      <button class="addItem" type="submit"><b>Place Order</b></button>
+    </div>
+
+  </section>
+
+  <!--<div id="buttons">
+    <button type="button" class="btn btn-primary">Place Order</button>
+    <button type="button" class="btn btn-success">Update</button>
+    <button type="button" class="btn btn-danger">Delete</button>
+    <button type="button" class="btn btn-warning">View Orders</button>
+  </div>-->
+
+
+  <table class="table">
+    <thead>
+    <tr>
+
+      <th scope="col">Item ID</th>
+      <th scope="col">Item Name</th>
+      <th scope="col">Qty</th>
+      <th scope="col">Price</th>
+      <th scope="col">Total</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row">O001</th>
+      <td>C001</td>
+      <td>Amal</td>
+      <td>Amal@gmail.com</td>
+      <td>20028386705</td>
+
+
+    </tr>
+
+    </tbody>
+  </table>
 
 
   <footer>
