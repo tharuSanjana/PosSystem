@@ -456,6 +456,126 @@ footer > div {
 .form-control {
     width: 400px;
 }
+
+#section2>div{
+    width: 564px;
+    aspect-ratio: 1/1;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    margin: 62px 791px;
+}
+
+#invoice-rec{
+    color: #0B60B0;
+    text-align: center;
+    font-size: 32px;
+    position: relative;
+    top: 20px;
+
+}
+
+
+#item-rec{
+    color: #0B60B0;
+    text-align: center;
+    font-size: 32px;
+    position: relative;
+    top: 20px;
+
+}
+#orderId-label,#inputOrderId{
+    font-size: 22px;
+    position: relative;
+    right: -43px;
+    top: 105px;
+}
+
+#inputOrderId{
+    width: 282px;
+    height: 34px;
+}
+#date{
+    font-size: 22px;
+}
+
+ #dateDate{
+     position: relative;
+    top: 85px;
+    left: 44px;
+}
+
+#customerId-label,#inputCustomerId{
+    font-size: 22px;
+    position: relative;
+    right: -42px;
+    top: 119px;
+}
+
+#inputCustomerId{
+    width: 282px;
+    height: 34px;
+}
+
+#customerName-label,#inputCustomerName{
+    font-size: 22px;
+    position: relative;
+    right: -42px;
+    top: 126px;
+}
+
+#inputCustomerName{
+    width: 282px;
+    height: 34px;
+}
+
+#customerNic-label,#inputCustomerNic{
+    font-size: 22px;
+    position: relative;
+    right: -42px;
+    top: 126px;
+}
+
+#inputCustomerNic{
+    width: 282px;
+    height: 34px;
+}
+
+
+#customerEmail-label,#inputCustomerEmail{
+    font-size: 22px;
+    position: relative;
+    right: -42px;
+    top: 126px;
+}
+
+#inputCustomerEmail{
+    width: 282px;
+    height: 34px;
+}
+
+#customerAddress-label,#inputCustomerAddress{
+    font-size: 22px;
+    position: relative;
+    right: -42px;
+    top: 126px;
+}
+
+#inputCustomerAddress{
+    width: 282px;
+    height: 34px;
+}
+
+#customerTel-label,#inputCustomerTel{
+    font-size: 22px;
+    position: relative;
+    right: -42px;
+    top: 126px;
+}
+
+#inputCustomerTel{
+    width: 282px;
+    height: 34px;
+}
 @keyframes anim {
     from{
         background-position: 0% 50%;
