@@ -163,7 +163,7 @@
   </div>
 
   <div>
-    <h3 id="item-rec"><b>Item</b></h3>
+    <h3 id="item-rec"><b>ITEM</b></h3>
 
     <div>
       <div class="row g-3 align-items-center">
@@ -235,8 +235,52 @@
       </div>
     </div>
 
+    <button class="addItem" type="submit"><b>Add Item</b></button>
+
   </div>
-  <div></div>
+  <div>
+    <h3 id="order-rec"><b>ORDER</b></h3>
+    <label id="countTotal">Cart</label>
+
+    <div class="row g-3 align-items-center">
+      <div class="col-auto">
+        <label for="inputCash" class="col-form-label" id="cash-label">Cash</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" id="inputCash" class="form-control" aria-describedby="passwordHelpInline">
+      </div>
+      <div class="col-auto">
+
+      </div>
+    </div>
+
+    <div class="row g-3 align-items-center">
+      <div class="col-auto">
+        <label for="inputDiscount" class="col-form-label" id="discount-label">Discount</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" id="inputDiscount" class="form-control" aria-describedby="passwordHelpInline">
+      </div>
+      <div class="col-auto">
+
+      </div>
+    </div>
+
+    <div class="row g-3 align-items-center">
+      <div class="col-auto">
+        <label for="inputBalance" class="col-form-label" id="balance-label">Balance</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" id="inputBalance" class="form-control" aria-describedby="passwordHelpInline">
+      </div>
+      <div class="col-auto">
+
+      </div>
+    </div>
+
+    <button class="addItem" type="submit"><b>Place Order</b></button>
+  </div>
+
 </section>
    <!-- <div class="select">
       <div>
@@ -316,28 +360,24 @@
   <div>
     <button class="btn btn-delete"><b>Delete</b></button>
   </div>-->
-<div id="buttons">
+<!--<div id="buttons">
   <button type="button" class="btn btn-primary">Place Order</button>
   <button type="button" class="btn btn-success">Update</button>
   <button type="button" class="btn btn-danger">Delete</button>
   <button type="button" class="btn btn-warning">View Orders</button>
-</div>
+</div>-->
 
 
   <table class="table">
     <thead>
     <tr>
 
-      <th scope="col">Order ID</th>
-      <th scope="col">Customer ID</th>
-      <th scope="col">Customer Name</th>
-      <th scope="col">Customer Email</th>
-      <th scope="col">Customer NIC</th>
-      <th scope="col">Customer Address</th>
       <th scope="col">Item ID</th>
       <th scope="col">Item Name</th>
       <th scope="col">Qty</th>
-      <th scope="col">Total(Rs)</th>
+      <th scope="col">Price</th>
+      <th scope="col">Total</th>
+
 
     </tr>
     </thead>
@@ -348,11 +388,7 @@
       <td>Amal</td>
       <td>Amal@gmail.com</td>
       <td>20028386705</td>
-      <td>Panadura</td>
-      <td>I001</td>
-      <td>Baasmathi</td>
-      <td>20kg</td>
-      <td>30 000/=</td>
+
 
     </tr>
 

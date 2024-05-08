@@ -241,8 +241,8 @@ main>section>div>div>form{
     position: relative;
     width: 100px;
     height: 200px;
-    top: 129px;
-    left: 112px;
+    top: 52px;
+    left: 393px;
     font-size: 20px;
 z-index: 999;
 
@@ -264,6 +264,7 @@ z-index: 999;
 
 
 
+/*
 .btn-view{
     background-color: #FCC314;
     color: white;
@@ -295,6 +296,7 @@ z-index: 999;
 }
 
 
+*/
 
 footer > div {
     background-color: white;
@@ -302,6 +304,7 @@ footer > div {
     bottom: -1572px;
     width: 100%;
     height: 45%;
+    top: 2537px;
 
 }
 
@@ -378,7 +381,7 @@ footer > div {
     width: 100%;
     height: 45%;
     /*z-index: 1000;*/
-    top: 2308px;
+    top: 2837px;
 
 }
 
@@ -483,6 +486,15 @@ footer > div {
     top: 20px;
 
 }
+
+#order-rec{
+    color: #0B60B0;
+    text-align: center;
+    font-size: 32px;
+    position: relative;
+    top: 20px;
+
+}
 #orderId-label,#inputOrderId{
     font-size: 22px;
     position: relative;
@@ -576,6 +588,120 @@ footer > div {
     width: 282px;
     height: 34px;
 }
+
+#itemId-label,#inputItemId{
+    font-size: 22px;
+    position: relative;
+    right: -42px;
+    top: 126px;
+}
+
+#inputItemId{
+    width: 282px;
+    height: 34px;
+}
+
+#itemName-label,#inputItemName{
+    font-size: 22px;
+    position: relative;
+    right: -42px;
+    top: 132px;
+}
+
+#inputItemName{
+    width: 282px;
+    height: 34px;
+}
+
+#itemPrice-label,#inputItemPrice{
+    font-size: 22px;
+    position: relative;
+    right: -42px;
+    top: 135px;
+}
+
+#inputItemPrice{
+    width: 282px;
+    height: 34px;
+}
+
+#itemQty-label,#inputItemQty{
+    font-size: 22px;
+    position: relative;
+    right: -42px;
+    top: 136px;
+}
+
+#inputItemQty{
+    width: 282px;
+    height: 34px;
+}
+
+#itemSelectedQty-label,#inputItemSelectedQty{
+    font-size: 22px;
+    position: relative;
+    right: -42px;
+    top: 140px;
+}
+
+#inputItemSelectedQty{
+    width: 282px;
+    height: 34px;
+}
+
+.addItem{
+    position: relative;
+    top: 175px;
+    right: -358px;
+    background-color:dodgerblue;
+    font-size: 20px;
+
+}
+
+#countTotal{
+    position: relative;
+    top: 63px;
+    left: 130px;
+    font-size: 55px;
+    color: red;
+}
+
+#cash-label,#inputCash{
+    font-size: 22px;
+    position: relative;
+    right: -42px;
+    top: 126px;
+}
+
+#inputCash{
+    width: 282px;
+    height: 34px;
+}
+
+#discount-label,#inputDiscount{
+    font-size: 22px;
+    position: relative;
+    right: -42px;
+    top: 132px;
+}
+
+#inputDiscount{
+    width: 282px;
+    height: 34px;
+}
+
+#balance-label,#inputBalance{
+    font-size: 22px;
+    position: relative;
+    right: -42px;
+    top: 135px;
+}
+
+#inputBalance{
+    width: 282px;
+    height: 34px;
+}
+
 @keyframes anim {
     from{
         background-position: 0% 50%;
