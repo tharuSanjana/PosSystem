@@ -45,6 +45,34 @@ $('#customer-save').on('click', () => {
             console.log("saved");
         }
     };
+
+validateNIC();
+    if (!id) {
+        alert('Please enter ID');
+        return;
+    }
+
+    if (!id.startsWith('C00')) {
+        alert('ID should start with C00');
+        return;
+    }
+
+    if (!na) {
+        alert('Please enter Name');
+        return;
+    }
+
+
+    if (!/^[a-zA-Z\s]+$/.test(na)) {
+        alert('Name can only contain letters and spaces');
+        return;
+    }
+
+
+    if (!nic) {
+        alert('Please enter NIC');
+        return;
+    }
     c.push(customer);
     addCustomerToTable(customer);
 getCustomerCount(c);
@@ -128,3 +156,40 @@ function getCustomerCount(c) {
     $('#customer-count').text(count);
     console.log("customer count: ", count);
 }
+
+// function validateNIC()
+// {
+//     var nic = document.getElementById('nic');
+//     var mesg = document.getElementById('msg');
+//
+//     if (nic.length != 3) {
+//         msg.innerHTML="Length must be 14 characters";
+//     } else{
+//
+//     }
+// }
+
+function validateNIC() {
+    var nic = document.getElementById('nic');
+    var mesg = document.getElementById('msg');
+
+    if (nic.value.length < 3) {
+        mesg.innerHTML = "Length must be at least 3 characters";
+        return false; // Prevent further processing or form submission
+    } else {
+
+    }
+}
+
+/*
+function validateId(id) {
+    if (!id) {
+        alert('Please enter ID');
+        return;
+    }
+
+    if (!id.startsWith('C00')) {
+        alert('ID should start with C00');
+        return;
+    }
+}*/
