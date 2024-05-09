@@ -1,3 +1,50 @@
+import {CustomerModel} from "../model/CustomerModel.js";
+import { c } from '../db/db.js';
+
+
+function logCArray() {
+    console.log(c[0]);
+}
+
+// Call the function to log c array
+logCArray();
+
+document.addEventListener('newDataAdded', function(event) {
+    const newData = event.detail;
+    console.log("New data received in Orders.js:", newData);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 function addOrdersToTable(orders) {
    $('#order-tbody').empty();
    o.map((item,index)=>{
@@ -168,4 +215,4 @@ function getOrdersCount(o) {
    $('#count').text(count);
    $('#orderOrder').text(count);
    console.log("Orders count: ", count);
-}
+}*/

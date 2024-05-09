@@ -1,3 +1,5 @@
+import {CustomerModel} from "../model/CustomerModel.js";
+import {c} from "../db/db.js";
 
 function addCustomerToTable(customer) {
     $('#tbody').empty();
@@ -16,7 +18,7 @@ function addCustomerToTable(customer) {
 
 
 }
-let c=[];
+/*let c=[];*/
 let getIndex;
 $('#customer-save').on('click', () => {
     let id = $('#id').val();
@@ -33,7 +35,7 @@ $('#customer-save').on('click', () => {
     console.log("address", address);
     console.log("tel", tel);
 
-
+/*
     let customer = {
         id: id,
         name: na,
@@ -44,7 +46,9 @@ $('#customer-save').on('click', () => {
         call: () => {
             console.log("saved");
         }
-    };
+    };*/
+
+    /*let customer = new CustomerModel(id,na,nic,email,address,tel);*/
 
 
     if (!id) {
@@ -109,8 +113,10 @@ $('#customer-save').on('click', () => {
         alert('Please enter a valid phone number');
         return;
     }
-
+    let customer = new CustomerModel(id,na,nic,email,address,tel);
     c.push(customer);
+
+    console.log("Array; ",c[0]);
     addCustomerToTable(customer);
     getCustomerCount(c);
 
