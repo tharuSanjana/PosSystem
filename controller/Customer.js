@@ -116,7 +116,7 @@ $('#customer-save').on('click', () => {
     let customer = new CustomerModel(id,na,nic,email,address,tel);
     c.push(customer);
 
-    console.log("Array; ",c[0]);
+    /*console.log("Array; ",c[0]);*/
     addCustomerToTable(customer);
     getCustomerCount(c);
 

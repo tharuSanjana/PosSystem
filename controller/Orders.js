@@ -1,4 +1,4 @@
-import {CustomerModel} from "../model/CustomerModel.js";
+    import {CustomerModel} from "../model/CustomerModel.js";
 import { c } from '../db/db.js';
 
 
@@ -6,16 +6,16 @@ function logCArray() {
     console.log(c[0]);
 }
 
-// Call the function to log c array
-logCArray();
 
-document.addEventListener('newDataAdded', function(event) {
+
+/*document.addEventListener('newDataAdded', function(event) {
     const newData = event.detail;
     console.log("New data received in Orders.js:", newData);
-});
+});*/
 
-
-
+    $('#customerId-label').on('click', () => {
+        logCArray();
+    });
 
 
 
