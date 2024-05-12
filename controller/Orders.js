@@ -145,9 +145,11 @@ function addOrderItemToTable() {
 
         let itemOfOrder = new ItemOfOrderModel(itemId, itemName, itemPrice, itemQty, selectedQty);
         orderItems.push(itemOfOrder);
+        var total = calculateTotal(itemPrice,selectedQty);
 
-
-        addOrderItemToTable(itemOfOrder);
+        addOrderItemToTable(itemOfOrder,total);
+        setTotalIntoLabel(orderItems);
+        /*calculateTotal(itemPrice,selectedQty);*/
 
         // Clear input fields after adding the item to the table
         $('#inputItemId').val('');
@@ -157,13 +159,38 @@ function addOrderItemToTable() {
         $('#inputItemSelectedQty').val('');
     });
 
-    function addOrderItemToTable(item) {
+    function addOrderItemToTable(item,total) {
         var record = `<tr>
         <td>${item.id}</td>
         <td>${item.name}</td>
+         <td>${item.q}</td>
+         <td>${item.selectedQty}</td>
         <td>${item.p}</td>
-        <td>${item.q}</td>
-        <td>${item.selectedQty}</td>
+        <td>${total}</td>
+       
+       
     </tr>`;
         $('#orderSelectedItem').append(record);
+    }
+
+    function calculateTotal(itemPrice,selectedQty) {
+        let total = itemPrice*selectedQty;
+        console.log("total: ",total);
+
+        return total;
+    }
+
+    function setTotalIntoLabel(orderItems) {
+      let setTotal = 0;
+
+      for (let j=0;j<orderItems.length;j++){
+          let itemPrice = orderItems[j].q;
+          let selectedQty = orderItems[j].selectedQty;
+
+          setTotal += itemPrice*selectedQty;
+
+
+      }
+        $('#countTotal').text("Rs " + setTotal.toFixed(2));
+      console.log(setTotal);
     }
