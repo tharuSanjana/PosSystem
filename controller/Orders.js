@@ -188,9 +188,29 @@ function addOrderItemToTable() {
           let selectedQty = orderItems[j].selectedQty;
 
           setTotal += itemPrice*selectedQty;
-
-
       }
         $('#countTotal').text("Rs " + setTotal.toFixed(2));
       console.log(setTotal);
     }
+
+    /*$('#placeOrder').on('click',()=>{
+        let cash = $('#inputCash').val();
+        let discount = $('#inputDiscount').val();
+
+        giveBalance(cash,discount);
+    });
+
+    function giveBalance(cash,discount) {
+        let total = $('#countTotal').val();
+        let x = (total*discount)%100;
+        let balance = cash-x;
+        $('#inputBalance').text(balance);
+        console.log(balance);
+    }*/
+
+    $('#inputDiscount').on('click',()=>{
+        let discount = $('#inputDiscount').val();
+        let getTotal = $('#countTotal').val();
+        let x = (getTotal*discount)%100;
+        console.log("sub Total: ",x);
+    });
