@@ -22,6 +22,7 @@ function addCustomerToTable(customer) {
 let getIndex;
 $('#customer-save').on('click', () => {
     let id = $('#id').val();
+   /* $('#inputOrderId').val(id);*/
     let na = $('#name').val();
     let nic = $('#nic').val();
     let email = $('#email').val();
@@ -280,17 +281,7 @@ function getCustomerCount(c) {
 //     }
 // }
 
-function validateNIC() {
-    var nic = document.getElementById('nic');
-    var mesg = document.getElementById('msg');
 
-    if (nic.value.length < 3) {
-        mesg.innerHTML = "Length must be at least 3 characters";
-        return false; // Prevent further processing or form submission
-    } else {
-
-    }
-}
 
 /*
 function validateId(id) {
