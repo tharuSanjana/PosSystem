@@ -1,6 +1,8 @@
     import {CustomerModel} from "../model/CustomerModel.js";
+    import {ItemOfOrderModel} from "../model/ItemOfOrderModel.js";
     import {c} from "../db/db.js";
-
+    import {i} from "../db/db.js";
+    import {orderItems} from "../db/db.js";
 
     $(document).ready(function() {
 
@@ -10,6 +12,12 @@
         $('#inputCustomerEmail').val('');
         $('#inputCustomerAddress').val('');
         $('#inputCustomerTel').val('');
+
+        $('#inputItemId').val('');
+        $('#inputItemName').val('');
+        $('#inputItemPrice').val('');
+        $('#inputItemQty').val('');
+        $('#inputItemSelectedQty').val('');
     });
 
     $('#inputCustomerId').on('click', () => {
@@ -18,7 +26,7 @@
 
     $('#inputCustomerId').on('input', function() {
         var selectedId = $(this).val();
-        setCustomerNameFromList(selectedId);
+        setCustomerDataFromList(selectedId);
     });
 
     function getAllCustomerId() {
@@ -30,7 +38,7 @@
         });
     }
 
-    function setCustomerNameFromList(id) {
+    function setCustomerDataFromList(id) {
         var selectedCustomer = c.find(function(item) {
             return item.id == id;
         });
@@ -50,3 +58,112 @@
         }
     }
 
+
+    $('#inputItemId').on('click', () => {
+        getAllItemId();
+    });
+
+    $('#inputItemId').on('input', function() {
+        var selectedId = $(this).val();
+        setItemDataFromList(selectedId);
+    });
+    function getAllItemId() {
+        var dataListForItemId = $("#listForItemId");
+       dataListForItemId.empty();
+
+        i.forEach((item) => {
+            dataListForItemId.append($("<option>", { value: item.id }));
+        });
+    }
+
+    function setItemDataFromList(id) {
+        var selectedItem = i.find(function(item) {
+            return item.id == id;
+        });
+
+        if (selectedItem) {
+            $('#inputItemName').val(selectedItem.name);
+            $('#inputItemPrice').val(selectedItem.p);
+            $('#inputItemQty').val(selectedItem.q);
+
+        } else {
+
+            $('#inputItemName').val('');
+            $('#inputItemPrice').val('');
+            $('#inputItemQty').val('');
+        }
+    }
+
+   /* let oi = [];*/
+/*
+$('#add-item-btn').on('click',()=>{
+    let itemId  = $('#inputItemId').val();
+    let itemName  =$('#inputItemName').val();
+    let itemPrice = $('#inputItemPrice').val();
+    let itemQty = $('#inputItemQty').val();
+    let selectedQty = $('#inputItemSelectedQty').val();
+
+    let itemOfOrder = new ItemOfOrderModel(itemId,itemName,itemPrice,itemQty,selectedQty);
+    orderItems.push(itemOfOrder);
+
+    orderItems.push(itemOfOrder);
+addOrderItemToTable(itemOfOrder);
+
+
+
+     $('#inputItemId').val('');
+    $('#inputItemName').val('');
+    $('#inputItemPrice').val('');
+     $('#inputItemQty').val('');
+    $('#inputItemSelectedQty').val('');
+});
+
+function addOrderItemToTable() {
+    $('#orderItem').empty();
+    orderItems.map((item,index)=>{
+        $('#orderItem').empty();
+        var record =`  <tr>
+            <td >${item.id}</td>
+            <td>${item.name}</td>
+            <td>${item.p}</td>
+            <td>${item.q}</td>
+            <td>${item.selectedQty}</td>
+            
+        </tr>`
+        $('#orderSelectedItem').append(record);
+    });
+
+
+}
+*/
+    $('#add-item-btn').on('click',()=>{
+        let itemId  = $('#inputItemId').val();
+        let itemName  =$('#inputItemName').val();
+        let itemPrice = $('#inputItemPrice').val();
+        let itemQty = $('#inputItemQty').val();
+        let selectedQty = $('#inputItemSelectedQty').val();
+
+        let itemOfOrder = new ItemOfOrderModel(itemId, itemName, itemPrice, itemQty, selectedQty);
+        orderItems.push(itemOfOrder);
+
+
+        addOrderItemToTable(itemOfOrder);
+
+        // Clear input fields after adding the item to the table
+        $('#inputItemId').val('');
+        $('#inputItemName').val('');
+        $('#inputItemPrice').val('');
+        $('#inputItemQty').val('');
+        $('#inputItemSelectedQty').val('');
+    });
+
+    function addOrderItemToTable(item) {
+        var record = `<tr>
+        <td>${item.id}</td>
+        <td>${item.name}</td>
+        <td>${item.p}</td>
+        <td>${item.q}</td>
+        <td>${item.selectedQty}</td>
+    </tr>`;
+        $('#orderSelectedItem').append(record);
+    }

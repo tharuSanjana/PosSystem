@@ -1,4 +1,5 @@
-
+import {ItemModel} from "../model/ItemModel.js";
+import {i} from "../db/db.js";
 function addItemToTable(items) {
     $('#item-body').empty();
     i.map((item,index)=>{
@@ -17,14 +18,15 @@ function addItemToTable(items) {
 
 }
 
-let i = [];
+/*let i = [];*/
+let getIndexNum;
 $('#item-save').on('click', () => {
     let id = $('#item-id').val();
     let na = $('#item-name').val();
     let qty = $('#item-qty').val();
     let price = $('#item-price').val();
 
-    let items = {
+   /* let items = {
         id: id,
         name: na,
         q: qty,
@@ -32,8 +34,8 @@ $('#item-save').on('click', () => {
         call: () => {
             console.log("saved");
         }
-    };
-
+    };*/
+let items = new ItemModel(id,na,qty,price);
     i.push(items);
 
 
