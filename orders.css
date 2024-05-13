@@ -660,9 +660,17 @@ footer > div {
 
 #countTotal{
     position: relative;
-    top: 63px;
-    left: 130px;
-    font-size: 55px;
+    top: 46px;
+    left: 46px;
+    font-size: 46px;
+    color: green;
+}
+
+#countBalance{
+    position: relative;
+    top: 55px;
+    left: 53px;
+    font-size: 46px;
     color: red;
 }
 

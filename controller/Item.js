@@ -130,6 +130,6 @@ function getItemCost(i) {
             console.error("Quantity or price is not a valid number for item at index " + j);
         }
     }
-    $('#cost').text("Rs " + totalCost.toFixed(2)); // Ensure two decimal places for currency
+    $('#cost').text("Rs " + totalCost.toFixed(2));
     console.log("Total cost: ", totalCost);
 }

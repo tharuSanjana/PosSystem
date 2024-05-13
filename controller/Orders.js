@@ -18,6 +18,10 @@
         $('#inputItemPrice').val('');
         $('#inputItemQty').val('');
         $('#inputItemSelectedQty').val('');
+
+        $('#inputBalance').val("");
+        $('#inputDiscount').val("");
+        $('#inputCash').val("");
     });
 
     $('#inputCustomerId').on('click', () => {
@@ -94,48 +98,7 @@
         }
     }
 
-   /* let oi = [];*/
-/*
-$('#add-item-btn').on('click',()=>{
-    let itemId  = $('#inputItemId').val();
-    let itemName  =$('#inputItemName').val();
-    let itemPrice = $('#inputItemPrice').val();
-    let itemQty = $('#inputItemQty').val();
-    let selectedQty = $('#inputItemSelectedQty').val();
 
-    let itemOfOrder = new ItemOfOrderModel(itemId,itemName,itemPrice,itemQty,selectedQty);
-    orderItems.push(itemOfOrder);
-
-    orderItems.push(itemOfOrder);
-addOrderItemToTable(itemOfOrder);
-
-
-
-     $('#inputItemId').val('');
-    $('#inputItemName').val('');
-    $('#inputItemPrice').val('');
-     $('#inputItemQty').val('');
-    $('#inputItemSelectedQty').val('');
-});
-
-function addOrderItemToTable() {
-    $('#orderItem').empty();
-    orderItems.map((item,index)=>{
-        $('#orderItem').empty();
-        var record =`  <tr>
-            <td >${item.id}</td>
-            <td>${item.name}</td>
-            <td>${item.p}</td>
-            <td>${item.q}</td>
-            <td>${item.selectedQty}</td>
-            
-        </tr>`
-        $('#orderSelectedItem').append(record);
-    });
-
-
-}
-*/
     $('#add-item-btn').on('click',()=>{
         let itemId  = $('#inputItemId').val();
         let itemName  =$('#inputItemName').val();
@@ -149,9 +112,7 @@ function addOrderItemToTable() {
 
         addOrderItemToTable(itemOfOrder,total);
         setTotalIntoLabel(orderItems);
-        /*calculateTotal(itemPrice,selectedQty);*/
 
-        // Clear input fields after adding the item to the table
         $('#inputItemId').val('');
         $('#inputItemName').val('');
         $('#inputItemPrice').val('');
@@ -189,28 +150,33 @@ function addOrderItemToTable() {
 
           setTotal += itemPrice*selectedQty;
       }
-        $('#countTotal').text("Rs " + setTotal.toFixed(2));
+        $('#countTotal').text("Total: Rs " + setTotal.toFixed(2));
       console.log(setTotal);
+
     }
 
-    /*$('#placeOrder').on('click',()=>{
-        let cash = $('#inputCash').val();
-        let discount = $('#inputDiscount').val();
 
-        giveBalance(cash,discount);
-    });
+    function calculateSubTotal(discount, total, cash) {
+        if (!isNaN(discount) && !isNaN(total)) {
+            let subTotal = total - (total * discount / 100);
+            console.log("Subtotal: ", subTotal.toFixed(2));
+            let balance = cash - subTotal;
+            console.log("Balance: ", balance.toFixed(2));
+            $('#countBalance').text("Balance: Rs " + balance.toFixed(2));
+        } else {
+            console.log("Invalid input");
+             $('#inputBalance').val("");
+        }
+    }
 
-    function giveBalance(cash,discount) {
-        let total = $('#countTotal').val();
-        let x = (total*discount)%100;
-        let balance = cash-x;
-        $('#inputBalance').text(balance);
-        console.log(balance);
-    }*/
+    $('#placeOrder').on('click', () => {
+        let discount = parseFloat($('#inputDiscount').val());
+        let cash = parseFloat($('#inputCash').val());
+        let total = parseFloat($('#countTotal').text().replace("Total: Rs ", ""));
 
-    $('#inputDiscount').on('click',()=>{
-        let discount = $('#inputDiscount').val();
-        let getTotal = $('#countTotal').val();
-        let x = (getTotal*discount)%100;
-        console.log("sub Total: ",x);
+        console.log("Discount: ", discount);
+        console.log("Cash: ", cash);
+        console.log("Total: ", total);
+
+        calculateSubTotal(discount, total, cash);
     });
