@@ -99,18 +99,27 @@
     }
 
 
-    $('#add-item-btn').on('click',()=>{
-        let itemId  = $('#inputItemId').val();
-        let itemName  =$('#inputItemName').val();
+
+    $('#add-item-btn').on('click', () => {
+        let itemId = $('#inputItemId').val();
+        let itemName = $('#inputItemName').val();
         let itemPrice = $('#inputItemPrice').val();
         let itemQty = $('#inputItemQty').val();
-        let selectedQty = $('#inputItemSelectedQty').val();
+        let selectedQty = parseFloat($('#inputItemSelectedQty').val());
 
-        let itemOfOrder = new ItemOfOrderModel(itemId, itemName, itemPrice, itemQty, selectedQty);
-        orderItems.push(itemOfOrder);
-        var total = calculateTotal(itemPrice,selectedQty);
+        let existingItemIndex = orderItems.findIndex(item => item.id === itemId);
 
-        addOrderItemToTable(itemOfOrder,total);
+        if (existingItemIndex !== -1) {
+
+            orderItems[existingItemIndex].selectedQty += selectedQty;
+            updateOrderItemRow(existingItemIndex, orderItems[existingItemIndex]);
+        } else {
+
+            let itemOfOrder = new ItemOfOrderModel(itemId, itemName, itemPrice, itemQty, selectedQty);
+            orderItems.push(itemOfOrder);
+            addOrderItemToTable(itemOfOrder, calculateTotal(itemPrice, selectedQty));
+        }
+
         setTotalIntoLabel(orderItems);
 
         $('#inputItemId').val('');
@@ -120,6 +129,16 @@
         $('#inputItemSelectedQty').val('');
     });
 
+    function updateOrderItemRow(index, item) {
+
+        let total = calculateTotal(item.q, item.selectedQty);
+        orderItems[index].total = total;
+
+
+        $(`#orderSelectedItem tr:eq(${index + 1}) td:nth-child(4)`).text(item.selectedQty);
+        $(`#orderSelectedItem tr:eq(${index + 1}) td:nth-child(6)`).text(total.toFixed(2));
+
+    }
     function addOrderItemToTable(item,total) {
         var record = `<tr>
         <td>${item.id}</td>

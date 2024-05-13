@@ -106,18 +106,6 @@ getItemCost(i);
 
 
 
-/*function getItemCost(i) {
-
-let totalCost=0;
-    for (let j=0;j<i.length;j++){
-        let cost = i[j].q*i[j].p;
-        totalCost += cost ;
-    }
-    $('#cost').text("Rs "+ totalCost);
-    console.log("Total cost : ", totalCost);
-}*/
-
-
 
 function getItemCost(i) {
     let totalCost = 0;
