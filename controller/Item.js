@@ -26,27 +26,76 @@ $('#item-save').on('click', () => {
     let qty = $('#item-qty').val();
     let price = $('#item-price').val();
 
-   /* let items = {
-        id: id,
-        name: na,
-        q: qty,
-        p: price,
-        call: () => {
-            console.log("saved");
-        }
-    };*/
-let items = new ItemModel(id,na,qty,price);
+    if (!id) {
+        alert('Please enter ID');
+        clearInputFields();
+        return;
+    }
+
+
+    if (!/^I00\d+$/.test(id)) {
+        alert('ID should start with I00 and be followed by at least one digit');
+        clearInputFields();
+        return;
+    }
+
+    if (i.some(item => item.id === id)) {
+        alert('ID already exists');
+        clearInputFields();
+        return;
+    }
+
+    if (!na) {
+        alert('Please enter Name');
+        clearInputFields();
+        return;
+    }
+
+    if (!/^[a-zA-Z\s]+$/.test(na)) {
+        alert('Name can only contain letters');
+        clearInputFields();
+        return;
+    }
+
+    if (!qty) {
+        alert('Please enter Quantity');
+        clearInputFields();
+        return;
+    }
+
+    if (isNaN(qty) || qty <= 0) {
+        alert('Quantity must be a positive number');
+        clearInputFields();
+        return;
+    }
+
+    if (!price) {
+        alert('Please enter Price');
+        clearInputFields();
+        return;
+    }
+
+    if (isNaN(price) || price <= 0) {
+        alert('Price must be a positive number');
+        clearInputFields();
+        return;
+    }
+
+    let items = new ItemModel(id, na, qty, price);
     i.push(items);
+    addItemToTable(i);
+    getItemCost(i);
 
+    clearInputFields();
 
-    addItemToTable(items);
-getItemCost(i);
+});
 
+function clearInputFields() {
     $('#item-id').val('');
     $('#item-name').val('');
     $('#item-qty').val('');
     $('#item-price').val('');
-});
+}
 
 
 $('#item-body').on('click','tr',function () {
@@ -80,6 +129,62 @@ $('#item-update').on('click', () => {
     let qty = $('#item-qty').val();
     let price = $('#item-price').val();
 
+
+    if (!id) {
+        alert('Please enter ID');
+        clearInputFields();
+        return;
+    }
+
+
+    if (!/^I00\d+$/.test(id)) {
+        alert('ID should start with I00 and be followed by at least one digit');
+        clearInputFields();
+        return;
+    }
+
+    if (i.some(item => item.id === id)) {
+        alert('ID already exists');
+        clearInputFields();
+        return;
+    }
+
+    if (!na) {
+        alert('Please enter Name');
+        clearInputFields();
+        return;
+    }
+
+    if (!/^[a-zA-Z\s]+$/.test(na)) {
+        alert('Name can only contain letters');
+        clearInputFields();
+        return;
+    }
+
+    if (!qty) {
+        alert('Please enter Quantity');
+        clearInputFields();
+        return;
+    }
+
+    if (isNaN(qty) || qty <= 0) {
+        alert('Quantity must be a positive number');
+        clearInputFields();
+        return;
+    }
+
+    if (!price) {
+        alert('Please enter Price');
+        clearInputFields();
+        return;
+    }
+
+    if (isNaN(price) || price <= 0) {
+        alert('Price must be a positive number');
+        clearInputFields();
+        return;
+    }
+
     i[getIndexNum].id = id;
     i[getIndexNum].name = na;
     i[getIndexNum].q = qty;
@@ -87,10 +192,8 @@ $('#item-update').on('click', () => {
 
     addItemToTable(i[getIndexNum]);
     getItemCost(i);
-    $('#item-id').val('');
-    $('#item-name').val('');
-    $('#item-qty').val('');
-    $('#item-price').val('');
+    clearInputFields();
+
 });
 
 $('#item-delete').on('click',()=>{
@@ -121,3 +224,5 @@ function getItemCost(i) {
     $('#cost').text("Rs " + totalCost.toFixed(2));
     console.log("Total cost: ", totalCost);
 }
+
+

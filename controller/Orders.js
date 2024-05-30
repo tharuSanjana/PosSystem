@@ -199,3 +199,11 @@
 
         calculateSubTotal(discount, total, cash);
     });
+
+  /*  document.getElementById("order-view").addEventListener("click", function () {
+        document.getElementById("customerView-popup").style.display = "flex";
+    });
+
+    document.getElementById("closePopup").addEventListener("click", function () {
+        document.getElementById("customerView-popup").style.display = "none";
+    });*/

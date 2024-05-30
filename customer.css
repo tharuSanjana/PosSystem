@@ -152,13 +152,14 @@ header>div>label{
     top: 173px;
     left: 500px;
     font-size: 20px;
-
-
+    min-width: 1000px;
+    border-collapse: collapse;
 }
 
 .table th,
 .table td {
     padding: 21px;
+    white-space: nowrap;
 }
 
 .table th:first-child,th:nth-child(2),th:nth-child(3),th:nth-child(4),th:nth-child(5),th:nth-child(6){
@@ -168,30 +169,6 @@ header>div>label{
 .table td:nth-child(2),td:nth-child(3),td:nth-child(4),td:nth-child(5),td:nth-child(6){
     background-color: white;
 }
-
-/*.update{
-    top: -30px;
-    left: 1146px;
-    width: 158px;
-    height: 47px;
-    background-color: #5180F9;
-    position: relative;
-    font-size: 18px;
-    border-color: #5180F9;
-
-}
-
-.delete{
-    top: -30px;
-    left: 1158px;
-    width: 158px;
-    height: 47px;
-    background-color: #F61515;
-    position: relative;
-    font-size: 18px;
-    border-color: #F61515;
-
-}*/
 
 #search{
     position: relative;
@@ -214,6 +191,61 @@ form>button{
     left: 8px;
     top: 30px;
 }
+
+.table-container {
+    width: 80%;
+    overflow-x: auto;
+    margin: 0 auto;
+    position: relative;
+    top: 200px;
+
+}
+
+/*.customer-popup {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(
+            0,
+            0,
+            0,
+            0.4
+    );
+    display: none;
+}*/
+
+/*
+.customer-popup {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 400px;
+    max-width: 800px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+*/
+
 @keyframes anim {
     from{
         background-position: 0% 50%;

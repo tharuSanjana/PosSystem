@@ -1,5 +1,5 @@
 import {CustomerModel} from "../model/CustomerModel.js";
-import {c} from "../db/db.js";
+import {c, i} from "../db/db.js";
 
 function addCustomerToTable(customer) {
     $('#tbody').empty();
@@ -29,12 +29,12 @@ $('#customer-save').on('click', () => {
     let address = $('#address').val();
     let tel = $('#tel').val();
 
-    console.log("Id", id);
+    /*console.log("Id", id);
     console.log("name", na);
     console.log("nic", nic);
     console.log("email", email);
     console.log("address", address);
-    console.log("tel", tel);
+    console.log("tel", tel);*/
 
 /*
     let customer = {
@@ -51,14 +51,22 @@ $('#customer-save').on('click', () => {
 
     /*let customer = new CustomerModel(id,na,nic,email,address,tel);*/
 
-
     if (!id) {
         alert('Please enter ID');
+        clearInputFields();
         return;
     }
 
-    if (!id.startsWith('C00')) {
-        alert('ID should start with C00');
+
+    if (!/^C00\d+$/.test(id)) {
+        alert('ID should start with C00 and be followed by at least one digit');
+        clearInputFields();
+        return;
+    }
+
+    if (c.some(item => item.id === id)) {
+        alert('ID already exists');
+        clearInputFields();
         return;
     }
 
@@ -121,13 +129,17 @@ $('#customer-save').on('click', () => {
     addCustomerToTable(customer);
     getCustomerCount(c);
 
+    clearInputFields();
+});
+
+function clearInputFields() {
     $('#id').val('');
     $('#name').val('');
     $('#nic').val('');
     $('#email').val('');
     $('#address').val('');
     $('#tel').val('');
-});
+}
 
 $('#tbody').on('click','tr',function () {
 let index = $(this).index();
@@ -167,13 +179,23 @@ $('#customer-update').on('click',()=>{
 
     if (!id) {
         alert('Please enter ID');
+        clearInputFields();
         return;
     }
 
-    if (!id.startsWith('C00')) {
-        alert('ID should start with C00');
+
+    if (!/^C00\d+$/.test(id)) {
+        alert('ID should start with C00 and be followed by at least one digit');
+        clearInputFields();
         return;
     }
+
+    if (c.some(item => item.id === id)) {
+        alert('ID already exists');
+        clearInputFields();
+        return;
+    }
+
 
     if (!na) {
         alert('Please enter Name');
@@ -237,12 +259,7 @@ c[getIndex].address=address;
 c[getIndex].tel=tel;
 
     addCustomerToTable(c[getIndex]);
-    $('#id').val('');
-    $('#name').val('');
-    $('#nic').val('');
-    $('#email').val('');
-    $('#address').val('');
-    $('#tel').val('');
+   clearInputFields();
 
 });
 
@@ -269,29 +286,12 @@ function getCustomerCount(c) {
     console.log("customer count: ", count);
 }
 
-// function validateNIC()
-// {
-//     var nic = document.getElementById('nic');
-//     var mesg = document.getElementById('msg');
-//
-//     if (nic.length != 3) {
-//         msg.innerHTML="Length must be 14 characters";
-//     } else{
-//
-//     }
-// }
+/*document.getElementById("customer-view").addEventListener("click", function () {
+    document.getElementById("customerView-popup").style.display = "flex";
+});
+
+document.getElementById("closePopup").addEventListener("click", function () {
+    document.getElementById("customerView-popup").style.display = "none";
+});*/
 
 
-
-/*
-function validateId(id) {
-    if (!id) {
-        alert('Please enter ID');
-        return;
-    }
-
-    if (!id.startsWith('C00')) {
-        alert('ID should start with C00');
-        return;
-    }
-}*/
