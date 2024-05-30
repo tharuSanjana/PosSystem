@@ -1,11 +1,53 @@
     import {CustomerModel} from "../model/CustomerModel.js";
     import {ItemOfOrderModel} from "../model/ItemOfOrderModel.js";
+    import {OrdersModel} from "../model/OrdersModel.js";
     import {c} from "../db/db.js";
     import {i} from "../db/db.js";
     import {orderItems} from "../db/db.js";
+    import {orders} from "../db/db.js";
+/*
+    let orderId = generateOrderId();
+    $('#inputOrderId').val(orderId);*/
 
+   /* function generateOrderId() {
+        const timestamp = Date.now();
+        const randomNum = Math.floor(Math.random() * 1000);
+        return `O00`;
+    }*/
+
+  /*  function generateOrderId() {
+        // Extract the numerical part of the existing order IDs and find the maximum value
+        let maxId = 0;
+        orders.forEach(order => {
+            if (order.orderId) {
+                const currentIdNum = parseInt(order.orderId.slice(1), 10);
+                if (currentIdNum > maxId) {
+                    maxId = currentIdNum;
+                }
+            }
+        });
+
+        // Increment the maximum value by 1 to get the new order ID number
+        const newIdNum = maxId + 1;
+
+        // Format the new order ID number with leading zeros
+        const newId = `O${newIdNum.toString().padStart(3, '0')}`;
+
+        return newId;
+    }*/
+
+    // Example usage:
+/*    console.log(generateOrderId());*/
+
+    function generateRandomID() {
+        return Math.random().toString(36).substr(2, 9);
+    }
+
+    const uniqueID = generateRandomID();
+    $('#inputOrderId').val(uniqueID);
     $(document).ready(function() {
 
+      /*  $('#inputOrderId').val(generateOrderId());*/
         $('#inputCustomerId').val('');
         $('#inputCustomerName').val('');
         $('#inputCustomerNic').val('');
@@ -121,13 +163,28 @@
         }
 
         setTotalIntoLabel(orderItems);
+        clearFields();
+       /* $('#inputItemId').val('');
+        $('#inputItemName').val('');
+        $('#inputItemPrice').val('');
+        $('#inputItemQty').val('');
+        $('#inputItemSelectedQty').val('');*/
+    });
+
+    function clearFields() {
+        $('#inputCustomerId').val('');
+        $('#inputCustomerName').val('');
+        $('#inputCustomerNic').val('');
+        $('#inputCustomerEmail').val('');
+        $('#inputCustomerAddress').val('');
+        $('#inputCustomerTel').val('');
 
         $('#inputItemId').val('');
         $('#inputItemName').val('');
         $('#inputItemPrice').val('');
         $('#inputItemQty').val('');
         $('#inputItemSelectedQty').val('');
-    });
+    }
 
     function updateOrderItemRow(index, item) {
 
@@ -189,6 +246,16 @@
     }
 
     $('#placeOrder').on('click', () => {
+        generateOrderId();
+        let date = $('#date').val();
+        let orderId = $('#inputOrderId').val();
+        let customerId = $('#inputCustomerId').val();
+        let customerName = $('#inputCustomerName').val();
+        let itemId = $('#inputItemId').val();
+        let itemName = $('#inputItemName').val();
+        let selectedQty = parseFloat($('#inputItemSelectedQty').val());
+
+
         let discount = parseFloat($('#inputDiscount').val());
         let cash = parseFloat($('#inputCash').val());
         let total = parseFloat($('#countTotal').text().replace("Total: Rs ", ""));
@@ -197,13 +264,9 @@
         console.log("Cash: ", cash);
         console.log("Total: ", total);
 
+        let or = new OrdersModel(date,orderId,customerId,customerName,itemId,itemName,selectedQty,discount,cash,total);
+        orders.push(or);
+        console.log(orders);
         calculateSubTotal(discount, total, cash);
     });
 
-  /*  document.getElementById("order-view").addEventListener("click", function () {
-        document.getElementById("customerView-popup").style.display = "flex";
-    });
-
-    document.getElementById("closePopup").addEventListener("click", function () {
-        document.getElementById("customerView-popup").style.display = "none";
-    });*/
