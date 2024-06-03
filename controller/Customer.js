@@ -1,62 +1,37 @@
 import {CustomerModel} from "../model/CustomerModel.js";
 import {c, i} from "../db/db.js";
 
-function addCustomerToTable(customer) {
-    $('#tbody').empty();
-    c.map((item,index)=>{
 
+
+function addCustomerToTable() {
+    $('#tbody').empty();
+    c.map((item, index) => {
         var record = `<tr>
-        <td id="colId">${item.id}</td>
-        <td id="colName">${item.name}</td>
-        <td id="colNic">${item.nic}</td>
-        <td id="colEmail">${item.email}</td>
-        <td id="colAddress">${item.address}</td>
-        <td id="colTel">${item.tel}</td>
-    </tr>`;
+            <td id="colId">${item.id}</td>
+            <td id="colName">${item.name}</td>
+            <td id="colNic">${item.nic}</td>
+            <td id="colEmail">${item.email}</td>
+            <td id="colAddress">${item.address}</td>
+            <td id="colTel">${item.tel}</td>
+        </tr>`;
         $('#customerTable').append(record);
     });
-
-
 }
-/*let c=[];*/
+
 let getIndex;
 $('#customer-save').on('click', () => {
     let id = $('#id').val();
-   /* $('#inputOrderId').val(id);*/
     let na = $('#name').val();
     let nic = $('#nic').val();
     let email = $('#email').val();
     let address = $('#address').val();
     let tel = $('#tel').val();
 
-    /*console.log("Id", id);
-    console.log("name", na);
-    console.log("nic", nic);
-    console.log("email", email);
-    console.log("address", address);
-    console.log("tel", tel);*/
-
-/*
-    let customer = {
-        id: id,
-        name: na,
-        nic: nic,
-        email:email,
-        address: address,
-        tel: tel,
-        call: () => {
-            console.log("saved");
-        }
-    };*/
-
-    /*let customer = new CustomerModel(id,na,nic,email,address,tel);*/
-
     if (!id) {
         alert('Please enter ID');
         clearInputFields();
         return;
     }
-
 
     if (!/^C00\d+$/.test(id)) {
         alert('ID should start with C00 and be followed by at least one digit');
@@ -75,12 +50,10 @@ $('#customer-save').on('click', () => {
         return;
     }
 
-
     if (!/^[a-zA-Z\s]+$/.test(na)) {
         alert('Name can only contain letters and spaces');
         return;
     }
-
 
     if (!nic) {
         alert('Please enter NIC');
@@ -88,7 +61,7 @@ $('#customer-save').on('click', () => {
     }
 
     if (!/^[0-9A-Za-z]{12}$/.test(nic)) {
-        alert('NIC should contain exactly 12 characters ');
+        alert('NIC should contain exactly 12 characters');
         return;
     }
 
@@ -107,7 +80,6 @@ $('#customer-save').on('click', () => {
         return;
     }
 
-
     if (!/^[\w\s\-,.'#&()]+$/u.test(address)) {
         alert('Please enter a valid address');
         return;
@@ -122,16 +94,14 @@ $('#customer-save').on('click', () => {
         alert('Please enter a valid phone number');
         return;
     }
-    let customer = new CustomerModel(id,na,nic,email,address,tel);
+
+    let customer = new CustomerModel(id, na, nic, email, address, tel);
     c.push(customer);
 
-    /*console.log("Array; ",c[0]);*/
-    addCustomerToTable(customer);
+    addCustomerToTable();
     getCustomerCount(c);
-
     clearInputFields();
 });
-
 function clearInputFields() {
     $('#id').val('');
     $('#name').val('');
@@ -141,7 +111,7 @@ function clearInputFields() {
     $('#tel').val('');
 }
 
-$('#tbody').on('click','tr',function () {
+/*$('#tbody').on('click','tr',function () {
 let index = $(this).index();
 getIndex=index;
  let id = $(this).find('#colId').text();
@@ -166,9 +136,29 @@ getIndex=index;
  $('#address').val(address);
  $('#tel').val(tel);
 
+});*/
+
+
+
+$('#tbody').on('click', 'tr', function () {
+    let index = $(this).index();
+    getIndex = index;
+    let id = $(this).find('#colId').text();
+    let name = $(this).find('#colName').text();
+    let nic = $(this).find('#colNic').text();
+    let email = $(this).find('#colEmail').text();
+    let address = $(this).find('#colAddress').text();
+    let tel = $(this).find('#colTel').text();
+
+    $('#id').val(id);
+    $('#name').val(name);
+    $('#nic').val(nic);
+    $('#email').val(email);
+    $('#address').val(address);
+    $('#tel').val(tel);
 });
 
-$('#customer-update').on('click',()=>{
+$('#customer-update').on('click', () => {
     let id = $('#id').val();
     let na = $('#name').val();
     let nic = $('#nic').val();
@@ -176,38 +166,25 @@ $('#customer-update').on('click',()=>{
     let address = $('#address').val();
     let tel = $('#tel').val();
 
-
     if (!id) {
         alert('Please enter ID');
-        clearInputFields();
         return;
     }
-
 
     if (!/^C00\d+$/.test(id)) {
         alert('ID should start with C00 and be followed by at least one digit');
-        clearInputFields();
         return;
     }
-
-    if (c.some(item => item.id === id)) {
-        alert('ID already exists');
-        clearInputFields();
-        return;
-    }
-
 
     if (!na) {
         alert('Please enter Name');
         return;
     }
 
-
     if (!/^[a-zA-Z\s]+$/.test(na)) {
         alert('Name can only contain letters and spaces');
         return;
     }
-
 
     if (!nic) {
         alert('Please enter NIC');
@@ -215,7 +192,7 @@ $('#customer-update').on('click',()=>{
     }
 
     if (!/^[0-9A-Za-z]{12}$/.test(nic)) {
-        alert('NIC should contain exactly 12 characters ');
+        alert('NIC should contain exactly 12 characters');
         return;
     }
 
@@ -234,7 +211,6 @@ $('#customer-update').on('click',()=>{
         return;
     }
 
-
     if (!/^[\w\s\-,.'#&()]+$/u.test(address)) {
         alert('Please enter a valid address');
         return;
@@ -250,34 +226,27 @@ $('#customer-update').on('click',()=>{
         return;
     }
 
+    c[getIndex].id = id;
+    c[getIndex].name = na;
+    c[getIndex].nic = nic;
+    c[getIndex].email = email;
+    c[getIndex].address = address;
+    c[getIndex].tel = tel;
 
-    c[getIndex].id=id;
-c[getIndex].name=na;
-c[getIndex].nic=nic;
-c[getIndex].email=email;
-c[getIndex].address=address;
-c[getIndex].tel=tel;
-
-    addCustomerToTable(c[getIndex]);
-   clearInputFields();
-
+    addCustomerToTable();
+    clearInputFields();
 });
 
-$('#customer-delete').on('click',()=>{
-c.splice(getIndex,1);
-    addCustomerToTable(c[getIndex]);
-    getCustomerCount(c);
-
-
-
-    $('#id').val('');
-    $('#name').val('');
-    $('#nic').val('');
-    $('#email').val('');
-    $('#address').val('');
-    $('#tel').val('');
+$('#customer-delete').on('click', () => {
+    if (getIndex !== undefined) {
+        c.splice(getIndex, 1);
+        addCustomerToTable();
+        getCustomerCount(c);
+        clearInputFields();
+    } else {
+        alert('Please select a customer to delete');
+    }
 });
-
 
 function getCustomerCount(c) {
     let count = c.length;
@@ -286,12 +255,6 @@ function getCustomerCount(c) {
     console.log("customer count: ", count);
 }
 
-/*document.getElementById("customer-view").addEventListener("click", function () {
-    document.getElementById("customerView-popup").style.display = "flex";
-});
 
-document.getElementById("closePopup").addEventListener("click", function () {
-    document.getElementById("customerView-popup").style.display = "none";
-});*/
 
 

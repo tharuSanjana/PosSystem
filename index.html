@@ -167,7 +167,7 @@
       </div>
       <!-- <button type="button" class="btn btn-primary"><b>+ Customer</b></button>
        <button type="button" class="btn btn-secondary"><b>View Customers</b></button>-->
-      <div class="table-container">
+      <div class="table-customerContainer">
       <table class="table" id="customerTable">
         <thead>
         <tr>
@@ -208,7 +208,7 @@
           </div>
           <div class="mb-3">
             <label  class="form-label">Name</label>
-            <input type="text" class="form-control"id="item-name" >
+            <input type="text" class="form-control" id="item-name" >
           </div>
           <div class="mb-3">
             <label  class="form-label" >Qty</label>
@@ -230,7 +230,7 @@
         </form>
       </div>
 
-      <div class="table-container">
+      <div class="table-itemContainer">
       <table class="table" id="item-table">
         <thead>
         <tr>
@@ -243,27 +243,7 @@
         </tr>
         </thead>
         <tbody id="item-body">
-       <!-- <tr>
-          <th scope="row">I001</th>
-          <td>Baasmathi</td>
-          <td>400kg</td>
-          <td>120</td>
 
-        </tr>
-        <tr>
-          <th scope="row">I002</th>
-          <td>Tipi tip</td>
-          <td>100</td>
-          <td>100</td>
-
-        </tr>
-        <tr>
-          <th scope="row">I003</th>
-          <td>Red bull</td>
-          <td>500</td>
-          <td>200</td>
-
-        </tr>-->
         </tbody>
       </table>
       </div>
@@ -289,41 +269,52 @@
 
         <button id="closePopup">Close</button>
 
-        <table class="table" id="viewAllOrders">
-          <thead>
-          <tr>
-            <th scope="col">Date</th>
-            <th scope="col">Order ID</th>
-            <th scope="col">Customer ID</th>
-            <th scope="col">Item ID</th>
-            <th scope="col">Item Name</th>
-            <th scope="col">Selected QTY</th>
-            <th scope="col">Cash</th>
-            <th scope="col">Discount</th>
-            <th scope="col">Total</th>
-            <th scope="col">Balance</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-          </tbody>
-        </table>
+        <div id="table-orders">
+
+          <table class="table" id="viewAllOrders">
+            <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Order ID</th>
+              <th scope="col">Customer ID</th>
+              <th scope="col">Item ID</th>
+              <th scope="col">Item Name</th>
+              <th scope="col">Selected QTY</th>
+              <th scope="col">Cash</th>
+              <th scope="col">Discount</th>
+              <th scope="col">Total</th>
+              <th scope="col">Balance</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
       </div>
     </div>
   </main>

@@ -246,7 +246,7 @@
     }
 
     $('#placeOrder').on('click', () => {
-        generateOrderId();
+        /*generateOrderId();*/
         let date = $('#date').val();
         let orderId = $('#inputOrderId').val();
         let customerId = $('#inputCustomerId').val();
@@ -254,7 +254,6 @@
         let itemId = $('#inputItemId').val();
         let itemName = $('#inputItemName').val();
         let selectedQty = parseFloat($('#inputItemSelectedQty').val());
-
 
         let discount = parseFloat($('#inputDiscount').val());
         let cash = parseFloat($('#inputCash').val());
@@ -266,24 +265,44 @@
 
         let or = new OrdersModel(date,orderId,customerId,customerName,itemId,itemName,selectedQty,discount,cash,total);
         orders.push(or);
+        addAllOrdersInToTable(orders);
         console.log(orders);
         calculateSubTotal(discount, total, cash);
     });
 
     document.addEventListener('DOMContentLoaded', (event) => {
-        // Get the elements
+
         const viewOrdersButton = document.getElementById('viewOrders');
         const closePopupButton = document.getElementById('closePopup');
         const allOrdersViewPopup = document.getElementById('allOrdersView-popup');
 
-        // Show the popup when the "View All Orders" button is clicked
+
         viewOrdersButton.addEventListener('click', () => {
             allOrdersViewPopup.style.display = 'block';
         });
 
-        // Hide the popup when the "Close" button is clicked
+
         closePopupButton.addEventListener('click', () => {
             allOrdersViewPopup.style.display = 'none';
         });
     });
+
+    function addAllOrdersInToTable(orders) {
+
+        var recordAllOrders = `  <tr>
+          
+            <td>${orders.date}</td>
+            <td>${orders.orderId}</td>
+            <td>${orders.customerId}</td>
+            <td>${orders.itemId}</td>
+            <td>${orders.itemName}</td>
+            <td>${orders.selectedQty}</td>
+            <td>${orders.cash}</td>
+            <td>${orders.discount}</td>
+            <td>${orders.total}</td>
+            <td>${orders.balance}</td>
+        </tr>`;
+
+        $('#viewAllOrders').append(recordAllOrders);
+    }
 

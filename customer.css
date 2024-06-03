@@ -145,12 +145,12 @@ header>div>label{
 
 
 
-.table{
+#customerTable{
     position: relative;
     width: 100px;
-    height: 200px;
+    height: 79px;
     top: 173px;
-    left: 500px;
+    left: 209px;
     font-size: 20px;
     min-width: 1000px;
     border-collapse: collapse;
@@ -192,12 +192,12 @@ form>button{
     top: 30px;
 }
 
-.table-container {
-    width: 80%;
-    overflow-x: auto;
+.table-customerContainer {
+    width: 92%;
+    overflow-x: hidden;
     margin: 0 auto;
     position: relative;
-    top: 200px;
+    top: 112px;
 
 }
 
