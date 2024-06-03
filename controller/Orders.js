@@ -265,7 +265,7 @@
 
         let or = new OrdersModel(date,orderId,customerId,customerName,itemId,itemName,selectedQty,discount,cash,total);
         orders.push(or);
-        addAllOrdersInToTable(orders);
+        addAllOrdersInToTable();
         console.log(orders);
         calculateSubTotal(discount, total, cash);
     });
@@ -287,8 +287,9 @@
         });
     });
 
-    function addAllOrdersInToTable(orders) {
-
+    function addAllOrdersInToTable() {
+        $('#ordersTbody').empty();
+        orders.map((item, index) => {
         var recordAllOrders = `  <tr>
           
             <td>${orders.date}</td>
@@ -304,5 +305,7 @@
         </tr>`;
 
         $('#viewAllOrders').append(recordAllOrders);
+
+        });
     }
 
