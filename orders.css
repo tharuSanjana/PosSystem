@@ -109,7 +109,7 @@ main>section>.viewOrderCount{
     left: 67px;
     width: 331px;
     height: 169px;
-     z-index: 999;
+  /*   z-index: 999;*/
     padding: 20px;
 
 }
@@ -244,7 +244,17 @@ main>section>div>div>form{
     top: 52px;
     left: 393px;
     font-size: 20px;
-z-index: 999;
+    z-index: 999;
+
+}
+
+
+.table-container {
+    width: 80%;
+    overflow-x: auto;
+    margin: 0 auto;
+    position: relative;
+    top: -2px;
 
 }
 
@@ -262,41 +272,15 @@ z-index: 999;
 }
 
 
-
-
-/*
-.btn-view{
-    background-color: #FCC314;
-    color: white;
+#viewOrders{
+    background-color: yellow;
+    color: black;
     position: relative;
-    top: 130px;
-    left: 551px;
-    font-size: 20px;
-    border: 2px solid #FCC314;
+    left: 1305px;
+    top: -50px;
+    height: 50px;
 }
 
-.btn-update{
-    background-color: #5180F9;
-    color: white;
-    position: relative;
-    top: 84px;
-    left: 719px;
-    font-size: 20px;
-    border: 2px solid #5180F9;
-}
-
-.btn-delete{
-    background-color: #F61515;
-    color: white;
-    position: relative;
-    top: 39px;
-    left: 842px;
-    font-size: 20px;
-    border: 2px solid #F61515;
-}
-
-
-*/
 
 footer > div {
     background-color: white;
@@ -710,6 +694,54 @@ footer > div {
     height: 34px;
 }
 
+#viewOrders:hover {
+    background-color: #45a049;
+}
+
+/* Styling for the popup container */
+#allOrdersView-popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+
+/* Popup content */
+.orderPopup-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    height: 500px;
+}
+
+/* Close button */
+#closePopup {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#closePopup:hover {
+    background-color: #d32f2f;
+}
+
+#viewAllOrders{
+    position: relative;
+    left: 50px;
+    top: 71px;
+    font-size: 13px;
+}
 /*
 .customer-popup {
     position: fixed;

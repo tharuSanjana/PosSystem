@@ -39,12 +39,12 @@
     // Example usage:
 /*    console.log(generateOrderId());*/
 
-    function generateRandomID() {
+   /* function generateRandomID() {
         return Math.random().toString(36).substr(2, 9);
-    }
+    }*/
 
-    const uniqueID = generateRandomID();
-    $('#inputOrderId').val(uniqueID);
+   /* const uniqueID = generateRandomID();
+    $('#inputOrderId').val(uniqueID);*/
     $(document).ready(function() {
 
       /*  $('#inputOrderId').val(generateOrderId());*/
@@ -268,5 +268,22 @@
         orders.push(or);
         console.log(orders);
         calculateSubTotal(discount, total, cash);
+    });
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Get the elements
+        const viewOrdersButton = document.getElementById('viewOrders');
+        const closePopupButton = document.getElementById('closePopup');
+        const allOrdersViewPopup = document.getElementById('allOrdersView-popup');
+
+        // Show the popup when the "View All Orders" button is clicked
+        viewOrdersButton.addEventListener('click', () => {
+            allOrdersViewPopup.style.display = 'block';
+        });
+
+        // Hide the popup when the "Close" button is clicked
+        closePopupButton.addEventListener('click', () => {
+            allOrdersViewPopup.style.display = 'none';
+        });
     });
 
