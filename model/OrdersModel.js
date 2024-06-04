@@ -86,18 +86,21 @@ export class OrdersModel {
     set balance(balance) {
         this._balance = balance;
     }
-    constructor(date,orderId,customerId,customerName,itemId,itemName,selectedQty,cash,discount,total,balance) {
-        this._date = date;
-        this._orderId = orderId;
-        this._customerId = customerId;
-        this._customerName = customerName;
-        this._itemId = itemId;
-        this._itemName = itemName;
-        this._selectedQty = selectedQty;
-        this._cash = cash;
-        this._discount = discount;
-        this._total = total;
-        this._balance = balance;
+
+
+
+    constructor(date, orderId, customerId, customerName, itemId, itemName, selectedQty, cash, discount, total, balance) {
+        this.date = date;
+        this.orderId = orderId;
+        this.customerId = customerId;
+        this.customerName = customerName;
+        this.itemId = itemId;
+        this.itemName = itemName;
+        this.selectedQty = selectedQty;
+        this.cash = cash;
+        this.discount = discount;
+        this.total = total;
+        this.balance = balance;
 
     }
 }

@@ -163,7 +163,7 @@
         }
 
         setTotalIntoLabel(orderItems);
-        clearFields();
+      /*  clearFields();*/
        /* $('#inputItemId').val('');
         $('#inputItemName').val('');
         $('#inputItemPrice').val('');
@@ -247,7 +247,7 @@
 
     $('#placeOrder').on('click', () => {
         /*generateOrderId();*/
-        let date = $('#date').val();
+        let date = $('#getDate').val();
         let orderId = $('#inputOrderId').val();
         let customerId = $('#inputCustomerId').val();
         let customerName = $('#inputCustomerName').val();
@@ -258,14 +258,15 @@
         let discount = parseFloat($('#inputDiscount').val());
         let cash = parseFloat($('#inputCash').val());
         let total = parseFloat($('#countTotal').text().replace("Total: Rs ", ""));
+        let balance = parseFloat($('#countBalance').text().replace("Balance: Rs ", ""));
 
         console.log("Discount: ", discount);
         console.log("Cash: ", cash);
         console.log("Total: ", total);
 
-        let or = new OrdersModel(date,orderId,customerId,customerName,itemId,itemName,selectedQty,discount,cash,total);
+        let or = new OrdersModel(date,orderId,customerId,customerName,itemId,itemName,selectedQty,cash,discount,total,balance);
         orders.push(or);
-        addAllOrdersInToTable();
+
         console.log(orders);
         calculateSubTotal(discount, total, cash);
     });
@@ -278,6 +279,7 @@
 
 
         viewOrdersButton.addEventListener('click', () => {
+            addAllOrdersInToTable();
             allOrdersViewPopup.style.display = 'block';
         });
 
@@ -287,25 +289,25 @@
         });
     });
 
+
+
     function addAllOrdersInToTable() {
         $('#ordersTbody').empty();
-        orders.map((item, index) => {
-        var recordAllOrders = `  <tr>
-          
-            <td>${orders.date}</td>
-            <td>${orders.orderId}</td>
-            <td>${orders.customerId}</td>
-            <td>${orders.itemId}</td>
-            <td>${orders.itemName}</td>
-            <td>${orders.selectedQty}</td>
-            <td>${orders.cash}</td>
-            <td>${orders.discount}</td>
-            <td>${orders.total}</td>
-            <td>${orders.balance}</td>
+        orders.map((order, index) => {
+            var recordAllOrders = `
+        <tr>
+            <td>${order.date}</td>
+            <td>${order.orderId}</td>
+            <td>${order.customerId}</td>
+             <td>${order.itemId}</td>
+            <td>${order.itemName}</td>
+            <td>${order.selectedQty}</td>
+            <td>${order.cash}</td>
+            <td>${order.discount}</td>
+            <td>${order.total}</td>
+            <td>${order.balance}</td>
         </tr>`;
-
-        $('#viewAllOrders').append(recordAllOrders);
-
+            $('#ordersTbody').append(recordAllOrders);
         });
     }
 
