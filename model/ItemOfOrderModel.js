@@ -1,11 +1,16 @@
-export class ItemOfOrderModel {
-    get selectedQty() {
-        return this._selectedQty;
+export class ItemOfOrderModel{
+
+    constructor(id, name, q, selectedQty, p) {
+
+        this._id = id;
+        this._name = name;
+        this._q = q;
+        this._selectedQty = selectedQty;
+        this._p = p;
+
     }
 
-    set selectedQty(selectedQty) {
-        this._selectedQty = selectedQty;
-    }
+
     get id() {
         return this._id;
     }
@@ -30,6 +35,14 @@ export class ItemOfOrderModel {
         this._q = q;
     }
 
+    get selectedQty() {
+        return this._selectedQty;
+    }
+
+    set selectedQty(selectedQty) {
+        this._selectedQty = selectedQty;
+    }
+
     get p() {
         return this._p;
     }
@@ -39,11 +52,4 @@ export class ItemOfOrderModel {
     }
 
 
-    constructor(id,name,q,p,selectedQty) {
-        this._id = id;
-        this._name = name;
-        this._q = q;
-        this._p = p;
-        this._selectedQty = selectedQty;
-    }
 }

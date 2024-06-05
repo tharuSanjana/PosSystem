@@ -141,13 +141,14 @@
     }
 
 
-
+    let currentOrderItems = [];
     $('#add-item-btn').on('click', () => {
         let itemId = $('#inputItemId').val();
         let itemName = $('#inputItemName').val();
-        let itemPrice = $('#inputItemPrice').val();
-        let itemQty = $('#inputItemQty').val();
-        let selectedQty = parseFloat($('#inputItemSelectedQty').val());
+            let itemPrice = $('#inputItemPrice').val();
+            let itemQty = $('#inputItemQty').val();
+            let selectedQty = parseFloat($('#inputItemSelectedQty').val());
+
 
         let existingItemIndex = orderItems.findIndex(item => item.id === itemId);
 
@@ -163,6 +164,8 @@
         }
 
         setTotalIntoLabel(orderItems);
+
+
       /*  clearFields();*/
        /* $('#inputItemId').val('');
         $('#inputItemName').val('');
@@ -239,6 +242,7 @@
             let balance = cash - subTotal;
             console.log("Balance: ", balance.toFixed(2));
             $('#countBalance').text("Balance: Rs " + balance.toFixed(2));
+
         } else {
             console.log("Invalid input");
              $('#inputBalance').val("");
@@ -260,9 +264,15 @@
         let total = parseFloat($('#countTotal').text().replace("Total: Rs ", ""));
         let balance = parseFloat($('#countBalance').text().replace("Balance: Rs ", ""));
 
+        if (isNaN(discount) || isNaN(cash) || isNaN(total) || isNaN(balance)) {
+            alert('Please ensure all monetary fields are valid numbers.');
+            return;
+        }
+
         console.log("Discount: ", discount);
         console.log("Cash: ", cash);
         console.log("Total: ", total);
+
 
         let or = new OrdersModel(date,orderId,customerId,customerName,itemId,itemName,selectedQty,cash,discount,total,balance);
         orders.push(or);
@@ -291,7 +301,7 @@
 
 
 
-    function addAllOrdersInToTable() {
+    function addAllOrdersInToTable(b) {
         $('#ordersTbody').empty();
         orders.map((order, index) => {
             var recordAllOrders = `
@@ -305,7 +315,9 @@
             <td>${order.cash}</td>
             <td>${order.discount}</td>
             <td>${order.total}</td>
-            <td>${order.balance}</td>
+            
+         
+         
         </tr>`;
             $('#ordersTbody').append(recordAllOrders);
         });
