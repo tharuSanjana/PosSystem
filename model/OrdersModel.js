@@ -1,106 +1,98 @@
+
 export class OrdersModel {
+
+
     get date() {
         return this._date;
     }
 
-    set date(date) {
-        this._date = date;
+    set date(value) {
+        this._date = value;
     }
 
     get orderId() {
         return this._orderId;
     }
 
-    set orderId(orderId) {
-        this._orderId = orderId;
+    set orderId(value) {
+        this._orderId = value;
     }
 
     get customerId() {
         return this._customerId;
     }
 
-    set customerId(customerId) {
-        this._customerId = customerId;
-    }
-
-    get customerName() {
-        return this._customerName;
-    }
-
-    set customerName(customerName) {
-        this._customerName = customerName;
+    set customerId(value) {
+        this._customerId = value;
     }
 
     get itemId() {
         return this._itemId;
     }
 
-    set itemId(itemId) {
-        this._itemId = itemId;
+    set itemId(value) {
+        this._itemId = value;
     }
 
     get itemName() {
         return this._itemName;
     }
 
-    set itemName(itemName) {
-        this._itemName = itemName;
+    set itemName(value) {
+        this._itemName = value;
     }
 
     get selectedQty() {
         return this._selectedQty;
     }
 
-    set selectedQty(selectedQty) {
-        this._selectedQty = selectedQty;
+    set selectedQty(value) {
+        this._selectedQty = value;
     }
 
     get cash() {
         return this._cash;
     }
 
-    set cash(cash) {
-        this._cash = cash;
+    set cash(value) {
+        this._cash = value;
     }
 
     get discount() {
         return this._discount;
     }
 
-    set discount(discount) {
-        this._discount = discount;
+    set discount(value) {
+        this._discount = value;
     }
 
     get total() {
         return this._total;
     }
 
-    set total(total) {
-        this._total = total;
+    set total(value) {
+        this._total = value;
     }
 
     get balance() {
         return this._balance;
     }
 
-    set balance(balance) {
-        this._balance = balance;
+    set balance(value) {
+        this._balance = value;
     }
 
-
-
-    constructor(date, orderId, customerId, customerName, itemId, itemName, selectedQty, cash, discount, total, balance) {
-        this.date = date;
-        this.orderId = orderId;
-        this.customerId = customerId;
-        this.customerName = customerName;
-        this.itemId = itemId;
-        this.itemName = itemName;
-        this.selectedQty = selectedQty;
-        this.cash = cash;
-        this.discount = discount;
-        this.total = total;
-        this.balance = balance;
+    constructor(date,orderId,customerId,itemId,itemName,selectedQty,cash,discount,total,balance) {
+        this._date = date;
+        this._orderId = orderId;
+        this._customerId = customerId;
+        this._itemId = itemId;
+        this._itemName = itemName;
+        this._selectedQty = selectedQty;
+        this._cash = cash;
+        this._discount = discount;
+        this._total = total;
+        this._balance = balance;
 
     }
 

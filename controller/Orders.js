@@ -258,7 +258,6 @@
         let itemId = $('#inputItemId').val();
         let itemName = $('#inputItemName').val();
         let selectedQty = parseFloat($('#inputItemSelectedQty').val());
-
         let discount = parseFloat($('#inputDiscount').val());
         let cash = parseFloat($('#inputCash').val());
         let total = parseFloat($('#countTotal').text().replace("Total: Rs ", ""));
@@ -274,7 +273,7 @@
         console.log("Total: ", total);
 
 
-        let or = new OrdersModel(date,orderId,customerId,customerName,itemId,itemName,selectedQty,cash,discount,total,balance);
+        let or = new OrdersModel(date,orderId,customerId,itemId,itemName,selectedQty,cash,discount,total,balance);
         orders.push(or);
 
         console.log(orders);
@@ -302,7 +301,7 @@
 
 
     function addAllOrdersInToTable(b) {
-        $('#ordersTbody').empty();
+        /*$('#ordersTbody').empty();
         orders.map((order, index) => {
             var recordAllOrders = `
         <tr>
@@ -318,8 +317,27 @@
             
          
          
-        </tr>`;
-            $('#ordersTbody').append(recordAllOrders);
-        });
-    }
+        </tr>`;*/
 
+        $('#ordersTbody').empty();
+        orders.forEach(order => {
+            order.items.forEach(item => {
+                var recordAllOrders = `
+                <tr>
+                    <td>${order.date}</td>
+                    <td>${order.orderId}</td>
+                    <td>${order.customerId}</td>
+                    <td>${item.id}</td>
+                    <td>${item.name}</td>
+                    <td>${item.selectedQty}</td>
+                    <td>${item.p}</td>
+                    <td>${order.cash}</td>
+                    <td>${order.discount}</td>
+                    <td>${order.total}</td>
+                </tr>`;
+                $('#ordersTbody').append(recordAllOrders);
+            });
+        });
+
+
+    }

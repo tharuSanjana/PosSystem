@@ -255,6 +255,51 @@ function getCustomerCount(c) {
     console.log("customer count: ", count);
 }
 
+document.addEventListener('DOMContentLoaded', (event) => {
+
+    const searchCustomerButton = document.getElementById('searchBtn');
+    const closePopupButton = document.getElementById('close');
+    const searchCustomerPopup = document.getElementById('searchCustomer-popup');
+
+
+    searchCustomerButton.addEventListener('click', () => {
+        getSearchCustomer();
+        searchCustomerPopup.style.display = 'block';
+    });
+
+
+    closePopupButton.addEventListener('click', () => {
+        $('#searchCusField').val('');
+        searchCustomerPopup.style.display = 'none';
+    });
+});
+
+function getSearchCustomer() {
+    let customerId = $('#searchCusField').val();
+    const tbody = document.getElementById('viewSearchCustomer').querySelector('#searchTbody');
+    tbody.innerHTML = '';
+    $('#searchTbody').empty();
+    c.map((item, index) => {
+       if(item.id==customerId){
+           console.log("id",item.id);
+           console.log("name",item.name);
+           console.log("address",item.address);
+           console.log("nic",item.nic);
+           console.log("tel",item.tel);
+
+           var record =`  <tr>
+               <td scope="col">${item.id}</td>
+               <td scope="col">${item.name}</td>
+               <td scope="col">${item.nic}</td>
+               <td scope="col">${item.email}</td>
+               <td scope="col">${item.address}</td>
+               <td scope="col">${item.tel}</td>
+           </tr>`
+           $('#viewSearchCustomer').append(record);
+       }
+    });
+
+}
 
 
 
