@@ -1,5 +1,5 @@
 import {ItemModel} from "../model/ItemModel.js";
-import {i} from "../db/db.js";
+import {c, i} from "../db/db.js";
 
 
 function addItemToTable() {
@@ -194,4 +194,46 @@ function getItemCost() {
     }
     $('#cost').text("Rs " + totalCost.toFixed(2));
     console.log("Total cost: ", totalCost);
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
+
+    const searchItemButton = document.getElementById('searchItemBtn');
+    const closePopupButton = document.getElementById('closeItem-popup');
+    const searchItemPopup = document.getElementById('searchItem-popup');
+
+
+    searchItemButton.addEventListener('click', () => {
+        getSearchItem();
+      searchItemPopup.style.display = 'block';
+    });
+
+
+    closePopupButton.addEventListener('click', () => {
+        $('#searchItemField').val('');
+        $('#searchItemTbody').empty();
+        searchItemPopup.style.display = 'none';
+    });
+});
+
+function getSearchItem() {
+    let itemId = $('#searchItemField').val();
+
+    $('#searchItemTbody').empty();
+
+    const items = i.find(item => item.id === itemId);
+    if (items) {
+        const record = `
+                    <tr>
+                        <td>${items.id}</td>
+                        <td>${items.name}</td>
+                        <td>${items.q}</td>
+                        <td>${items.p}</td>
+                       
+                    </tr>
+                `;
+        $('#searchItemTbody').append(record);
+    } else {
+        $('#searchItemTbody').append('<tr><td colspan="4">Item not found</td></tr>');
+    }
 }
