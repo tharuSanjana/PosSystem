@@ -270,35 +270,32 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     closePopupButton.addEventListener('click', () => {
         $('#searchCusField').val('');
+        $('#searchTbody').empty();
         searchCustomerPopup.style.display = 'none';
     });
 });
 
 function getSearchCustomer() {
     let customerId = $('#searchCusField').val();
-    const tbody = document.getElementById('viewSearchCustomer').querySelector('#searchTbody');
-    tbody.innerHTML = '';
+
     $('#searchTbody').empty();
-    c.map((item, index) => {
-       if(item.id==customerId){
-           console.log("id",item.id);
-           console.log("name",item.name);
-           console.log("address",item.address);
-           console.log("nic",item.nic);
-           console.log("tel",item.tel);
 
-           var record =`  <tr>
-               <td scope="col">${item.id}</td>
-               <td scope="col">${item.name}</td>
-               <td scope="col">${item.nic}</td>
-               <td scope="col">${item.email}</td>
-               <td scope="col">${item.address}</td>
-               <td scope="col">${item.tel}</td>
-           </tr>`
-           $('#viewSearchCustomer').append(record);
-       }
-    });
-
+    const customer = c.find(item => item.id === customerId);
+    if (customer) {
+        const record = `
+                    <tr>
+                        <td>${customer.id}</td>
+                        <td>${customer.name}</td>
+                        <td>${customer.nic}</td>
+                        <td>${customer.email}</td>
+                        <td>${customer.address}</td>
+                        <td>${customer.tel}</td>
+                    </tr>
+                `;
+        $('#searchTbody').append(record);
+    } else {
+        $('#searchTbody').append('<tr><td colspan="6">Customer not found</td></tr>');
+    }
 }
 
 
