@@ -1,12 +1,20 @@
 export class ItemOfOrderModel{
+    get oId() {
+        return this._oId;
+    }
 
-    constructor(id, name, p, q, selectedQty) {
+    set oId(value) {
+        this._oId = value;
+    }
 
+    constructor(oId,id, name, p, q, selectedQty) {
+        this._oId = oId;
         this._id = id;
         this._name = name;
         this._p = p;
         this._q = q;
         this._selectedQty = selectedQty;
+
 
 
     }
