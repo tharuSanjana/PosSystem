@@ -330,6 +330,44 @@
       </div>
     </section>
 
+    <div id="searchOrder">
+      <input type="text" id="searchOrderField">
+      <button id="searchOrderBtn">Search</button>
+    </div>
+
+
+   <div id="searchOrder-popup" class="search-popup">
+      <div class="searchCustomerPopup-content">
+
+        <button id="closeOrder-popup">Close</button>
+
+        <div id="table-searchOrder">
+
+          <table class="table-customer" id="viewSearchOrder">
+            <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">OrderID</th>
+              <th scope="col">CustomerID</th>
+              <th scope="col">Cash</th>
+              <th scope="col">Discount</th>
+              <th scope="col">Total</th>
+
+            </tr>
+            </thead>
+            <tbody id="searchOrderTbody">
+
+
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+   </div>
+
+
+
     <button id="viewOrders"><b>View All Orders</b></button>
 
     <div id="allOrdersView-popup" class="order-popup">

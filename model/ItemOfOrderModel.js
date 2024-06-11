@@ -1,12 +1,13 @@
 export class ItemOfOrderModel{
 
-    constructor(id, name, q, selectedQty, p) {
+    constructor(id, name, p, q, selectedQty) {
 
         this._id = id;
         this._name = name;
+        this._p = p;
         this._q = q;
         this._selectedQty = selectedQty;
-        this._p = p;
+
 
     }
 
