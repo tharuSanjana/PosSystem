@@ -119,6 +119,7 @@
         addOrderItemToTable(itemOfOrder, calculateTotal(itemPrice, selectedQty));
         console.log("aaaaaaaaaaaaaaaa");
         setTotalIntoLabel(orderItems,orderId);
+        updateItemQty(itemId,selectedQty);
 
        /* clearFields();*/
     });
@@ -323,4 +324,58 @@
         } else {
             $('#searchOrderTbody').append('<tr><td colspan="7">Order not found</td></tr>');
         }
+    }
+
+   /* function updateItemQty(selectedQty) {
+        i.map((item, index) => {
+           let getNewQty = item.q-selectedQty;
+        });
+    }*/
+
+/*    function updateItemQty(itemId, selectedQty) {
+      i.map(item => {
+            if (item.id === itemId) {
+                item.q -= selectedQty;
+            }
+            return item;
+        });
+        console.log("Updated item quantities:", i.q);
+    }*/
+
+
+   /* function updateItemQty(itemId, selectedQty) {
+        i.forEach(item => {
+            if (item.id === itemId) {
+                item.q -= selectedQty;
+            }
+            console.log("Updated item quantities:", item.id,  item.q );
+        });
+        /!*console.log("Updated item quantities:", i.map(item => ({ id: item.id, q: item.q })));*!/
+    }*/
+
+    function updateItemQty(itemId, selectedQty) {
+        let itemFound = false;
+        i.forEach(item => {
+            if (item.id === itemId) {
+                item.q -= selectedQty;
+                itemFound = true;
+                console.log(`Updated item: id=${item.id}, new qty=${item.q}`);
+            }
+        });
+
+        if (!itemFound) {
+            console.error(`Item with id ${itemId} not found.`);
+        }
+
+        $('#item-body').empty();
+        i.map((item, index) => {
+            var record =
+                `<tr>
+                <td id="colItemId_${index}">${item.id}</td>
+                <td id="colItemName_${index}">${item.name}</td>
+                <td id="colItemQty_${index}">${item.q}</td>
+                <td id="colItemPrice_${index}">${item.p}</td>
+            </tr>`;
+            $('#item-body').append(record);
+        });
     }
