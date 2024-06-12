@@ -84,22 +84,6 @@ function clearInputFields() {
 
 
 
-/*$('#item-body').on('click','tr',function () {
-    let index = $(this).index();
-    getIndexNum = index;
-    let id = $(this).find('#colItemId').text();
-    let name = $(this).find('#colItemName').text();
-    let qty = $(this).find('#colItemQty').text();
-    let price = $(this).find('#colItemPrice').text();
-
-
-
-    $('#item-id').val(id);
-    $('#item-name').val(name);
-    $('#item-qty').val(qty);
-    $('#item-price').val(price);
-});*/
-
 $('#item-body').on('click', 'tr', function () {
     let index = $(this).index();
     getIndexNum = index;

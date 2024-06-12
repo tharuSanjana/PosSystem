@@ -114,6 +114,16 @@
             return;
         }
 
+        if (!orderId || !itemId || !itemName || isNaN(itemPrice) || isNaN(itemQty) || isNaN(selectedQty)) {
+            alert('Please fill out all fields correctly.');
+            return;
+        }
+
+        if (selectedQty > itemQty|| selectedQty<=0) {
+            alert('Selected quantity exceeds available stock.');
+            return;
+        }
+
         let itemOfOrder = new ItemOfOrderModel(orderId,itemId, itemName, itemPrice, itemQty, selectedQty);
         orderItems.push(itemOfOrder);
         addOrderItemToTable(itemOfOrder, calculateTotal(itemPrice, selectedQty));
@@ -221,7 +231,7 @@
         let discount = parseFloat($('#inputDiscount').val());
         let cash = parseFloat($('#inputCash').val());
         let total = parseFloat($('#countTotal').text().replace("Total: Rs ", ""));
-        let balance = parseFloat($('#countBalance').text().replace("Balance: Rs ", ""));
+       /* let balance = parseFloat($('#countBalance').text().replace("Balance: Rs ", ""));*/
 
         /*if (isNaN(discount) || isNaN(cash) || isNaN(total) || isNaN(balance)) {
             alert('Please ensure all monetary fields are valid numbers.');
@@ -244,13 +254,44 @@
         /*let or = new OrdersModel(date, orderId, customerId, itemId, itemName, selectedQty, cash, discount, total, balance);
         orders.push(or);
         console.log(orders);*/
-        calculateSubTotal(discount, total, cash);
+
+        if (!orderId) {
+            alert('Please enter ID');
+            return;
+        }
+
+       /* if (!/^O00\d+$/.test(id)) {
+            alert('ID should start with O00 and be followed by at least one digit');
+            return;
+        }*/
+
+        if (orders.some(item => item.id === orderId)) {
+            alert('ID already exists');
+            clearInputFields();
+            return;
+        }
+
+        if (isNaN(discount) || isNaN(cash) || isNaN(total)) {
+            alert('Please ensure all monetary fields are valid numbers.');
+            return;
+        }
+
+        let subTotal = total - (total * discount / 100);
+        let balance = cash - subTotal;
+        $('#countBalance').text("Balance: Rs " + balance.toFixed(2));
+
+        if (isNaN(balance)) {
+            alert('Please ensure all monetary fields are valid numbers.');
+            return;
+        }
+       /* calculateSubTotal(discount, total, cash);*/
         let or = new OrdersModel(date, orderId, customerId, itemId, itemName, selectedQty, cash, discount, total, balance);
         orders.push(or);
         console.log(orders);
+        getOrderCount(orders);
         clearFields();
         $('#orderItem').empty();
-        /*alert('Order is sucessfull!!');*/
+
 
     });
 
@@ -326,32 +367,6 @@
         }
     }
 
-   /* function updateItemQty(selectedQty) {
-        i.map((item, index) => {
-           let getNewQty = item.q-selectedQty;
-        });
-    }*/
-
-/*    function updateItemQty(itemId, selectedQty) {
-      i.map(item => {
-            if (item.id === itemId) {
-                item.q -= selectedQty;
-            }
-            return item;
-        });
-        console.log("Updated item quantities:", i.q);
-    }*/
-
-
-   /* function updateItemQty(itemId, selectedQty) {
-        i.forEach(item => {
-            if (item.id === itemId) {
-                item.q -= selectedQty;
-            }
-            console.log("Updated item quantities:", item.id,  item.q );
-        });
-        /!*console.log("Updated item quantities:", i.map(item => ({ id: item.id, q: item.q })));*!/
-    }*/
 
     function updateItemQty(itemId, selectedQty) {
         let itemFound = false;
@@ -378,4 +393,11 @@
             </tr>`;
             $('#item-body').append(record);
         });
+    }
+
+    function getOrderCount(orders) {
+        let count = orders.length;
+        $('#count').text(count);
+        $('#orderOrder').text(count);
+        console.log("customer count: ", count);
     }
