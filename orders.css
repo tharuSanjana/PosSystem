@@ -250,7 +250,7 @@ main>section>div>div>form{
 
 
 .table-container {
-    width: 80%;
+    width: 72%;
     overflow-x: auto;
     margin: 0 auto;
     position: relative;
@@ -696,14 +696,14 @@ footer > div {
 }
 
 #viewOrders:hover {
-    background-color: #45a049;
+    background-color:greenyellow;
 }
 
 
 #allOrdersView-popup {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;

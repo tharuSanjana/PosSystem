@@ -255,15 +255,40 @@
         orders.push(or);
         console.log(orders);*/
 
-        if (!orderId) {
-            alert('Please enter ID');
+        if (!customerId) {
+            alert('Please enter Customer ID');
             return;
         }
 
-       /* if (!/^O00\d+$/.test(id)) {
+        if (!itemId) {
+            alert('Please enter Item ID');
+            return;
+        }
+
+        if (!cash) {
+            alert('Please enter Cash');
+            return;
+        }
+
+        if (!discount) {
+            alert('Please enter Discount');
+            return;
+        }
+
+        if (!selectedQty) {
+            alert('Please enter item Selected Qty');
+            return;
+        }
+
+        if (!orderId) {
+            alert('Please enter order ID');
+            return;
+        }
+
+        if (!/^O00\d+$/.test(orderId)) {
             alert('ID should start with O00 and be followed by at least one digit');
             return;
-        }*/
+        }
 
         if (orders.some(item => item.id === orderId)) {
             alert('ID already exists');
